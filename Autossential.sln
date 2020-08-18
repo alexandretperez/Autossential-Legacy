@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Autossential", "Autossential", "{F972178F-0AF3-4F61-9210-1179967B289C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autossential", "Autossential\Autossential\Autossential.csproj", "{51884BE0-8F2A-4849-AA32-A2043E5C38B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autossential.Activities", "Autossential\Autossential.Activities\Autossential.Activities.csproj", "{17279BBC-0A76-4CA1-AA28-44A575939BD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autossential.Activities.Design", "Autossential\Autossential.Activities.Design\Autossential.Activities.Design.csproj", "{50217E61-D88C-4CF1-B44B-7109DC636885}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{4350A74E-F106-4DAD-A4A8-97F3B907B264}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities", "Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.shproj", "{4546856D-EA50-45C6-9419-EEEACB5A80AA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities.Design", "Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.shproj", "{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{17279bbc-0a76-4ca1-aa28-44a575939bd2}*SharedItemsImports = 5
+		Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{4546856d-ea50-45c6-9419-eeeacb5a80aa}*SharedItemsImports = 13
+		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{50217e61-d88c-4cf1-b44b-7109dc636885}*SharedItemsImports = 5
+		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{df9c43f0-add3-4fbf-995e-84b92f9cbf25}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51884BE0-8F2A-4849-AA32-A2043E5C38B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51884BE0-8F2A-4849-AA32-A2043E5C38B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51884BE0-8F2A-4849-AA32-A2043E5C38B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51884BE0-8F2A-4849-AA32-A2043E5C38B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17279BBC-0A76-4CA1-AA28-44A575939BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17279BBC-0A76-4CA1-AA28-44A575939BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17279BBC-0A76-4CA1-AA28-44A575939BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17279BBC-0A76-4CA1-AA28-44A575939BD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50217E61-D88C-4CF1-B44B-7109DC636885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50217E61-D88C-4CF1-B44B-7109DC636885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50217E61-D88C-4CF1-B44B-7109DC636885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50217E61-D88C-4CF1-B44B-7109DC636885}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{51884BE0-8F2A-4849-AA32-A2043E5C38B5} = {F972178F-0AF3-4F61-9210-1179967B289C}
+		{17279BBC-0A76-4CA1-AA28-44A575939BD2} = {F972178F-0AF3-4F61-9210-1179967B289C}
+		{50217E61-D88C-4CF1-B44B-7109DC636885} = {F972178F-0AF3-4F61-9210-1179967B289C}
+		{4546856D-EA50-45C6-9419-EEEACB5A80AA} = {4350A74E-F106-4DAD-A4A8-97F3B907B264}
+		{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25} = {4350A74E-F106-4DAD-A4A8-97F3B907B264}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8CC8F1E-10EE-4A2F-AFD6-6FCCFC28C545}
+	EndGlobalSection
+EndGlobal
