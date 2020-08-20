@@ -126,7 +126,7 @@
     <comment>property name</comment>
   </data>
   <data name="Timeout_Description" xml:space="preserve">
-    <value>Specifies the amount of time (in milliseconds) to wait for the activity to run before an error is thrown. The default value is 60000 (1 minute).</value>
+    <value>Specifies the amount of time (in milliseconds) to wait for the activity to run before an error is thrown. The default value is 30000 (30 seconds).</value>
     <comment>property description</comment>
   </data>
   <data name="Timeout_DisplayName" xml:space="preserve">
@@ -144,5 +144,285 @@
   <data name="Common_Category" xml:space="preserve">
     <value>Common</value>
     <comment>category</comment>
+  </data>
+  <data name="Authentication_Category" xml:space="preserve">
+    <value>Authentication</value>
+    <comment>category</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
+  <data name="Options_Category" xml:space="preserve">
+    <value>Options</value>
+    <comment>category</comment>
+  </data>
+  <data name="ValidationScope_Error" xml:space="preserve">
+    <value>Cannot be used outside of a {0}.</value>
+    <comment>error message; {0} is a container activity (e.g. a scope)</comment>
+  </data>
+  <data name="ValidationValue_Error" xml:space="preserve">
+    <value>Please provide a value for {0}.</value>
+    <comment>error message; {0} is the name of a missing property</comment>
+  </data>
+  <data name="ValidationExclusiveProperties_Error" xml:space="preserve">
+    <value>Please provide a value either for {0} or {1}, but not both.</value>
+    <comment>error message; {0} &amp; {1} are mutually exclusive activities</comment>
+  </data>
+  <data name="ValidationOverloadGroup_Error" xml:space="preserve">
+    <value>Please provide values for both {0} and {1}.</value>
+    <comment>error message; {0} &amp; {1} are complementary properties</comment>
+  </data>
+  <data name="WaitFile_DisplayName" xml:space="preserve">
+    <value>Wait File</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="WaitFile_Description" xml:space="preserve">
+    <value>Waits till the file be available.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="WaitFile_FilePath_DisplayName" xml:space="preserve">
+    <value>FilePath</value>
+    <comment>property name</comment>
+  </data>
+  <data name="WaitFile_FilePath_Description" xml:space="preserve">
+    <value>The storage path of the file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="WaitFile_WaitForExist_DisplayName" xml:space="preserve">
+    <value>WaitForExist</value>
+    <comment>property name</comment>
+  </data>
+  <data name="WaitFile_WaitForExist_Description" xml:space="preserve">
+    <value>Waits till the file exist.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="WaitFile_FileInfo_DisplayName" xml:space="preserve">
+    <value>FileInfo</value>
+    <comment>property name</comment>
+  </data>
+  <data name="WaitFile_FileInfo_Description" xml:space="preserve">
+    <value>(Optional) Returns the information about the file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Aggregate_ColumnIndexes_Description" xml:space="preserve">
+    <value>The column indexes which will be applied the aggregation.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Aggregate_ColumnIndexes_DisplayName" xml:space="preserve">
+    <value>Column Indexes</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Aggregate_ColumnNames_Description" xml:space="preserve">
+    <value>The column names which will be applied the aggregation.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Aggregate_ColumnNames_DisplayName" xml:space="preserve">
+    <value>Column Names</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Aggregate_DataRow_Description" xml:space="preserve">
+    <value>The generated DataRow from aggregation</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Aggregate_DataRow_DisplayName" xml:space="preserve">
+    <value>Data Row</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Aggregate_DataTable_Description" xml:space="preserve">
+    <value>The data table which the aggregate function will be applied</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Aggregate_DataTable_DisplayName" xml:space="preserve">
+    <value>Data Table</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Aggregate_Description" xml:space="preserve">
+    <value>Provides aggregate functions for data table</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="Aggregate_DisplayName" xml:space="preserve">
+    <value>Aggregate</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="Aggregate_Function_Description" xml:space="preserve">
+    <value>The aggregate function</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Aggregate_Function_DisplayName" xml:space="preserve">
+    <value>Function</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Aggregate_HasHeaders_Description" xml:space="preserve">
+    <value>Determines if the first row of the data table is a header</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Aggregate_HasHeaders_DisplayName" xml:space="preserve">
+    <value>Has Headers</value>
+    <comment>property name</comment>
+  </data>
+  <data name="WaitFile_Interval_Description" xml:space="preserve">
+    <value>Specifies the amount of time (in milliseconds) for the file re-check. Any values out of the range of 100-30000 milliseconds is reseted to its nearest limit. The default value is 500.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="WaitFile_Interval_DisplayName" xml:space="preserve">
+    <value>Interval</value>
+    <comment>property name</comment>
+  </data>
+  <data name="WaitFile_Interval_Range_Error" xml:space="preserve">
+    <value>The accepted value range is from {0} to {1}. The value will be reseted to its nearest limit.</value>
+    <comment>error message</comment>
+  </data>
+  <data name="RemoveEmptyRows_DisplayName" xml:space="preserve">
+    <value>Remove Empty Rows</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="RemoveEmptyRows_Description" xml:space="preserve">
+    <value>Removes the empty rows from a data table</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="RemoveEmptyRows_DataTable_DisplayName" xml:space="preserve">
+    <value>DataTable</value>
+    <comment>property name</comment>
+  </data>
+  <data name="RemoveEmptyRows_DataTable_Description" xml:space="preserve">
+    <value>The data table</value>
+    <comment>property description</comment>
+  </data>
+  <data name="RemoveEmptyRows_OutputDataTable_DisplayName" xml:space="preserve">
+    <value>DataTable</value>
+    <comment>property name</comment>
+  </data>
+  <data name="RemoveEmptyRows_OutputDataTable_Description" xml:space="preserve">
+    <value>The result data table</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Stopwatch_DisplayName" xml:space="preserve">
+    <value>Stopwatch</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="Stopwatch_Description" xml:space="preserve">
+    <value>A stopwatch to performance diagnostics</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="Stopwatch_AutoLog_DisplayName" xml:space="preserve">
+    <value>Auto Log</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Stopwatch_AutoLog_Description" xml:space="preserve">
+    <value>Automatics generate log</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Stopwatch_LogFormat_DisplayName" xml:space="preserve">
+    <value>Log Format</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Stopwatch_LogFormat_Description" xml:space="preserve">
+    <value>The log format</value>
+    <comment>property description</comment>
+  </data>
+  <data name="RemoveEmptyRows_CustomOptions_Category" xml:space="preserve">
+    <value>Options (Custom Mode)</value>
+    <comment>category</comment>
+  </data>
+  <data name="Container_DisplayName" xml:space="preserve">
+    <value>Container</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="Container_Description" xml:space="preserve">
+    <value>Container </value>
+    <comment>activity description</comment>
+  </data>
+  <data name="Exit_DisplayName" xml:space="preserve">
+    <value>Exit</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="Exit_Description" xml:space="preserve">
+    <value>Exits from a Container</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="CultureScope_CultureName_Description" xml:space="preserve">
+    <value>The desired culture, eg.: en-US, pt-BR, jp-JP, etc.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="CultureScope_CultureName_DisplayName" xml:space="preserve">
+    <value>CultureName</value>
+    <comment>property name</comment>
+  </data>
+  <data name="CultureScope_Description" xml:space="preserve">
+    <value>Changes the thread culture to the specified one</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="CultureScope_DisplayName" xml:space="preserve">
+    <value>Culture Scope</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DictionaryToDataTable_DisplayName" xml:space="preserve">
+    <value>Dictionary To DataTable</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DictionaryToDataTable_Description" xml:space="preserve">
+    <value>Converts a Dictionary to DataTable</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DictionaryToDataTable_Dictionary_DisplayName" xml:space="preserve">
+    <value>Dictionary</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DictionaryToDataTable_Dictionary_Description" xml:space="preserve">
+    <value>The dictionary</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DictionaryToDataTable_DataTable_DisplayName" xml:space="preserve">
+    <value>DataTable</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DictionaryToDataTable_DataTable_Description" xml:space="preserve">
+    <value>The output Data Table</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DataRowToDictionary_DisplayName" xml:space="preserve">
+    <value>DataRow To Dictionary</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DataRowToDictionary_Description" xml:space="preserve">
+    <value>Converts a DataRow to Dictionary</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DataRowToDictionary_DataRow_DisplayName" xml:space="preserve">
+    <value>Data Row</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DataRowToDictionary_DataRow_Description" xml:space="preserve">
+    <value>The Data Row</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DataRowToDictionary_Dictionary_DisplayName" xml:space="preserve">
+    <value>Dictionary</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DataRowToDictionary_Dictionary_Description" xml:space="preserve">
+    <value>The output Dictionary</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DictionaryToDataTable_InputDictionary_Error" xml:space="preserve">
+    <value>The type must derived from Dictionary&lt;T1,T2&gt;</value>
+    <comment>error message</comment>
+  </data>
+  <data name="ValidationType_Error" xml:space="preserve">
+    <value>Please provide a value of type {0}.</value>
+    <comment>error message; wrong value type</comment>
+  </data>
+  <data name="WaitFile_FileDoesNotExist_Error" xml:space="preserve">
+    <value>The file path does not exist. Enable the WaitForExist option if you want to wait for the file to exist.</value>
+    <comment>property name</comment>
+  </data>
+  <data name="RemoveEmptyRows_CustomMode_Error" xml:space="preserve">
+    <value>Custom mode requires either {0} or {1}.</value>
+    <comment>error message</comment>
   </data>
 </root>

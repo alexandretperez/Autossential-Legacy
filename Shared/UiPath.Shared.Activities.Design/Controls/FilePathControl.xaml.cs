@@ -36,7 +36,7 @@ namespace UiPath.Shared.Activities.Design.Controls
             set { SetValue(PropertyNameProperty, value); }
         }
 
-        public static readonly DependencyProperty HintTextProperty = DependencyProperty.Register("HintText", typeof(string), typeof(FilePathControl), new PropertyMetadata("Text must be qouted"));
+        public static readonly DependencyProperty HintTextProperty = DependencyProperty.Register("HintText", typeof(string), typeof(FilePathControl), new PropertyMetadata("Text must be quoted"));
         public string HintText
         {
             get { return GetValue(HintTextProperty) as string; }
