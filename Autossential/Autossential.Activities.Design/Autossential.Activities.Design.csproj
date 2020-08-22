@@ -8,14 +8,14 @@
   <!-- Package Metadata -->
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Description>This package was generated using the UiPath VS Extension.</Description>
-    <Authors>Company</Authors>
-    <Company>Company</Company>
-    <Copyright>© 2020 Company</Copyright>
-    <PackageTags>UiPath Activit𝗒</PackageTags>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <Description>A set of custom activities.</Description>
+    <Authors>Alexandre Toledo Perez</Authors>
+    <Company>Alexandre Toledo Perez</Company>
+    <Copyright>© 2020 Alexandre Toledo Perez</Copyright>
+    <PackageTags>UiPath Activit𝗒 .NET Workflow</PackageTags>
     <PackageProjectUrl>https://docs.uipath.com/integrations/docs/how-to-create-activities</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/NuGet/Samples/master/PackageIconNuspecExample/icon.png</PackageIconUrl>
+    <PackageIconUrl></PackageIconUrl>
     <!--<PackageIcon>packageIcon.png</PackageIcon>--> <!--PackageIcon not yet supported in UiPath Studio-->
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
@@ -27,7 +27,7 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>0.1.0</PackageVersion>
+    <PackageVersion>1.0.0-alpha</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\AggregateDesigner.xaml" />
@@ -38,6 +38,14 @@
     <None Remove="Designers\ExitDesigner.xaml" />
     <None Remove="Designers\RemoveEmptyRowsDesigner.xaml" />
     <None Remove="Designers\WaitFileDesigner.xaml" />
+    <None Include="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="packageIcon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
@@ -60,6 +68,10 @@
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\Autossential.Activities.Design.xml</DocumentationFile>
+    <PackageIcon>packageIcon.png</PackageIcon>
+    <Product>Autossential.Activities</Product>
+    <Version>1.0.0-alpha</Version>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 	<ItemGroup>
 		<Reference Include="System" />

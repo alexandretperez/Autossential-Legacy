@@ -1,61 +1,47 @@
-using System;
-using System.Activities;
-using System.Threading;
-using System.Threading.Tasks;
+using Autossential.Activities.Contraints;
 using Autossential.Activities.Properties;
-using UiPath.Shared.Activities;
+using System.Activities;
+using System.Activities.Validation;
 using UiPath.Shared.Activities.Localization;
 
 namespace Autossential.Activities
 {
     [LocalizedDisplayName(nameof(Resources.Exit_DisplayName))]
     [LocalizedDescription(nameof(Resources.Exit_Description))]
-    public class Exit : ContinuableAsyncCodeActivity
+    public class Exit : NativeActivity
     {
-        #region Properties
+        private class ExitConstraint : ContainerChildConstraint { }
 
-        /// <summary>
-        /// If set, continue executing the remaining activities even if the current activity has failed.
-        /// </summary>
-        [LocalizedCategory(nameof(Resources.Common_Category))]
-        [LocalizedDisplayName(nameof(Resources.ContinueOnError_DisplayName))]
-        [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
-        public override InArgument<bool> ContinueOnError { get; set; }
+        internal const string ExitBookmark = "Exit";
 
-        #endregion
-
-
-        #region Constructors
+        protected override bool CanInduceIdle => true;
 
         public Exit()
         {
+            var arg = new DelegateInArgument<Exit>("constraintArg");
+            var ctx = new DelegateInArgument<ValidationContext>("validationContext");
+            Constraints.Add(new Constraint<Exit>
+            {
+                Body = new ActivityAction<Exit, ValidationContext>
+                {
+                    Argument1 = arg,
+                    Argument2 = ctx,
+                    Handler = new ExitConstraint
+                    {
+                        ParentChain = new GetParentChain { ValidationContext = ctx }
+                    }
+                }
+            });
         }
 
-        #endregion
-
-
-        #region Protected Methods
-
-        protected override void CacheMetadata(CodeActivityMetadata metadata)
+        protected override void Execute(NativeActivityContext context)
         {
-
-            base.CacheMetadata(metadata);
+            var bookmark = (Bookmark)context.Properties.Find(ExitBookmark);
+            if (bookmark != null)
+            {
+                var value = context.CreateBookmark();
+                context.ResumeBookmark(bookmark, value);
+            }
         }
-
-        protected override async Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken)
-        {
-            // Inputs
-    
-            ///////////////////////////
-            // Add execution logic HERE
-            ///////////////////////////
-
-            // Outputs
-            return (ctx) => {
-            };
-        }
-
-        #endregion
     }
 }
-

@@ -22,4 +22,27 @@
         <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/Autossential.Activities.Design;component/themes/icons.xaml}" />
     </sap:ActivityDesigner.Icon>
 
+
+    <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="115" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="115" />
+            </Grid.ColumnDefinitions>
+
+            <Label Content="{x:Static activity:Resources.DictionaryToDataTable_Dictionary_DisplayName}" Grid.Row="0"
+                   ToolTip="{x:Static activity:Resources.DictionaryToDataTable_Dictionary_Description}"/>
+            <sapv:ExpressionTextBox Grid.Row="1" ExpressionType="{Binding ModelItem.Properties[Dictionary].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding ModelItem}" HintText="{x:Static activity:Resources.DictionaryToDataTable_Dictionary_DisplayName}" UseLocationExpression="False" Expression="{Binding ModelItem.Dictionary, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label Content="{x:Static activity:Resources.DictionaryToDataTable_DataTable_DisplayName}" ContentStringFormat="{}{0} (Output)" Grid.Row="0" Grid.Column="2"
+                   ToolTip="{x:Static activity:Resources.DictionaryToDataTable_DataTable_Description}"/>
+            <sapv:ExpressionTextBox Grid.Row="1" Grid.Column="2" ExpressionType="{Binding ModelItem.Properties[DataTable].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding ModelItem}" HintText="{x:Static activity:Resources.DictionaryToDataTable_DataTable_DisplayName}" UseLocationExpression="True" Expression="{Binding ModelItem.DataTable, ConverterParameter=Out, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+    </uip:ActivityDecoratorControl>
+    
 </sap:ActivityDesigner>

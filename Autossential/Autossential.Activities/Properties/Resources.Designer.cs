@@ -169,24 +169,6 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Determines if the first row of the data table is a header.
-        /// </summary>
-        public static string Aggregate_HasHeaders_Description {
-            get {
-                return ResourceManager.GetString("Aggregate_HasHeaders_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Has Headers.
-        /// </summary>
-        public static string Aggregate_HasHeaders_DisplayName {
-            get {
-                return ResourceManager.GetString("Aggregate_HasHeaders_DisplayName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Authentication.
         /// </summary>
         public static string Authentication_Category {
@@ -205,7 +187,7 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Container .
+        ///   Looks up a localized string similar to Like a Sequence Activity, it executes a set of child activities sequentially, however, it can be combined with Exit Activity which interrupts the children execution flow exiting from the Container beforehand..
         /// </summary>
         public static string Container_Description {
             get {
@@ -259,7 +241,7 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Changes the thread culture to the specified one.
+        ///   Looks up a localized string similar to Applies a different culture for the current thread..
         /// </summary>
         public static string CultureScope_Description {
             get {
@@ -286,7 +268,7 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Data Row.
+        ///   Looks up a localized string similar to DataRow.
         /// </summary>
         public static string DataRowToDictionary_DataRow_DisplayName {
             get {
@@ -403,7 +385,7 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exits from a Container.
+        ///   Looks up a localized string similar to Exits from the Container Activity interrupting any child executions after it..
         /// </summary>
         public static string Exit_Description {
             get {
@@ -516,60 +498,6 @@ namespace Autossential.Activities.Properties {
         public static string RemoveEmptyRows_OutputDataTable_DisplayName {
             get {
                 return ResourceManager.GetString("RemoveEmptyRows_OutputDataTable_DisplayName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Automatics generate log.
-        /// </summary>
-        public static string Stopwatch_AutoLog_Description {
-            get {
-                return ResourceManager.GetString("Stopwatch_AutoLog_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Auto Log.
-        /// </summary>
-        public static string Stopwatch_AutoLog_DisplayName {
-            get {
-                return ResourceManager.GetString("Stopwatch_AutoLog_DisplayName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A stopwatch to performance diagnostics.
-        /// </summary>
-        public static string Stopwatch_Description {
-            get {
-                return ResourceManager.GetString("Stopwatch_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Stopwatch.
-        /// </summary>
-        public static string Stopwatch_DisplayName {
-            get {
-                return ResourceManager.GetString("Stopwatch_DisplayName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The log format.
-        /// </summary>
-        public static string Stopwatch_LogFormat_Description {
-            get {
-                return ResourceManager.GetString("Stopwatch_LogFormat_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Log Format.
-        /// </summary>
-        public static string Stopwatch_LogFormat_DisplayName {
-            get {
-                return ResourceManager.GetString("Stopwatch_LogFormat_DisplayName", resourceCulture);
             }
         }
         
@@ -736,7 +664,7 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Waits till the file exist..
+        ///   Looks up a localized string similar to Waits until the file exists..
         /// </summary>
         public static string WaitFile_WaitForExist_Description {
             get {

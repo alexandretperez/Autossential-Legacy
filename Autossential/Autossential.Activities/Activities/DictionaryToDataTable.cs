@@ -2,9 +2,11 @@ using System;
 using System.Activities;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using Autossential.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
+using System.Data;
 
 namespace Autossential.Activities
 {
@@ -22,14 +24,16 @@ namespace Autossential.Activities
         [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
         public override InArgument<bool> ContinueOnError { get; set; }
 
-        #endregion
+        [LocalizedDisplayName(nameof(Resources.DictionaryToDataTable_Dictionary_DisplayName))]
+        [LocalizedDescription(nameof(Resources.DictionaryToDataTable_Dictionary_Description))]
+        [LocalizedCategory(nameof(Resources.Input_Category))]
+        public InArgument<Dictionary<string, object>> Dictionary { get; set; }
 
 
-        #region Constructors
-
-        public DictionaryToDataTable()
-        {
-        }
+        [LocalizedDisplayName(nameof(Resources.DictionaryToDataTable_DataTable_DisplayName))]
+        [LocalizedDescription(nameof(Resources.DictionaryToDataTable_DataTable_Description))]
+        [LocalizedCategory(nameof(Resources.Output_Category))]
+        public OutArgument<DataTable> DataTable { get; set; }
 
         #endregion
 
@@ -38,6 +42,15 @@ namespace Autossential.Activities
 
         protected override void CacheMetadata(CodeActivityMetadata metadata)
         {
+            if (Dictionary == null)
+            {
+                metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, Resources.DictionaryToDataTable_Dictionary_DisplayName));
+            }
+
+            if (DataTable == null)
+            {
+                metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, Resources.DictionaryToDataTable_DataTable_DisplayName));
+            }
 
             base.CacheMetadata(metadata);
         }
@@ -45,14 +58,23 @@ namespace Autossential.Activities
         protected override async Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken)
         {
             // Inputs
-    
-            ///////////////////////////
-            // Add execution logic HERE
-            ///////////////////////////
+            var dic = Dictionary.Get(context);
+
+            var table = new DataTable();
+            if (dic.Count > 0)
+            {
+                foreach (var item in dic)
+                    table.Columns.Add(item.Key, item.Value == null || item.Value == DBNull.Value ? typeof(object) : item.Value.GetType());
+
+                var row = table.NewRow();
+                foreach (var item in dic)
+                    row[item.Key] = item.Value;
+
+                table.Rows.Add(row);
+            }
 
             // Outputs
-            return (ctx) => {
-            };
+            return (ctx) => DataTable.Set(ctx, table);
         }
 
         #endregion

@@ -23,15 +23,15 @@
     </sap:ActivityDesigner.Icon>
 
     <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
-        <Grid Width="300">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="115" />
                 <ColumnDefinition Width="10" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="115" />
             </Grid.ColumnDefinitions>
 
             <Label Content="{x:Static activity:Resources.RemoveEmptyRows_DataTable_DisplayName}" Grid.Row="0" Grid.Column="0"

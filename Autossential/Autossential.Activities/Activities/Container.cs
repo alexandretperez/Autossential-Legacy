@@ -1,8 +1,8 @@
+﻿using Autossential.Activities.Properties;
 using System;
 using System.Activities;
-using System.Threading;
-using System.Threading.Tasks;
-using Autossential.Activities.Properties;
+using System.Activities.Statements;
+using System.ComponentModel;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
 
@@ -10,52 +10,77 @@ namespace Autossential.Activities
 {
     [LocalizedDisplayName(nameof(Resources.Container_DisplayName))]
     [LocalizedDescription(nameof(Resources.Container_Description))]
-    public class Container : ContinuableAsyncCodeActivity
+    public class Container : NativeActivity
     {
-        #region Properties
+        // A tag used to identify the scope in the activity context
+        internal static string ParentContainerPropertyTag => "ScopeActivity";
 
-        /// <summary>
-        /// If set, continue executing the remaining activities even if the current activity has failed.
-        /// </summary>
-        [LocalizedCategory(nameof(Resources.Common_Category))]
-        [LocalizedDisplayName(nameof(Resources.ContinueOnError_DisplayName))]
-        [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
-        public override InArgument<bool> ContinueOnError { get; set; }
+        protected override bool CanInduceIdle => true;
 
-        #endregion
+        private IObjectContainer _objectContainer;
 
+        [Browsable(false)]
+        public ActivityAction<IObjectContainer​> Body { get; set; }
 
         #region Constructors
 
-        public Container()
+        public Container(IObjectContainer objectContainer)
         {
-        }
+            _objectContainer = objectContainer;
 
-        #endregion
-
-
-        #region Protected Methods
-
-        protected override void CacheMetadata(CodeActivityMetadata metadata)
-        {
-
-            base.CacheMetadata(metadata);
-        }
-
-        protected override async Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken)
-        {
-            // Inputs
-    
-            ///////////////////////////
-            // Add execution logic HERE
-            ///////////////////////////
-
-            // Outputs
-            return (ctx) => {
+            Body = new ActivityAction<IObjectContainer>
+            {
+                Argument = new DelegateInArgument<IObjectContainer>(ParentContainerPropertyTag),
+                Handler = new Sequence { DisplayName = Resources.Do }
             };
         }
 
-        #endregion
+        public Container() : this(new ObjectContainer())
+        {
+        }
+
+        #endregion Constructors
+
+        protected override void Execute(NativeActivityContext context)
+        {
+            var exitBookmark = context.CreateBookmark(OnExit, BookmarkOptions.NonBlocking);
+            context.Properties.Add(Exit.ExitBookmark, exitBookmark);
+
+            context.ScheduleAction<IObjectContainer>(Body, _objectContainer, OnCompleted, OnFaulted);
+        }
+
+        #region Events
+
+        private void OnFaulted(NativeActivityFaultContext faultContext, Exception propagatedException, ActivityInstance propagatedFrom)
+        {
+            faultContext.CancelChildren();
+            Cleanup();
+        }
+
+        private void OnCompleted(NativeActivityContext context, ActivityInstance completedInstance)
+        {
+            Cleanup();
+        }
+
+        #endregion Events
+
+        #region Helpers
+
+        private void Cleanup()
+        {
+            foreach (var obj in _objectContainer.Where(o => o is IDisposable))
+            {
+                if (obj is IDisposable dispObject)
+                    dispObject.Dispose();
+            }
+            _objectContainer.Clear();
+        }
+
+        #endregion Helpers
+
+        private void OnExit(NativeActivityContext context, Bookmark bookmark, object value)
+        {
+            context.CancelChildren();
+        }
     }
 }
-

@@ -198,7 +198,7 @@
     <comment>property name</comment>
   </data>
   <data name="WaitFile_WaitForExist_Description" xml:space="preserve">
-    <value>Waits till the file exist.</value>
+    <value>Waits until the file exists.</value>
     <comment>property description</comment>
   </data>
   <data name="WaitFile_FileInfo_DisplayName" xml:space="preserve">
@@ -257,14 +257,6 @@
     <value>Function</value>
     <comment>property name</comment>
   </data>
-  <data name="Aggregate_HasHeaders_Description" xml:space="preserve">
-    <value>Determines if the first row of the data table is a header</value>
-    <comment>property description</comment>
-  </data>
-  <data name="Aggregate_HasHeaders_DisplayName" xml:space="preserve">
-    <value>Has Headers</value>
-    <comment>property name</comment>
-  </data>
   <data name="WaitFile_Interval_Description" xml:space="preserve">
     <value>Specifies the amount of time (in milliseconds) for the file re-check. Any values out of the range of 100-30000 milliseconds is reseted to its nearest limit. The default value is 500.</value>
     <comment>property description</comment>
@@ -301,30 +293,6 @@
     <value>The result data table</value>
     <comment>property description</comment>
   </data>
-  <data name="Stopwatch_DisplayName" xml:space="preserve">
-    <value>Stopwatch</value>
-    <comment>activity name</comment>
-  </data>
-  <data name="Stopwatch_Description" xml:space="preserve">
-    <value>A stopwatch to performance diagnostics</value>
-    <comment>activity description</comment>
-  </data>
-  <data name="Stopwatch_AutoLog_DisplayName" xml:space="preserve">
-    <value>Auto Log</value>
-    <comment>property name</comment>
-  </data>
-  <data name="Stopwatch_AutoLog_Description" xml:space="preserve">
-    <value>Automatics generate log</value>
-    <comment>property description</comment>
-  </data>
-  <data name="Stopwatch_LogFormat_DisplayName" xml:space="preserve">
-    <value>Log Format</value>
-    <comment>property name</comment>
-  </data>
-  <data name="Stopwatch_LogFormat_Description" xml:space="preserve">
-    <value>The log format</value>
-    <comment>property description</comment>
-  </data>
   <data name="RemoveEmptyRows_CustomOptions_Category" xml:space="preserve">
     <value>Options (Custom Mode)</value>
     <comment>category</comment>
@@ -334,7 +302,7 @@
     <comment>activity name</comment>
   </data>
   <data name="Container_Description" xml:space="preserve">
-    <value>Container </value>
+    <value>Like a Sequence Activity, it executes a set of child activities sequentially, however, it can be combined with Exit Activity which interrupts the children execution flow exiting from the Container beforehand.</value>
     <comment>activity description</comment>
   </data>
   <data name="Exit_DisplayName" xml:space="preserve">
@@ -342,7 +310,7 @@
     <comment>activity name</comment>
   </data>
   <data name="Exit_Description" xml:space="preserve">
-    <value>Exits from a Container</value>
+    <value>Exits from the Container Activity interrupting any child executions after it.</value>
     <comment>activity description</comment>
   </data>
   <data name="CultureScope_CultureName_Description" xml:space="preserve">
@@ -354,7 +322,7 @@
     <comment>property name</comment>
   </data>
   <data name="CultureScope_Description" xml:space="preserve">
-    <value>Changes the thread culture to the specified one</value>
+    <value>Applies a different culture for the current thread.</value>
     <comment>activity description</comment>
   </data>
   <data name="CultureScope_DisplayName" xml:space="preserve">
@@ -394,7 +362,7 @@
     <comment>activity description</comment>
   </data>
   <data name="DataRowToDictionary_DataRow_DisplayName" xml:space="preserve">
-    <value>Data Row</value>
+    <value>DataRow</value>
     <comment>property name</comment>
   </data>
   <data name="DataRowToDictionary_DataRow_Description" xml:space="preserve">
