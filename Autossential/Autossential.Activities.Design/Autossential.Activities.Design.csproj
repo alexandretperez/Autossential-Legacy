@@ -14,7 +14,7 @@
     <Company>Alexandre Toledo Perez</Company>
     <Copyright>© 2020 Alexandre Toledo Perez</Copyright>
     <PackageTags>UiPath Activit𝗒 .NET Workflow</PackageTags>
-    <PackageProjectUrl>https://docs.uipath.com/integrations/docs/how-to-create-activities</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/alexandretperez/Autossential</PackageProjectUrl>
     <PackageIconUrl></PackageIconUrl>
     <!--<PackageIcon>packageIcon.png</PackageIcon>--> <!--PackageIcon not yet supported in UiPath Studio-->
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -72,6 +72,8 @@
     <Product>Autossential.Activities</Product>
     <Version>1.0.0-alpha</Version>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/alexandretperez/Autossential</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
   </PropertyGroup>
 	<ItemGroup>
 		<Reference Include="System" />
