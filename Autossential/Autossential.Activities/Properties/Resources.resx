@@ -393,4 +393,64 @@
     <value>Custom mode requires either {0} or {1}.</value>
     <comment>error message</comment>
   </data>
+  <data name="Increment_DisplayName" xml:space="preserve">
+    <value>Increment</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="Increment_Description" xml:space="preserve">
+    <value>Increments the value of a variable by the specified increment value</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="Increment_Variable_DisplayName" xml:space="preserve">
+    <value>Variable</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Increment_Variable_Description" xml:space="preserve">
+    <value>The variable to be incremented</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Increment_Value_DisplayName" xml:space="preserve">
+    <value>Value</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Increment_Value_Description" xml:space="preserve">
+    <value>The increment value</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Decrement_DisplayName" xml:space="preserve">
+    <value>Decrement</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="Decrement_Description" xml:space="preserve">
+    <value>Decrements the value of a variable by the specified decrement value</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="Decrement_Variable_DisplayName" xml:space="preserve">
+    <value>Variable</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Decrement_Variable_Description" xml:space="preserve">
+    <value>The variable to decrement</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Decrement_Value_DisplayName" xml:space="preserve">
+    <value>Value</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Decrement_Value_Description" xml:space="preserve">
+    <value>The decrement value</value>
+    <comment>property description</comment>
+  </data>
+  <data name="InputOutput_Category" xml:space="preserve">
+    <value>Reference</value>
+    <comment>category</comment>
+  </data>
+  <data name="Decrement_Value_Error" xml:space="preserve">
+    <value>The decrement value cannot be smaller than 1.</value>
+    <comment>error message</comment>
+  </data>
+  <data name="Increment_Value_Error" xml:space="preserve">
+    <value>The increment value cannot be smaller than 1.</value>
+    <comment>error message</comment>
+  </data>
 </root>

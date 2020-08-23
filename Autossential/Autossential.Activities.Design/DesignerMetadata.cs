@@ -51,6 +51,14 @@ namespace Autossential.Activities.Design
             builder.AddCustomAttributes(typeof(DictionaryToDataTable), new DesignerAttribute(typeof(DictionaryToDataTableDesigner)));
             builder.AddCustomAttributes(typeof(DictionaryToDataTable), new HelpKeywordAttribute(""));
 
+            builder.AddCustomAttributes(typeof(Increment), programmingCategory);
+            builder.AddCustomAttributes(typeof(Increment), new DesignerAttribute(typeof(IncrementDesigner)));
+            builder.AddCustomAttributes(typeof(Increment), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(Decrement), programmingCategory);
+            builder.AddCustomAttributes(typeof(Decrement), new DesignerAttribute(typeof(DecrementDesigner)));
+            builder.AddCustomAttributes(typeof(Decrement), new HelpKeywordAttribute(""));
+
 
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }

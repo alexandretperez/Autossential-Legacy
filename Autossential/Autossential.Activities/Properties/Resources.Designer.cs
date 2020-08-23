@@ -313,6 +313,69 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Decrements the value of a variable by the specified decrement value.
+        /// </summary>
+        public static string Decrement_Description {
+            get {
+                return ResourceManager.GetString("Decrement_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decrement.
+        /// </summary>
+        public static string Decrement_DisplayName {
+            get {
+                return ResourceManager.GetString("Decrement_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The decrement value.
+        /// </summary>
+        public static string Decrement_Value_Description {
+            get {
+                return ResourceManager.GetString("Decrement_Value_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        public static string Decrement_Value_DisplayName {
+            get {
+                return ResourceManager.GetString("Decrement_Value_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The decrement value cannot be smaller than 1..
+        /// </summary>
+        public static string Decrement_Value_Error {
+            get {
+                return ResourceManager.GetString("Decrement_Value_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The variable to decrement.
+        /// </summary>
+        public static string Decrement_Variable_Description {
+            get {
+                return ResourceManager.GetString("Decrement_Variable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Variable.
+        /// </summary>
+        public static string Decrement_Variable_DisplayName {
+            get {
+                return ResourceManager.GetString("Decrement_Variable_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The output Data Table.
         /// </summary>
         public static string DictionaryToDataTable_DataTable_Description {
@@ -403,11 +466,83 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Increments the value of a variable by the specified increment value.
+        /// </summary>
+        public static string Increment_Description {
+            get {
+                return ResourceManager.GetString("Increment_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Increment.
+        /// </summary>
+        public static string Increment_DisplayName {
+            get {
+                return ResourceManager.GetString("Increment_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The increment value.
+        /// </summary>
+        public static string Increment_Value_Description {
+            get {
+                return ResourceManager.GetString("Increment_Value_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        public static string Increment_Value_DisplayName {
+            get {
+                return ResourceManager.GetString("Increment_Value_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The increment value cannot be smaller than 1..
+        /// </summary>
+        public static string Increment_Value_Error {
+            get {
+                return ResourceManager.GetString("Increment_Value_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The variable to be incremented.
+        /// </summary>
+        public static string Increment_Variable_Description {
+            get {
+                return ResourceManager.GetString("Increment_Variable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Variable.
+        /// </summary>
+        public static string Increment_Variable_DisplayName {
+            get {
+                return ResourceManager.GetString("Increment_Variable_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Input.
         /// </summary>
         public static string Input_Category {
             get {
                 return ResourceManager.GetString("Input_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reference.
+        /// </summary>
+        public static string InputOutput_Category {
+            get {
+                return ResourceManager.GetString("InputOutput_Category", resourceCulture);
             }
         }
         

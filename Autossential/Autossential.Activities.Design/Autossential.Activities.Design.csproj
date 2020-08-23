@@ -34,8 +34,10 @@
     <None Remove="Designers\ContainerDesigner.xaml" />
     <None Remove="Designers\CultureScopeDesigner.xaml" />
     <None Remove="Designers\DataRowToDictionaryDesigner.xaml" />
+    <None Remove="Designers\DecrementDesigner.xaml" />
     <None Remove="Designers\DictionaryToDataTableDesigner.xaml" />
     <None Remove="Designers\ExitDesigner.xaml" />
+    <None Remove="Designers\IncrementDesigner.xaml" />
     <None Remove="Designers\RemoveEmptyRowsDesigner.xaml" />
     <None Remove="Designers\WaitFileDesigner.xaml" />
     <None Include="LICENSE.txt">
@@ -70,7 +72,7 @@
     <DocumentationFile>bin\$(Configuration)\Autossential.Activities.Design.xml</DocumentationFile>
     <PackageIcon>packageIcon.png</PackageIcon>
     <Product>Autossential.Activities</Product>
-    <Version>1.0.0-alpha</Version>
+    <Version>1.0.0-alpha2</Version>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <RepositoryUrl>https://github.com/alexandretperez/Autossential</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
@@ -110,11 +112,19 @@
     <Page Include="Designers\DataRowToDictionaryDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
+    <Page Include="Designers\DecrementDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
     <Page Include="Designers\DictionaryToDataTableDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\ExitDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\IncrementDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\RemoveEmptyRowsDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

@@ -28,7 +28,7 @@
     <DrawingBrush x:Key="AggregateIcon" Drawing="{StaticResource AggregateIconSource}" />
 
     <!--RemoveEmptyRows Icon-->
-    <DrawingGroup x:Key="tablerowremovef4cfdf569a9b4ff09defa2d3d3853da8_0">
+    <DrawingGroup x:Key="RemoveEmptyRowsIconSource">
         <DrawingGroup.ClipGeometry>
             <RectangleGeometry Rect="0,0,24,24" />
         </DrawingGroup.ClipGeometry>
@@ -38,10 +38,10 @@
             </GeometryDrawing.Geometry>
         </GeometryDrawing>
     </DrawingGroup>
-    <DrawingBrush x:Key="RemoveEmptyRowsIcon" Drawing="{StaticResource tablerowremovef4cfdf569a9b4ff09defa2d3d3853da8_0}" />
+    <DrawingBrush x:Key="RemoveEmptyRowsIcon" Drawing="{StaticResource RemoveEmptyRowsIconSource}" />
 
     <!--Container Icon-->
-    <DrawingGroup x:Key="checkboxblankoutline96cd908cd9ec4d49b5071447c8b8f87a_0">
+    <DrawingGroup x:Key="ContainerIconSource">
         <DrawingGroup.ClipGeometry>
             <RectangleGeometry Rect="0,0,24,24" />
         </DrawingGroup.ClipGeometry>
@@ -51,10 +51,10 @@
             </GeometryDrawing.Geometry>
         </GeometryDrawing>
     </DrawingGroup>
-    <DrawingBrush x:Key="ContainerIcon" Drawing="{StaticResource checkboxblankoutline96cd908cd9ec4d49b5071447c8b8f87a_0}" />
+    <DrawingBrush x:Key="ContainerIcon" Drawing="{StaticResource ContainerIconSource}" />
 
     <!--Exit Icon-->
-    <DrawingGroup x:Key="checkboxblankoffoutlinefe2defb1dc4e4808b3d750d5df67cdfe_0">
+    <DrawingGroup x:Key="ExitIconSource">
         <DrawingGroup.ClipGeometry>
             <RectangleGeometry Rect="0,0,24,24" />
         </DrawingGroup.ClipGeometry>
@@ -64,46 +64,82 @@
             </GeometryDrawing.Geometry>
         </GeometryDrawing>
     </DrawingGroup>
-    <DrawingBrush x:Key="ExitIcon" Drawing="{StaticResource checkboxblankoffoutlinefe2defb1dc4e4808b3d750d5df67cdfe_0}" />
+    <DrawingBrush x:Key="ExitIcon" Drawing="{StaticResource ExitIconSource}" />
 
     <!--Culture Icon-->
-    <DrawingGroup x:Key="checkboxblankoutlinecd0538c655244a6a86883efaa5cad771_0">
-      <DrawingGroup.ClipGeometry>
-        <RectangleGeometry Rect="0,0,24,24" />
-      </DrawingGroup.ClipGeometry>
-      <GeometryDrawing Brush="#FFFFB052">
-        <GeometryDrawing.Geometry>
-          <PathGeometry FillRule="Nonzero" Figures="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
-        </GeometryDrawing.Geometry>
-      </GeometryDrawing>
+    <DrawingGroup x:Key="CultureScopeIconSource">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0,0,24,24" />
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#fff08200">
+            <GeometryDrawing.Geometry>
+                <PathGeometry FillRule="Nonzero" Figures="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
     </DrawingGroup>
-    <DrawingBrush x:Key="CultureScopeIcon" Drawing="{StaticResource checkboxblankoutlinecd0538c655244a6a86883efaa5cad771_0}" />
+    <DrawingBrush x:Key="CultureScopeIcon" Drawing="{StaticResource CultureScopeIconSource}" />
 
     <!--DictionaryToDataTable Icon-->
-    <DrawingGroup x:Key="tablecogf1ed57b13f64465bbef44a9cb5c3076e_0">
-      <DrawingGroup.ClipGeometry>
-        <RectangleGeometry Rect="0,0,24,24" />
-      </DrawingGroup.ClipGeometry>
+    <DrawingGroup x:Key="DictionaryToDataTableIconSource">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0,0,24,24" />
+        </DrawingGroup.ClipGeometry>
         <GeometryDrawing Brush="#FF00C373">
-        <GeometryDrawing.Geometry>
-          <PathGeometry FillRule="Nonzero" Figures="M3,3L17,3C18.11,3,19,3.9,19,5L19,12.08C17.45,11.82,15.92,12.18,14.68,13L11,13 11,17 12.08,17C11.97,17.68,11.97,18.35,12.08,19L3,19C1.9,19,1,18.11,1,17L1,5C1,3.9,1.9,3,3,3 M3,7L3,11 9,11 9,7 3,7 M11,7L11,11 17,11 17,7 11,7 M3,13L3,17 9,17 9,13 3,13 M22.78,19.32L21.71,18.5C21.73,18.33 21.75,18.17 21.75,18 21.75,17.83 21.74,17.67 21.71,17.5L22.77,16.68C22.86,16.6,22.89,16.47,22.83,16.36L21.83,14.63C21.77,14.5,21.64,14.5,21.5,14.5L20.28,15C20,14.82,19.74,14.65,19.43,14.53L19.24,13.21C19.23,13.09,19.12,13,19,13L17,13C16.88,13,16.77,13.09,16.75,13.21L16.56,14.53C16.26,14.66,15.97,14.82,15.71,15L14.47,14.5C14.36,14.5,14.23,14.5,14.16,14.63L13.16,16.36C13.1,16.47,13.12,16.6,13.22,16.68L14.28,17.5C14.26,17.67 14.25,17.83 14.25,18 14.25,18.17 14.26,18.33 14.28,18.5L13.22,19.32C13.13,19.4,13.1,19.53,13.16,19.64L14.16,21.37C14.22,21.5,14.35,21.5,14.47,21.5L15.71,21C15.97,21.18,16.25,21.35,16.56,21.47L16.75,22.79C16.77,22.91,16.87,23,17,23L19,23C19.12,23,19.23,22.91,19.25,22.79L19.44,21.47C19.74,21.34,20,21.18,20.28,21L21.5,21.5C21.64,21.5,21.77,21.5,21.84,21.37L22.84,19.64C22.9,19.53,22.87,19.4,22.78,19.32 M18,19.5C17.17,19.5 16.5,18.83 16.5,18 16.5,17.17 17.18,16.5 18,16.5 18.82,16.5 19.5,17.17 19.5,18 19.5,18.83 18.84,19.5 18,19.5z" />
-        </GeometryDrawing.Geometry>
-      </GeometryDrawing>
+            <GeometryDrawing.Geometry>
+                <PathGeometry FillRule="Nonzero" Figures="M3,3L17,3C18.11,3,19,3.9,19,5L19,12.08C17.45,11.82,15.92,12.18,14.68,13L11,13 11,17 12.08,17C11.97,17.68,11.97,18.35,12.08,19L3,19C1.9,19,1,18.11,1,17L1,5C1,3.9,1.9,3,3,3 M3,7L3,11 9,11 9,7 3,7 M11,7L11,11 17,11 17,7 11,7 M3,13L3,17 9,17 9,13 3,13 M22.78,19.32L21.71,18.5C21.73,18.33 21.75,18.17 21.75,18 21.75,17.83 21.74,17.67 21.71,17.5L22.77,16.68C22.86,16.6,22.89,16.47,22.83,16.36L21.83,14.63C21.77,14.5,21.64,14.5,21.5,14.5L20.28,15C20,14.82,19.74,14.65,19.43,14.53L19.24,13.21C19.23,13.09,19.12,13,19,13L17,13C16.88,13,16.77,13.09,16.75,13.21L16.56,14.53C16.26,14.66,15.97,14.82,15.71,15L14.47,14.5C14.36,14.5,14.23,14.5,14.16,14.63L13.16,16.36C13.1,16.47,13.12,16.6,13.22,16.68L14.28,17.5C14.26,17.67 14.25,17.83 14.25,18 14.25,18.17 14.26,18.33 14.28,18.5L13.22,19.32C13.13,19.4,13.1,19.53,13.16,19.64L14.16,21.37C14.22,21.5,14.35,21.5,14.47,21.5L15.71,21C15.97,21.18,16.25,21.35,16.56,21.47L16.75,22.79C16.77,22.91,16.87,23,17,23L19,23C19.12,23,19.23,22.91,19.25,22.79L19.44,21.47C19.74,21.34,20,21.18,20.28,21L21.5,21.5C21.64,21.5,21.77,21.5,21.84,21.37L22.84,19.64C22.9,19.53,22.87,19.4,22.78,19.32 M18,19.5C17.17,19.5 16.5,18.83 16.5,18 16.5,17.17 17.18,16.5 18,16.5 18.82,16.5 19.5,17.17 19.5,18 19.5,18.83 18.84,19.5 18,19.5z" />
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
     </DrawingGroup>
-    <DrawingBrush x:Key="DictionaryToDataTableIcon" Drawing="{StaticResource tablecogf1ed57b13f64465bbef44a9cb5c3076e_0}" />
+    <DrawingBrush x:Key="DictionaryToDataTableIcon" Drawing="{StaticResource DictionaryToDataTableIconSource}" />
 
     <!--DataRowToDictionary Icon-->
-    <DrawingGroup x:Key="filetableboxoutline146949dd43844090af7bec9c017bf907_0">
-      <DrawingGroup.ClipGeometry>
-        <RectangleGeometry Rect="0,0,24,24" />
-      </DrawingGroup.ClipGeometry>
+    <DrawingGroup x:Key="DataRowToDictionaryIconSource">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0,0,24,24" />
+        </DrawingGroup.ClipGeometry>
         <GeometryDrawing Brush="#FF00C373">
-        <GeometryDrawing.Geometry>
-          <PathGeometry FillRule="Nonzero" Figures="M19,3L5,3C3.89,3,3,3.89,3,5L3,19C3,20.11,3.89,21,5,21L19,21C20.11,21,21,20.11,21,19L21,5C21,3.89,20.11,3,19,3 M19,19L5,19 5,5 19,5 19,19 M9,18L6,18 6,16 9,16 9,18 M13,18L10,18 10,16 13,16 13,18 M9,15L6,15 6,13 9,13 9,15 M13,15L10,15 10,13 13,13 13,15 M9,12L6,12 6,10 9,10 9,12 M13,12L10,12 10,10 13,10 13,12z" />
-        </GeometryDrawing.Geometry>
-      </GeometryDrawing>
+            <GeometryDrawing.Geometry>
+                <PathGeometry FillRule="Nonzero" Figures="M19,3L5,3C3.89,3,3,3.89,3,5L3,19C3,20.11,3.89,21,5,21L19,21C20.11,21,21,20.11,21,19L21,5C21,3.89,20.11,3,19,3 M19,19L5,19 5,5 19,5 19,19 M9,18L6,18 6,16 9,16 9,18 M13,18L10,18 10,16 13,16 13,18 M9,15L6,15 6,13 9,13 9,15 M13,15L10,15 10,13 13,13 13,15 M9,12L6,12 6,10 9,10 9,12 M13,12L10,12 10,10 13,10 13,12z" />
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
     </DrawingGroup>
-    <DrawingBrush x:Key="DataRowToDictionaryIcon" Drawing="{StaticResource filetableboxoutline146949dd43844090af7bec9c017bf907_0}" />
+    <DrawingBrush x:Key="DataRowToDictionaryIcon" Drawing="{StaticResource DataRowToDictionaryIconSource}" />
+
+    <!--Increment Icon-->
+    <DrawingGroup x:Key="IncrementIconSource">
+        <DrawingGroup x:Name="DrawingLayer">
+            <DrawingGroup.ClipGeometry>
+                <RectangleGeometry Rect="649.95,342.252,44.384,20.216" />
+            </DrawingGroup.ClipGeometry>
+            <DrawingGroup.Transform>
+                <TranslateTransform X="-649.95" Y="-342.252" />
+            </DrawingGroup.Transform>
+            <GeometryDrawing Brush="#fff08200">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry FillRule="Nonzero" Figures="M694.334,350.308L694.334,354.526 687.912,354.526 687.912,361.024 683.542,361.024 683.542,354.526 677.12,354.526 677.12,350.308 683.542,350.308 683.542,343.772 687.912,343.772 687.912,350.308 694.334,350.308 694.334,350.308z M650.178,362.468L649.988,358.858 652.344,358.174 652.344,348.978 652.344,348.978Q652.344,348.142,652.23,347.895L652.23,347.895 652.23,347.895Q652.116,347.648,651.622,347.344L651.622,347.344 649.95,346.432 650.064,343.582 650.9,343.43 650.9,343.43Q655.878,342.442,658.082,342.366L658.082,342.366 658.082,342.366Q658.386,343.164,658.576,344.114L658.576,344.114 658.576,344.114Q660.894,343.05,662.357,342.651L662.357,342.651 662.357,342.651Q663.82,342.252,665.112,342.252L665.112,342.252 665.112,342.252Q671.154,342.252,671.154,349.472L671.154,349.472 671.154,356.92 671.154,356.92Q671.154,357.718,671.268,357.984L671.268,357.984 671.268,357.984Q671.382,358.25,671.914,358.554L671.914,358.554 673.738,359.618 673.586,362.468 663.098,362.468 662.908,358.858 664.77,358.326 664.77,351.144 664.77,351.144Q664.77,349.434,664.656,348.75L664.656,348.75 664.656,348.75Q664.542,348.066,664.029,347.686L664.029,347.686 664.029,347.686Q663.516,347.306,662.224,347.306L662.224,347.306 662.224,347.306Q660.856,347.306,658.766,347.724L658.766,347.724 658.766,356.92 658.766,356.92Q658.766,357.718,658.88,357.984L658.88,357.984 658.88,357.984Q658.994,358.25,659.488,358.554L659.488,358.554 661.35,359.618 661.198,362.468 650.178,362.468 650.178,362.468z" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingBrush x:Key="IncrementIcon" Drawing="{StaticResource IncrementIconSource}" />
+
+    <!--Decrement Icon-->
+    <DrawingGroup x:Key="DecrementIconSource">
+        <DrawingGroup x:Name="DrawingLayer">
+            <DrawingGroup.ClipGeometry>
+                <RectangleGeometry Rect="480.95,297.252,37.392,20.216" />
+            </DrawingGroup.ClipGeometry>
+            <DrawingGroup.Transform>
+                <TranslateTransform X="-480.95" Y="-297.252" />
+            </DrawingGroup.Transform>
+            <GeometryDrawing Brush="#fff08200">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry FillRule="Nonzero" Figures="M481.178,317.468L480.988,313.858 483.344,313.174 483.344,303.978 483.344,303.978Q483.344,303.142,483.23,302.895L483.23,302.895 483.23,302.895Q483.116,302.648,482.622,302.344L482.622,302.344 480.95,301.432 481.064,298.582 481.9,298.43 481.9,298.43Q486.878,297.442,489.082,297.366L489.082,297.366 489.082,297.366Q489.386,298.164,489.576,299.114L489.576,299.114 489.576,299.114Q491.894,298.05,493.357,297.651L493.357,297.651 493.357,297.651Q494.82,297.252,496.112,297.252L496.112,297.252 496.112,297.252Q502.154,297.252,502.154,304.472L502.154,304.472 502.154,311.92 502.154,311.92Q502.154,312.718,502.268,312.984L502.268,312.984 502.268,312.984Q502.382,313.25,502.914,313.554L502.914,313.554 504.738,314.618 504.586,317.468 494.098,317.468 493.908,313.858 495.77,313.326 495.77,306.144 495.77,306.144Q495.77,304.434,495.656,303.75L495.656,303.75 495.656,303.75Q495.542,303.066,495.029,302.686L495.029,302.686 495.029,302.686Q494.516,302.306,493.224,302.306L493.224,302.306 493.224,302.306Q491.856,302.306,489.766,302.724L489.766,302.724 489.766,311.92 489.766,311.92Q489.766,312.718,489.88,312.984L489.88,312.984 489.88,312.984Q489.994,313.25,490.488,313.554L490.488,313.554 492.35,314.618 492.198,317.468 481.178,317.468 481.178,317.468z M507.094,308.386L507.094,304.624 516.366,303.37 518.342,303.37 518.342,308.386 507.094,308.386 507.094,308.386z" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingBrush x:Key="DecrementIcon" Drawing="{StaticResource DecrementIconSource}" />
 
 
 </ResourceDictionary>
