@@ -24,14 +24,11 @@
 
 
     <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
-        <DockPanel LastChildFill="True" MinWidth="300">
+        <DockPanel LastChildFill="True">
             <sap:WorkflowItemPresenter x:Uid="sad:WorkflowItemPresenter_1"
                                        AutomationProperties.AutomationId="Activity"
                                        DockPanel.Dock="Bottom"
-                                       MinWidth="200"
-                                       Margin="0,10,0,0"
                                        Item="{Binding Path=ModelItem.Body.Handler, Mode=TwoWay}"
-                                       AllowedItemType="{x:Type sa:Activity}"
                                        HintText="{x:Static p:Resources.DropActivityHere}" />
 
         </DockPanel>
