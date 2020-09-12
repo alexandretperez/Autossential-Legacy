@@ -31,8 +31,13 @@ namespace Autossential.Activities
             Body = new ActivityAction<IObjectContainer>
             {
                 Argument = new DelegateInArgument<IObjectContainer>(ParentContainerPropertyTag),
-                Handler = new Sequence { DisplayName = Resources.Do }
+                Handler = DefaultBody()
             };
+        }
+
+        public static Activity DefaultBody()
+        {
+            return new Sequence { DisplayName = Resources.Do };
         }
 
         public Container() : this(new ObjectContainer())
@@ -81,6 +86,7 @@ namespace Autossential.Activities
         private void OnExit(NativeActivityContext context, Bookmark bookmark, object value)
         {
             context.CancelChildren();
+            Cleanup();
         }
     }
 }

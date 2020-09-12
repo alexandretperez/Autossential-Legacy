@@ -39,6 +39,11 @@ namespace Autossential.Activities
         [LocalizedCategory(nameof(Resources.Options_Category))]
         public bool WaitForExist { get; set; }
 
+        [LocalizedDisplayName(nameof(Resources.WaitFile_KeepPrimaryException_DisplayName))]
+        [LocalizedDescription(nameof(Resources.WaitFile_KeepPrimaryException_Description))]
+        [LocalizedCategory(nameof(Resources.Options_Category))]
+        public bool KeepPrimaryException { get; set; }
+
         [LocalizedDisplayName(nameof(Resources.WaitFile_FileInfo_DisplayName))]
         [LocalizedDescription(nameof(Resources.WaitFile_FileInfo_Description))]
         [LocalizedCategory(nameof(Resources.Output_Category))]
@@ -53,9 +58,9 @@ namespace Autossential.Activities
 
         private const int MaximumInterval = 30000;
 
+        private Exception _primaryException;
+
         #endregion Properties
-
-
 
         #region Protected Methods
 
@@ -77,7 +82,14 @@ namespace Autossential.Activities
             // Set a timeout on the execution
             var task = ExecuteWithTimeout(context, filePath, cancellationToken);
             if (await Task.WhenAny(task, Task.Delay(timeout, cancellationToken)).ConfigureAwait(false) != task)
+            {
+                if (KeepPrimaryException && _primaryException != null)
+                {
+                    throw _primaryException;
+                }
+
                 throw new TimeoutException(Resources.Timeout_Error);
+            }
 
             await task.ConfigureAwait(false);
 
@@ -108,8 +120,9 @@ namespace Autossential.Activities
                             }
                         }
                     }
-                    catch (IOException)
+                    catch (Exception e)
                     {
+                        _primaryException = e;
                         Thread.Sleep(interval);
                     }
                 } while (!done);

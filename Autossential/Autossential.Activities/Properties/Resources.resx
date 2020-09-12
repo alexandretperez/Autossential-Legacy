@@ -453,4 +453,16 @@
     <value>The increment value cannot be smaller than 1.</value>
     <comment>error message</comment>
   </data>
+  <data name="WaitFile_FilePath_HintText" xml:space="preserve">
+    <value>The full or relative file path.</value>
+    <comment>property hint text</comment>
+  </data>
+  <data name="WaitFile_KeepPrimaryException_Description" xml:space="preserve">
+    <value>Keeps the primary exception on the throw statement when the timeout is reached.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="WaitFile_KeepPrimaryException_DisplayName" xml:space="preserve">
+    <value>KeepPrimaryException</value>
+    <comment>property name</comment>
+  </data>
 </root>

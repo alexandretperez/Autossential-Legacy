@@ -1,8 +1,8 @@
+using Autossential.Activities.Design.Designers;
+using Autossential.Activities.Design.Properties;
 using System.Activities.Presentation.Metadata;
 using System.ComponentModel;
 using System.ComponentModel.Design;
-using Autossential.Activities.Design.Designers;
-using Autossential.Activities.Design.Properties;
 
 namespace Autossential.Activities.Design
 {
@@ -58,7 +58,6 @@ namespace Autossential.Activities.Design
             builder.AddCustomAttributes(typeof(Decrement), programmingCategory);
             builder.AddCustomAttributes(typeof(Decrement), new DesignerAttribute(typeof(DecrementDesigner)));
             builder.AddCustomAttributes(typeof(Decrement), new HelpKeywordAttribute(""));
-
 
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }

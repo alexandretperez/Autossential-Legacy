@@ -24,21 +24,13 @@
 
 
     <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
-        <Grid Width="300">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Label Content="{x:Static activity:Resources.WaitFile_FilePath_DisplayName}" Grid.Row="0"
-                   ToolTip="{x:Static activity:Resources.WaitFile_FilePath_Description}"/>
-            <uip:FilePathControl HorizontalAlignment="Left" 
+        <uip:FilePathControl HorizontalAlignment="Left" 
                                  Height="23" Margin="0,0,0,0" Grid.Row="1" 
                                  VerticalAlignment="Top" Width="300"
                                  ModelItem="{Binding ModelItem}"
                                  PropertyName="FilePath"
-                                 Expression="{Binding Path=ModelItem.FilePath, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}">
-            </uip:FilePathControl>
-        </Grid>
+                                 Expression="{Binding Path=ModelItem.FilePath, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}"
+                                 HintText="{x:Static activity:Resources.WaitFile_FilePath_HintText}"/>
     </uip:ActivityDecoratorControl>
 
 </sap:ActivityDesigner>

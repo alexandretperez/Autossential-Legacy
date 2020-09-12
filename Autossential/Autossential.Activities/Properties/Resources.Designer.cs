@@ -772,6 +772,15 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The full or relative file path..
+        /// </summary>
+        public static string WaitFile_FilePath_HintText {
+            get {
+                return ResourceManager.GetString("WaitFile_FilePath_HintText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Specifies the amount of time (in milliseconds) for the file re-check. Any values out of the range of 100-30000 milliseconds is reseted to its nearest limit. The default value is 500..
         /// </summary>
         public static string WaitFile_Interval_Description {
@@ -795,6 +804,24 @@ namespace Autossential.Activities.Properties {
         public static string WaitFile_Interval_Range_Error {
             get {
                 return ResourceManager.GetString("WaitFile_Interval_Range_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Keeps the primary exception on the throw statement when the timeout is reached..
+        /// </summary>
+        public static string WaitFile_KeepPrimaryException_Description {
+            get {
+                return ResourceManager.GetString("WaitFile_KeepPrimaryException_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to KeepPrimaryException.
+        /// </summary>
+        public static string WaitFile_KeepPrimaryException_DisplayName {
+            get {
+                return ResourceManager.GetString("WaitFile_KeepPrimaryException_DisplayName", resourceCulture);
             }
         }
         
