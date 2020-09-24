@@ -457,12 +457,48 @@
     <value>The full or relative file path.</value>
     <comment>property hint text</comment>
   </data>
-  <data name="WaitFile_KeepPrimaryException_Description" xml:space="preserve">
-    <value>Keeps the primary exception on the throw statement when the timeout is reached.</value>
+  <data name="WaitFile_ThrowFileException_Description" xml:space="preserve">
+    <value>Throws the latest recorded file exception when the timeout is reached.</value>
     <comment>property description</comment>
   </data>
-  <data name="WaitFile_KeepPrimaryException_DisplayName" xml:space="preserve">
-    <value>KeepPrimaryException</value>
+  <data name="WaitFile_ThrowFileException_DisplayName" xml:space="preserve">
+    <value>ThrowFileException</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PromoteHeaders_DisplayName" xml:space="preserve">
+    <value>Promote Headers</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="PromoteHeaders_Description" xml:space="preserve">
+    <value>Promotes the first row of values to new column headers.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="PromoteHeaders_InputDataTable_DisplayName" xml:space="preserve">
+    <value>DataTable</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PromoteHeaders_InputDataTable_Description" xml:space="preserve">
+    <value>The input datatable</value>
+    <comment>property description</comment>
+  </data>
+  <data name="PromoteHeaders_OutputDataTable_DisplayName" xml:space="preserve">
+    <value>DataTable</value>
+    <comment>property name</comment>
+  </data>
+  <data name="PromoteHeaders_OutputDataTable_Description" xml:space="preserve">
+    <value>The output datatable</value>
+    <comment>property description</comment>
+  </data>
+  <data name="PromoteHeaders_EmptyRows_Error" xml:space="preserve">
+    <value>There is no rows in input data table to promote.</value>
+    <comment>error message</comment>
+  </data>
+  <data name="PromoteHeaders_AutoRename_Description" xml:space="preserve">
+    <value>When true, it avoids the column name already belongs to DataTable error by adding a numeric suffix to it.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="PromoteHeaders_AutoRename_DisplayName" xml:space="preserve">
+    <value>AutoRename</value>
     <comment>property name</comment>
   </data>
 </root>

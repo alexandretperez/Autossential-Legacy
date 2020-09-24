@@ -59,6 +59,11 @@ namespace Autossential.Activities.Design
             builder.AddCustomAttributes(typeof(Decrement), new DesignerAttribute(typeof(DecrementDesigner)));
             builder.AddCustomAttributes(typeof(Decrement), new HelpKeywordAttribute(""));
 
+            builder.AddCustomAttributes(typeof(PromoteHeaders), dataTableCategory);
+            builder.AddCustomAttributes(typeof(PromoteHeaders), new DesignerAttribute(typeof(PromoteHeadersDesigner)));
+            builder.AddCustomAttributes(typeof(PromoteHeaders), new HelpKeywordAttribute(""));
+
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

@@ -22,7 +22,7 @@
         <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/Autossential.Activities.Design;component/themes/icons.xaml}" />
     </sap:ActivityDesigner.Icon>
 
-    <Border Background="#207769FF" Padding="7">
+    <Border Background="#107769FF" Padding="7">
         <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
             <sap:WorkflowItemPresenter x:Uid="sad:WorkflowItemPresenter_1"
                                        AutomationProperties.AutomationId="Activity"

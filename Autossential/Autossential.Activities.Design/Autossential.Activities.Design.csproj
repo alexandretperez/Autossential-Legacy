@@ -38,6 +38,7 @@
     <None Remove="Designers\DictionaryToDataTableDesigner.xaml" />
     <None Remove="Designers\ExitDesigner.xaml" />
     <None Remove="Designers\IncrementDesigner.xaml" />
+    <None Remove="Designers\PromoteHeadersDesigner.xaml" />
     <None Remove="Designers\RemoveEmptyRowsDesigner.xaml" />
     <None Remove="Designers\WaitFileDesigner.xaml" />
     <None Include="LICENSE.txt">
@@ -125,6 +126,9 @@
     <Page Include="Designers\IncrementDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\PromoteHeadersDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\RemoveEmptyRowsDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

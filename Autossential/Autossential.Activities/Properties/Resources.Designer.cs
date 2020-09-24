@@ -565,6 +565,87 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to When true, it avoids the column name already belongs to DataTable error by adding a numeric suffix to it..
+        /// </summary>
+        public static string PromoteHeaders_AutoRename_Description {
+            get {
+                return ResourceManager.GetString("PromoteHeaders_AutoRename_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AutoRename.
+        /// </summary>
+        public static string PromoteHeaders_AutoRename_DisplayName {
+            get {
+                return ResourceManager.GetString("PromoteHeaders_AutoRename_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Promotes the first row of values to new column headers..
+        /// </summary>
+        public static string PromoteHeaders_Description {
+            get {
+                return ResourceManager.GetString("PromoteHeaders_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Promote Headers.
+        /// </summary>
+        public static string PromoteHeaders_DisplayName {
+            get {
+                return ResourceManager.GetString("PromoteHeaders_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There is no rows in input data table to promote..
+        /// </summary>
+        public static string PromoteHeaders_EmptyRows_Error {
+            get {
+                return ResourceManager.GetString("PromoteHeaders_EmptyRows_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The input datatable.
+        /// </summary>
+        public static string PromoteHeaders_InputDataTable_Description {
+            get {
+                return ResourceManager.GetString("PromoteHeaders_InputDataTable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DataTable.
+        /// </summary>
+        public static string PromoteHeaders_InputDataTable_DisplayName {
+            get {
+                return ResourceManager.GetString("PromoteHeaders_InputDataTable_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The output datatable.
+        /// </summary>
+        public static string PromoteHeaders_OutputDataTable_Description {
+            get {
+                return ResourceManager.GetString("PromoteHeaders_OutputDataTable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DataTable.
+        /// </summary>
+        public static string PromoteHeaders_OutputDataTable_DisplayName {
+            get {
+                return ResourceManager.GetString("PromoteHeaders_OutputDataTable_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Custom mode requires either {0} or {1}..
         /// </summary>
         public static string RemoveEmptyRows_CustomMode_Error {
@@ -808,20 +889,20 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Keeps the primary exception on the throw statement when the timeout is reached..
+        ///   Looks up a localized string similar to Throws the latest recorded file exception when the timeout is reached..
         /// </summary>
-        public static string WaitFile_KeepPrimaryException_Description {
+        public static string WaitFile_ThrowFileException_Description {
             get {
-                return ResourceManager.GetString("WaitFile_KeepPrimaryException_Description", resourceCulture);
+                return ResourceManager.GetString("WaitFile_ThrowFileException_Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to KeepPrimaryException.
+        ///   Looks up a localized string similar to ThrowFileException.
         /// </summary>
-        public static string WaitFile_KeepPrimaryException_DisplayName {
+        public static string WaitFile_ThrowFileException_DisplayName {
             get {
-                return ResourceManager.GetString("WaitFile_KeepPrimaryException_DisplayName", resourceCulture);
+                return ResourceManager.GetString("WaitFile_ThrowFileException_DisplayName", resourceCulture);
             }
         }
         

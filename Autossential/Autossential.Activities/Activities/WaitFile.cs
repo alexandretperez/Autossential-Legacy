@@ -39,10 +39,10 @@ namespace Autossential.Activities
         [LocalizedCategory(nameof(Resources.Options_Category))]
         public bool WaitForExist { get; set; }
 
-        [LocalizedDisplayName(nameof(Resources.WaitFile_KeepPrimaryException_DisplayName))]
-        [LocalizedDescription(nameof(Resources.WaitFile_KeepPrimaryException_Description))]
+        [LocalizedDisplayName(nameof(Resources.WaitFile_ThrowFileException_DisplayName))]
+        [LocalizedDescription(nameof(Resources.WaitFile_ThrowFileException_Description))]
         [LocalizedCategory(nameof(Resources.Options_Category))]
-        public bool KeepPrimaryException { get; set; }
+        public bool ThrowFileException { get; set; }
 
         [LocalizedDisplayName(nameof(Resources.WaitFile_FileInfo_DisplayName))]
         [LocalizedDescription(nameof(Resources.WaitFile_FileInfo_Description))]
@@ -58,7 +58,7 @@ namespace Autossential.Activities
 
         private const int MaximumInterval = 30000;
 
-        private Exception _primaryException;
+        private Exception _latestFileException;
 
         #endregion Properties
 
@@ -83,9 +83,9 @@ namespace Autossential.Activities
             var task = ExecuteWithTimeout(context, filePath, cancellationToken);
             if (await Task.WhenAny(task, Task.Delay(timeout, cancellationToken)).ConfigureAwait(false) != task)
             {
-                if (KeepPrimaryException && _primaryException != null)
+                if (ThrowFileException && _latestFileException != null)
                 {
-                    throw _primaryException;
+                    throw _latestFileException;
                 }
 
                 throw new TimeoutException(Resources.Timeout_Error);
@@ -122,7 +122,7 @@ namespace Autossential.Activities
                     }
                     catch (Exception e)
                     {
-                        _primaryException = e;
+                        _latestFileException = e;
                         Thread.Sleep(interval);
                     }
                 } while (!done);

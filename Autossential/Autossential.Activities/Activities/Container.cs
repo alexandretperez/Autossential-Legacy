@@ -3,6 +3,7 @@ using System;
 using System.Activities;
 using System.Activities.Statements;
 using System.ComponentModel;
+using System.Linq;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
 
