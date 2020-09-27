@@ -621,42 +621,6 @@
     <value>Overwrite</value>
     <comment>property name</comment>
   </data>
-  <data name="Authentication_Category" xml:space="preserve">
-    <value>Authentication</value>
-    <comment>category</comment>
-  </data>
-  <data name="Common_Category" xml:space="preserve">
-    <value>Common</value>
-    <comment>category</comment>
-  </data>
-  <data name="Input_Category" xml:space="preserve">
-    <value>Input</value>
-    <comment>category</comment>
-  </data>
-  <data name="Output_Category" xml:space="preserve">
-    <value>Output</value>
-    <comment>category</comment>
-  </data>
-  <data name="Options_Category" xml:space="preserve">
-    <value>Options</value>
-    <comment>category</comment>
-  </data>
-  <data name="ValidationScope_Error" xml:space="preserve">
-    <value>Cannot be used outside of a {0}.</value>
-    <comment>error message; {0} is a container activity (e.g. a scope)</comment>
-  </data>
-  <data name="ValidationValue_Error" xml:space="preserve">
-    <value>Please provide a value for {0}.</value>
-    <comment>error message; {0} is the name of a missing property</comment>
-  </data>
-  <data name="ValidationExclusiveProperties_Error" xml:space="preserve">
-    <value>Please provide a value either for {0} or {1}, but not both.</value>
-    <comment>error message; {0} &amp; {1} are mutually exclusive activities</comment>
-  </data>
-  <data name="ValidationOverloadGroup_Error" xml:space="preserve">
-    <value>Please provide values for both {0} and {1}.</value>
-    <comment>error message; {0} &amp; {1} are complementary properties</comment>
-  </data>
   <data name="CheckPoint_DisplayName" xml:space="preserve">
     <value>Check Point</value>
     <comment>activity name</comment>
@@ -673,10 +637,6 @@
     <value>The expression to be evaluated.</value>
     <comment>property description</comment>
   </data>
-  <data name="Input_Category" xml:space="preserve">
-    <value>Input</value>
-    <comment>category</comment>
-  </data>
   <data name="CheckPoint_Exception_DisplayName" xml:space="preserve">
     <value>Exception</value>
     <comment>property name</comment>
@@ -685,8 +645,28 @@
     <value>The exception that will be thrown if the expression is not true.</value>
     <comment>property description</comment>
   </data>
-  <data name="Input_Category" xml:space="preserve">
-    <value>Input</value>
-    <comment>category</comment>
+  <data name="Zip_AutoRenaming_Description" xml:space="preserve">
+    <value>When true, renames the entry if the entry's name already exists in zip archive. It uses the pattern &lt;entry&gt;.&lt;counter&gt;.&lt;extension&gt;</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Zip_AutoRenaming_DisplayName" xml:space="preserve">
+    <value>AutoRenaming</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Zip_CompressionLevel_Description" xml:space="preserve">
+    <value>One of the enumeration values that indicates whether to emphasize speed or compression</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Zip_CompressionLevel_DisplayName" xml:space="preserve">
+    <value>CompressionLevel</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Zip_Encoding_Description" xml:space="preserve">
+    <value>The encoding to use when writing entry names in this archive. Specify a value for this parameter only when an encoding is required for interoperability with zip archive tools and libraries that do not support UTF-8 encoding for entry names.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Zip_Encoding_DisplayName" xml:space="preserve">
+    <value>Encoding</value>
+    <comment>property name</comment>
   </data>
 </root>

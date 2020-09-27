@@ -27,7 +27,7 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.0-alpha3</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\AggregateDesigner.xaml" />

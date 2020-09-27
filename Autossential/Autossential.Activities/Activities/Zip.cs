@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using UiPath.Shared.Activities;
@@ -35,6 +36,21 @@ namespace Autossential.Activities
         [LocalizedDescription(nameof(Resources.Zip_ZipFilePath_Description))]
         [LocalizedCategory(nameof(Resources.Input_Category))]
         public InArgument<string> ZipFilePath { get; set; }
+
+        [LocalizedDisplayName(nameof(Resources.Zip_Encoding_DisplayName))]
+        [LocalizedDescription(nameof(Resources.Zip_Encoding_Description))]
+        [LocalizedCategory(nameof(Resources.Options_Category))]
+        public Encoding Encoding { get; set; }
+
+        [LocalizedDisplayName(nameof(Resources.Zip_AutoRenaming_DisplayName))]
+        [LocalizedDescription(nameof(Resources.Zip_AutoRenaming_Description))]
+        [LocalizedCategory(nameof(Resources.Options_Category))]
+        public bool AutoRenaming { get; set; } = true;
+
+        [LocalizedDisplayName(nameof(Resources.Zip_CompressionLevel_DisplayName))]
+        [LocalizedDescription(nameof(Resources.Zip_CompressionLevel_Description))]
+        [LocalizedCategory(nameof(Resources.Options_Category))]
+        public CompressionLevel CompressionLevel { get; set; }
 
         [LocalizedDisplayName(nameof(Resources.Zip_FilesCount_DisplayName))]
         [LocalizedDescription(nameof(Resources.Zip_FilesCount_Description))]
@@ -94,29 +110,53 @@ namespace Autossential.Activities
 
             var counter = 0;
             var allInRoot = files.Select(fi => fi.Directory.FullName).Distinct().Count() == 1;
-            using (var zip = ZipFile.Open(zipFilePath, mode))
+            using (var zip = ZipFile.Open(zipFilePath, mode, Encoding))
             {
-                if (allInRoot)
-                {
-                    foreach (var file in files)
-                    {
-                        zip.CreateEntryFromFile(file.FullName, file.Name);
-                        counter++;
-                    }
-                }
-                else
-                {
-                    foreach (var file in files)
-                    {
-                        var name = NormalizeName(file);
-                        zip.CreateEntryFromFile(file.FullName, name);
-                        counter++;
-                    }
-                }
+                counter = CreateZip(files, allInRoot, zip, mode);
             }
 
             // Outputs
             return (ctx) => FilesCount.Set(ctx, counter);
+        }
+
+        private int CreateZip(IEnumerable<FileInfo> files, bool allInRoot, ZipArchive zip, ZipArchiveMode mode)
+        {
+            var dic = new Dictionary<string, int>();
+            string Rename(string keyName, string entryName)
+            {
+                var entry = zip.GetEntry(entryName);
+                if (entry == null)
+                    return entryName;
+
+                if (dic.ContainsKey(keyName))
+                    dic[keyName]++;
+                else
+                    dic.Add(keyName, 1);
+
+                return Rename(keyName, $"{Path.ChangeExtension(keyName, $"{dic[keyName]}{Path.GetExtension(keyName)}")}");
+            }
+
+            var renaming = AutoRenaming && mode == ZipArchiveMode.Update;
+            var counter = 0;
+            if (allInRoot)
+            {
+                foreach (var file in files)
+                {
+                    zip.CreateEntryFromFile(file.FullName, renaming ? Rename(file.Name, file.Name) : file.Name, CompressionLevel);
+                    counter++;
+                }
+            }
+            else
+            {
+                foreach (var file in files)
+                {
+                    var name = NormalizeName(file);
+                    zip.CreateEntryFromFile(file.FullName, renaming ? Rename(name, name) : name, CompressionLevel);
+                    counter++;
+                }
+            }
+
+            return counter;
         }
 
         private static string NormalizeName(FileInfo file)

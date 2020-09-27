@@ -1177,6 +1177,42 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to When true, renames the entry if the entry&apos;s name already exists in zip archive. It uses the pattern &lt;entry&gt;.&lt;counter&gt;.&lt;extension&gt;.
+        /// </summary>
+        public static string Zip_AutoRenaming_Description {
+            get {
+                return ResourceManager.GetString("Zip_AutoRenaming_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AutoRenaming.
+        /// </summary>
+        public static string Zip_AutoRenaming_DisplayName {
+            get {
+                return ResourceManager.GetString("Zip_AutoRenaming_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One of the enumeration values that indicates whether to emphasize speed or compression.
+        /// </summary>
+        public static string Zip_CompressionLevel_Description {
+            get {
+                return ResourceManager.GetString("Zip_CompressionLevel_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CompressionLevel.
+        /// </summary>
+        public static string Zip_CompressionLevel_DisplayName {
+            get {
+                return ResourceManager.GetString("Zip_CompressionLevel_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Compress files into a zip archive..
         /// </summary>
         public static string Zip_Description {
@@ -1191,6 +1227,24 @@ namespace Autossential.Activities.Properties {
         public static string Zip_DisplayName {
             get {
                 return ResourceManager.GetString("Zip_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The encoding to use when writing entry names in this archive. Specify a value for this parameter only when an encoding is required for interoperability with zip archive tools and libraries that do not support UTF-8 encoding for entry names..
+        /// </summary>
+        public static string Zip_Encoding_Description {
+            get {
+                return ResourceManager.GetString("Zip_Encoding_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encoding.
+        /// </summary>
+        public static string Zip_Encoding_DisplayName {
+            get {
+                return ResourceManager.GetString("Zip_Encoding_DisplayName", resourceCulture);
             }
         }
         
