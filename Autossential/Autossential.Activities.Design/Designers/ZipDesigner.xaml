@@ -59,6 +59,7 @@
                                  PropertyName="ZipFilePath"
                                  Expression="{Binding Path=ModelItem.ZipFilePath, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}"
                                  HintText="{x:Static activity:Resources.Zip_ZipFilePath_Description}"
+                                 Filter="Zip Files (*.zip)|*.zip"
                                  CheckFileExists="False"/>
         </Grid>
     </uip:ActivityDecoratorControl>

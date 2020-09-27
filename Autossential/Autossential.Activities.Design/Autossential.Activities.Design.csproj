@@ -27,7 +27,7 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>1.0.0-alpha</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\AggregateDesigner.xaml" />
@@ -77,7 +77,7 @@
     <DocumentationFile>bin\$(Configuration)\Autossential.Activities.Design.xml</DocumentationFile>
     <PackageIcon>packageIcon.png</PackageIcon>
     <Product>Autossential.Activities</Product>
-    <Version>1.0.0-alpha2</Version>
+    <Version>1.0.0</Version>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <RepositoryUrl>https://github.com/alexandretperez/Autossential</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>

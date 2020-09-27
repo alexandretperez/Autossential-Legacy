@@ -40,6 +40,7 @@
                                  ModelItem="{Binding ModelItem}"
                                  PropertyName="ZipFilePath"
                                  Expression="{Binding Path=ModelItem.ZipFilePath, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}"
+                                 Filter="Zip Files (*.zip)|*.zip"
                                  HintText="{x:Static activity:Resources.Unzip_ZipFilePath_Description}" />
 
             <Label Content="{x:Static activity:Resources.Unzip_ExtractTo_DisplayName}" Grid.Row="2"
