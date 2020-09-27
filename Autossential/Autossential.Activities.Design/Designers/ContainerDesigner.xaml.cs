@@ -1,5 +1,3 @@
-using System.Activities.Presentation.Model;
-
 namespace Autossential.Activities.Design.Designers
 {
     /// <summary>

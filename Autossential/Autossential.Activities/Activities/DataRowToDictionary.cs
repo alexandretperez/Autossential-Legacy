@@ -1,10 +1,10 @@
+using Autossential.Activities.Properties;
 using System;
 using System.Activities;
+using System.Collections.Generic;
+using System.Data;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Data;
-using System.Collections.Generic;
-using Autossential.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
 
@@ -34,8 +34,7 @@ namespace Autossential.Activities
         [LocalizedCategory(nameof(Resources.Output_Category))]
         public OutArgument<Dictionary<string, object>> Dictionary { get; set; }
 
-        #endregion
-
+        #endregion Properties
 
         #region Protected Methods
 
@@ -60,7 +59,6 @@ namespace Autossential.Activities
             return (ctx) => Dictionary.Set(ctx, dic);
         }
 
-        #endregion
+        #endregion Protected Methods
     }
 }
-

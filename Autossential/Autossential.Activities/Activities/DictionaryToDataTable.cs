@@ -1,12 +1,12 @@
+using Autossential.Activities.Properties;
 using System;
 using System.Activities;
+using System.Collections.Generic;
+using System.Data;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Collections.Generic;
-using Autossential.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using System.Data;
 
 namespace Autossential.Activities
 {
@@ -29,14 +29,12 @@ namespace Autossential.Activities
         [LocalizedCategory(nameof(Resources.Input_Category))]
         public InArgument<Dictionary<string, object>> Dictionary { get; set; }
 
-
         [LocalizedDisplayName(nameof(Resources.DictionaryToDataTable_DataTable_DisplayName))]
         [LocalizedDescription(nameof(Resources.DictionaryToDataTable_DataTable_Description))]
         [LocalizedCategory(nameof(Resources.Output_Category))]
         public OutArgument<DataTable> DataTable { get; set; }
 
-        #endregion
-
+        #endregion Properties
 
         #region Protected Methods
 
@@ -77,7 +75,6 @@ namespace Autossential.Activities
             return (ctx) => DataTable.Set(ctx, table);
         }
 
-        #endregion
+        #endregion Protected Methods
     }
 }
-

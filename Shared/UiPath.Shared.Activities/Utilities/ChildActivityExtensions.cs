@@ -6,7 +6,7 @@ namespace UiPath.Shared.Activities.Utilities
     public static class ChildActivityExtensions
     {
         /// <summary>
-        /// Get object from context.UserState object. 
+        /// Get object from context.UserState object.
         /// According to documentation, this is the place to store object for multithreaded access
         /// </summary>
         public static U GetFromUserState<U>(this AsyncCodeActivityContext context) where U : class

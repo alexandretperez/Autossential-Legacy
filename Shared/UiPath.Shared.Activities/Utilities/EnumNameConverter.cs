@@ -9,7 +9,6 @@ namespace UiPath.Shared.Activities.Utilities
     {
         public EnumNameConverter() : base(typeof(T))
         {
-
         }
 
         public EnumNameConverter(Type type) : base(type)

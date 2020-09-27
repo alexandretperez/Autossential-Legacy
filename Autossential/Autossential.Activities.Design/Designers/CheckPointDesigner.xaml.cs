@@ -1,11 +1,11 @@
 namespace Autossential.Activities.Design.Designers
 {
     /// <summary>
-    /// Interaction logic for CultureScopeDesigner.xaml
+    /// Interaction logic for CheckPointDesigner.xaml
     /// </summary>
-    public partial class CultureScopeDesigner
+    public partial class CheckPointDesigner
     {
-        public CultureScopeDesigner()
+        public CheckPointDesigner()
         {
             InitializeComponent();
         }

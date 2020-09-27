@@ -9,16 +9,15 @@
                       xmlns:ac="clr-namespace:Autossential.Activities.Design.Converters"
                       xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls">
 
-
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="..\Themes\Generic.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <sapc:ArgumentToExpressionConverter x:Key="ArgumentToExpressionConverter" />
-            <sapc:ModelToObjectValueConverter x:Key="ModelToObjectConverter"/>
+            <sapc:ModelToObjectValueConverter x:Key="ModelToObjectConverter" />
             <converters:ActivityIconConverter x:Key="ActivityIconConverter" />
-            <converters:StringArgumentToComboboxConverter x:Key="StringArgumentToComboboxConverter"/>
+            <converters:StringArgumentToComboboxConverter x:Key="StringArgumentToComboboxConverter" />
             <ac:EnumToStringConverter x:Key="EnumToStringConverter" />
         </ResourceDictionary>
     </sap:ActivityDesigner.Resources>
@@ -27,38 +26,35 @@
         <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/Autossential.Activities.Design;component/themes/icons.xaml}" />
     </sap:ActivityDesigner.Icon>
 
-
     <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
         <StackPanel>
-            <Label Content="{x:Static activity:Resources.Aggregate_DataTable_DisplayName}"/>
+            <Label Content="{x:Static activity:Resources.Aggregate_DataTable_DisplayName}" />
             <sapv:ExpressionTextBox
             ExpressionType="{Binding ModelItem.Properties[DataTable].PropertyType.GenericTypeArguments[0]}"
             OwnerActivity="{Binding ModelItem}"
             UseLocationExpression="False"
-            Expression="{Binding ModelItem.DataTable, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            Expression="{Binding ModelItem.DataTable, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="115"/>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="115"/>
+                    <ColumnDefinition Width="115" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="115" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Label Content="{x:Static activity:Resources.Aggregate_Function_DisplayName}" Grid.Row="0" Grid.Column="0"/>
+                <Label Content="{x:Static activity:Resources.Aggregate_Function_DisplayName}" Grid.Row="0" Grid.Column="0" />
                 <ComboBox Grid.Row="1" Grid.Column="0"
-                    ItemsSource="{Binding AggregateFunctions}" 
-                    SelectedValue="{Binding Path=ModelItem.Function, Mode=TwoWay, Converter={StaticResource EnumToStringConverter}}"/>
-                <Label Content="{x:Static activity:Resources.Aggregate_DataRow_DisplayName}" ContentStringFormat="{}{0} (Output)" Grid.Row="0" Grid.Column="2"/>
+                    ItemsSource="{Binding AggregateFunctions}"
+                    SelectedValue="{Binding Path=ModelItem.Function, Mode=TwoWay, Converter={StaticResource EnumToStringConverter}}" />
+                <Label Content="{x:Static activity:Resources.Aggregate_DataRow_DisplayName}" ContentStringFormat="{}{0} (Output)" Grid.Row="0" Grid.Column="2" />
                 <sapv:ExpressionTextBox Grid.Row="1" Grid.Column="2"
                   ExpressionType="{Binding ModelItem.Properties[DataRow].PropertyType.GenericTypeArguments[0]}"
                   OwnerActivity="{Binding ModelItem}"
                   UseLocationExpression="True"
                   Expression="{Binding ModelItem.DataRow, ConverterParameter=Out, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-
             </Grid>
         </StackPanel>
     </uip:ActivityDecoratorControl>
-
 </sap:ActivityDesigner>

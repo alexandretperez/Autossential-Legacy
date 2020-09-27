@@ -22,15 +22,13 @@
         <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/Autossential.Activities.Design;component/themes/icons.xaml}" />
     </sap:ActivityDesigner.Icon>
 
-
     <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
-        <uip:FilePathControl HorizontalAlignment="Left" 
-                                 Height="23" Margin="0,0,0,0" Grid.Row="1" 
+        <uip:FilePathControl HorizontalAlignment="Left"
+                                 Height="23" Margin="0,0,0,0" Grid.Row="1"
                                  VerticalAlignment="Top" Width="300"
                                  ModelItem="{Binding ModelItem}"
                                  PropertyName="FilePath"
                                  Expression="{Binding Path=ModelItem.FilePath, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}"
-                                 HintText="{x:Static activity:Resources.WaitFile_FilePath_HintText}"/>
+                                 HintText="{x:Static activity:Resources.WaitFile_FilePath_HintText}" />
     </uip:ActivityDecoratorControl>
-
 </sap:ActivityDesigner>

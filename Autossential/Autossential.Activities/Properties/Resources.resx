@@ -382,7 +382,7 @@
     <comment>error message</comment>
   </data>
   <data name="ValidationType_Error" xml:space="preserve">
-    <value>Please provide a value of type {0}.</value>
+    <value>Please provide a value of type {0} for {1}.</value>
     <comment>error message; wrong value type</comment>
   </data>
   <data name="WaitFile_FileDoesNotExist_Error" xml:space="preserve">
@@ -500,5 +500,193 @@
   <data name="PromoteHeaders_AutoRename_DisplayName" xml:space="preserve">
     <value>AutoRename</value>
     <comment>property name</comment>
+  </data>
+  <data name="EnumerateFiles_DisplayName" xml:space="preserve">
+    <value>Enumerate Files</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="EnumerateFiles_Description" xml:space="preserve">
+    <value>Returns an enumerable collection of file names that match the provided search patterns and directories. Optionally also searches into subdirectories.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="EnumerateFiles_Path_DisplayName" xml:space="preserve">
+    <value>Path</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EnumerateFiles_Path_Description" xml:space="preserve">
+    <value>The relative or absolute path (or collection of paths) to the directory (or directories) to search.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EnumerateFiles_SearchPattern_DisplayName" xml:space="preserve">
+    <value>SearchPattern</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EnumerateFiles_SearchPattern_Description" xml:space="preserve">
+    <value>The search string to match against the names of files in path. This parameter  can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EnumerateFiles_SearchOption_DisplayName" xml:space="preserve">
+    <value>SearchOption</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EnumerateFiles_SearchOption_Description" xml:space="preserve">
+    <value>One of the enumeration values that specifies whether the search operation should include only the current directory or should include all subdirectories.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="ValidationType_StringOrStrings_Error" xml:space="preserve">
+    <value>{0} must be a string or a collection of strings</value>
+    <comment>error message</comment>
+  </data>
+  <data name="EnumerateFiles_Result_Description" xml:space="preserve">
+    <value>An enumerable collection of the full names (including paths) for the files in the directory specified by path and that match the specified search pattern and option.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EnumerateFiles_Result_DisplayName" xml:space="preserve">
+    <value>Result</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EnumerateFiles_SearchPattern_HintText" xml:space="preserve">
+    <value>(Optional) Default is *.*</value>
+    <comment>property hint text</comment>
+  </data>
+  <data name="Zip_DisplayName" xml:space="preserve">
+    <value>Zip</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="Zip_Description" xml:space="preserve">
+    <value>Compress files into a zip archive.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="Zip_ToCompress_DisplayName" xml:space="preserve">
+    <value>ToCompress</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Zip_ToCompress_Description" xml:space="preserve">
+    <value>Path of the file(s) or folder(s) that will be compressed. Can be a string or a collection of strings.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Zip_ZipFilePath_DisplayName" xml:space="preserve">
+    <value>ZipFilePath</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Zip_ZipFilePath_Description" xml:space="preserve">
+    <value>Path of the zip archive.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Zip_FilesCount_DisplayName" xml:space="preserve">
+    <value>FilesCount</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Zip_FilesCount_Description" xml:space="preserve">
+    <value>Returns the amount of files added to zip archive.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Unzip_DisplayName" xml:space="preserve">
+    <value>Unzip</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="Unzip_Description" xml:space="preserve">
+    <value>Decompress files from a zip archive.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="Unzip_ZipFilePath_DisplayName" xml:space="preserve">
+    <value>ZipFilePath</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Unzip_ZipFilePath_Description" xml:space="preserve">
+    <value>The compressed file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Unzip_ExtractTo_DisplayName" xml:space="preserve">
+    <value>ExtractTo</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Unzip_ExtractTo_Description" xml:space="preserve">
+    <value>Path to the folder where files will be extracted.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Unzip_ExtractingResultsInOutside_Error" xml:space="preserve">
+    <value>Extracting Zip entry would have resulted in a file outside the specified destination directory.</value>
+    <comment>error message</comment>
+  </data>
+  <data name="Unzip_DirectoryNameWithData_Error" xml:space="preserve">
+    <value>Zip entry name ends in directory separator character but contains data</value>
+    <comment>error message</comment>
+  </data>
+  <data name="Unzip_Overwrite_Description" xml:space="preserve">
+    <value>When true, overwrites an existing file that has the same name as the destination file.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Unzip_Overwrite_DisplayName" xml:space="preserve">
+    <value>Overwrite</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Authentication_Category" xml:space="preserve">
+    <value>Authentication</value>
+    <comment>category</comment>
+  </data>
+  <data name="Common_Category" xml:space="preserve">
+    <value>Common</value>
+    <comment>category</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="Output_Category" xml:space="preserve">
+    <value>Output</value>
+    <comment>category</comment>
+  </data>
+  <data name="Options_Category" xml:space="preserve">
+    <value>Options</value>
+    <comment>category</comment>
+  </data>
+  <data name="ValidationScope_Error" xml:space="preserve">
+    <value>Cannot be used outside of a {0}.</value>
+    <comment>error message; {0} is a container activity (e.g. a scope)</comment>
+  </data>
+  <data name="ValidationValue_Error" xml:space="preserve">
+    <value>Please provide a value for {0}.</value>
+    <comment>error message; {0} is the name of a missing property</comment>
+  </data>
+  <data name="ValidationExclusiveProperties_Error" xml:space="preserve">
+    <value>Please provide a value either for {0} or {1}, but not both.</value>
+    <comment>error message; {0} &amp; {1} are mutually exclusive activities</comment>
+  </data>
+  <data name="ValidationOverloadGroup_Error" xml:space="preserve">
+    <value>Please provide values for both {0} and {1}.</value>
+    <comment>error message; {0} &amp; {1} are complementary properties</comment>
+  </data>
+  <data name="CheckPoint_DisplayName" xml:space="preserve">
+    <value>Check Point</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="CheckPoint_Description" xml:space="preserve">
+    <value>Checks if a given expression is true, if not, thrown the specified exception.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="CheckPoint_Expression_DisplayName" xml:space="preserve">
+    <value>Expression</value>
+    <comment>property name</comment>
+  </data>
+  <data name="CheckPoint_Expression_Description" xml:space="preserve">
+    <value>The expression to be evaluated.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
+  </data>
+  <data name="CheckPoint_Exception_DisplayName" xml:space="preserve">
+    <value>Exception</value>
+    <comment>property name</comment>
+  </data>
+  <data name="CheckPoint_Exception_Description" xml:space="preserve">
+    <value>The exception that will be thrown if the expression is not true.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Input_Category" xml:space="preserve">
+    <value>Input</value>
+    <comment>category</comment>
   </data>
 </root>

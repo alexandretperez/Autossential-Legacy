@@ -31,16 +31,20 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\AggregateDesigner.xaml" />
+    <None Remove="Designers\CheckPointDesigner.xaml" />
     <None Remove="Designers\ContainerDesigner.xaml" />
     <None Remove="Designers\CultureScopeDesigner.xaml" />
     <None Remove="Designers\DataRowToDictionaryDesigner.xaml" />
     <None Remove="Designers\DecrementDesigner.xaml" />
     <None Remove="Designers\DictionaryToDataTableDesigner.xaml" />
+    <None Remove="Designers\EnumerateFilesDesigner.xaml" />
     <None Remove="Designers\ExitDesigner.xaml" />
     <None Remove="Designers\IncrementDesigner.xaml" />
     <None Remove="Designers\PromoteHeadersDesigner.xaml" />
     <None Remove="Designers\RemoveEmptyRowsDesigner.xaml" />
+    <None Remove="Designers\UnzipDesigner.xaml" />
     <None Remove="Designers\WaitFileDesigner.xaml" />
+    <None Remove="Designers\ZipDesigner.xaml" />
     <None Include="LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -81,6 +85,7 @@
 	<ItemGroup>
 		<Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
 		<Reference Include="System.Xml.Linq" />
 		<Reference Include="System.Data.DataSetExtensions" />
 		<Reference Include="Microsoft.CSharp" />
@@ -104,6 +109,9 @@
     <Page Include="Designers\AggregateDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
+    <Page Include="Designers\CheckPointDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
     <Page Include="Designers\ContainerDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
@@ -120,6 +128,9 @@
     <Page Include="Designers\DictionaryToDataTableDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
+    <Page Include="Designers\EnumerateFilesDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
     <Page Include="Designers\ExitDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
@@ -133,7 +144,13 @@
     <Page Include="Designers\RemoveEmptyRowsDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
+    <Page Include="Designers\UnzipDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
     <Page Include="Designers\WaitFileDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\ZipDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Themes\Icons.xaml">
@@ -160,6 +177,9 @@
     <EmbeddedResource Update="Properties\Resources.*.resx">
       <DependentUpon>Resources.resx</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="..\..\Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems" Label="Shared" />
 </Project>

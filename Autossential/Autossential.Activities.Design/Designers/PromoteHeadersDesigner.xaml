@@ -35,19 +35,19 @@
             </Grid.ColumnDefinitions>
 
             <Label Content="{x:Static activity:Resources.PromoteHeaders_InputDataTable_DisplayName}" Grid.Row="0" Grid.Column="0"
-                   ToolTip="{x:Static activity:Resources.PromoteHeaders_InputDataTable_Description}"/>
-            <sapv:ExpressionTextBox Grid.Row="1" Grid.Column="0" 
-                                    ExpressionType="{Binding ModelItem.Properties[InputDataTable].PropertyType.GenericTypeArguments[0]}" 
-                                    OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.PromoteHeaders_InputDataTable_Description}" 
+                   ToolTip="{x:Static activity:Resources.PromoteHeaders_InputDataTable_Description}" />
+            <sapv:ExpressionTextBox Grid.Row="1" Grid.Column="0"
+                                    ExpressionType="{Binding ModelItem.Properties[InputDataTable].PropertyType.GenericTypeArguments[0]}"
+                                    OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.PromoteHeaders_InputDataTable_Description}"
                                     UseLocationExpression="False"
                                     Expression="{Binding Path=ModelItem.InputDataTable, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             </sapv:ExpressionTextBox>
 
             <Label Content="{x:Static activity:Resources.PromoteHeaders_OutputDataTable_DisplayName}" ContentStringFormat="{}{0} (Output)" Grid.Row="0" Grid.Column="2"
-                   ToolTip="{x:Static activity:Resources.PromoteHeaders_OutputDataTable_Description}"/>
-            <sapv:ExpressionTextBox Grid.Row="1" Grid.Column="2" 
-                                    ExpressionType="{Binding ModelItem.Properties[OutputDataTable].PropertyType.GenericTypeArguments[0]}" 
-                                    OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.PromoteHeaders_OutputDataTable_Description}" 
+                   ToolTip="{x:Static activity:Resources.PromoteHeaders_OutputDataTable_Description}" />
+            <sapv:ExpressionTextBox Grid.Row="1" Grid.Column="2"
+                                    ExpressionType="{Binding ModelItem.Properties[OutputDataTable].PropertyType.GenericTypeArguments[0]}"
+                                    OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.PromoteHeaders_OutputDataTable_Description}"
                                     UseLocationExpression="True"
                                     Expression="{Binding Path=ModelItem.OutputDataTable, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=Out, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             </sapv:ExpressionTextBox>

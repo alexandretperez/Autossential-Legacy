@@ -81,6 +81,7 @@ namespace UiPath.Shared.Activities
         }
 
         private bool _disposed; // To detect redundant calls
+
         public void Dispose()
         {
             if (!_disposed)
@@ -100,6 +101,7 @@ namespace UiPath.Shared.Activities
     public abstract class AsyncTaskCodeActivity : AsyncCodeActivity, IDisposable
     {
         private AsyncTaskCodeActivityImplementation _impl = new AsyncTaskCodeActivityImplementation();
+
         protected override void Cancel(AsyncCodeActivityContext context)
         {
             _impl.Cancel();
@@ -119,6 +121,7 @@ namespace UiPath.Shared.Activities
         protected abstract Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken);
 
         #region IDisposable Support
+
         private bool _disposed = false; // To detect redundant calls
 
         protected virtual void Dispose(bool disposing)
@@ -149,12 +152,14 @@ namespace UiPath.Shared.Activities
             // TODO: uncomment the following line if the finalizer is overridden above.
             GC.SuppressFinalize(this);
         }
-        #endregion
+
+        #endregion IDisposable Support
     }
 
     public abstract class AsyncTaskCodeActivity<T> : AsyncCodeActivity<T>, IDisposable
     {
         private AsyncTaskCodeActivityImplementation _impl = new AsyncTaskCodeActivityImplementation();
+
         protected override void Cancel(AsyncCodeActivityContext context)
         {
             _impl.Cancel();
@@ -175,6 +180,7 @@ namespace UiPath.Shared.Activities
         protected abstract Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken);
 
         #region IDisposable Support
+
         private bool _disposed = false; // To detect redundant calls
 
         protected virtual void Dispose(bool disposing)
@@ -205,6 +211,7 @@ namespace UiPath.Shared.Activities
             // Uncomment the following line if the finalizer is overridden above.
             GC.SuppressFinalize(this);
         }
-        #endregion
+
+        #endregion IDisposable Support
     }
 }

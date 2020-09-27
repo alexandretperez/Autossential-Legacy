@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Input;
+
 namespace Autossential.Activities.Design.Designers
 {
     /// <summary>
@@ -13,7 +16,18 @@ namespace Autossential.Activities.Design.Designers
         private void DecrementButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             var model = ModelItem.GetCurrentValue() as Decrement;
-            ModelItem.Properties[nameof(Decrement.Value)].SetValue(model.Value + 1);
+            var value = model.Value;
+
+            if (Keyboard.PrimaryDevice.Modifiers == ModifierKeys.Control)
+            {
+                value = Math.Max(1, value - 1);
+            }
+            else
+            {
+                value++;
+            }
+
+            ModelItem.Properties[nameof(Decrement.Value)].SetValue(value);
         }
     }
 }

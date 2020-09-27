@@ -1,4 +1,4 @@
-<sap:ActivityDesigner x:Class="Autossential.Activities.Design.Designers.DictionaryToDataTableDesigner"
+<sap:ActivityDesigner x:Class="Autossential.Activities.Design.Designers.CheckPointDesigner"
                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:activity="clr-namespace:Autossential.Activities.Properties;assembly=Autossential.Activities"
@@ -23,24 +23,29 @@
     </sap:ActivityDesigner.Icon>
 
     <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
-        <Grid>
+        <Grid Width="300">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="115" />
-                <ColumnDefinition Width="10" />
-                <ColumnDefinition Width="115" />
-            </Grid.ColumnDefinitions>
 
-            <Label Content="{x:Static activity:Resources.DictionaryToDataTable_Dictionary_DisplayName}" Grid.Row="0"
-                   ToolTip="{x:Static activity:Resources.DictionaryToDataTable_Dictionary_Description}" />
-            <sapv:ExpressionTextBox Grid.Row="1" ExpressionType="{Binding ModelItem.Properties[Dictionary].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding ModelItem}" HintText="{x:Static activity:Resources.DictionaryToDataTable_Dictionary_DisplayName}" UseLocationExpression="False" Expression="{Binding ModelItem.Dictionary, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <Label Content="{x:Static activity:Resources.CheckPoint_Expression_DisplayName}" Grid.Row="0"
+                   ToolTip="{x:Static activity:Resources.CheckPoint_Expression_Description}"/>
+            <sapv:ExpressionTextBox Grid.Row="1" ExpressionType="{Binding ModelItem.Properties[Expression].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.CheckPoint_Expression_Description}" UseLocationExpression="False">
+                <sapv:ExpressionTextBox.Expression>
+                    <Binding Path="ModelItem.Expression" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
+                </sapv:ExpressionTextBox.Expression>
+            </sapv:ExpressionTextBox>
 
-            <Label Content="{x:Static activity:Resources.DictionaryToDataTable_DataTable_DisplayName}" ContentStringFormat="{}{0} (Output)" Grid.Row="0" Grid.Column="2"
-                   ToolTip="{x:Static activity:Resources.DictionaryToDataTable_DataTable_Description}" />
-            <sapv:ExpressionTextBox Grid.Row="1" Grid.Column="2" ExpressionType="{Binding ModelItem.Properties[DataTable].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding ModelItem}" HintText="{x:Static activity:Resources.DictionaryToDataTable_DataTable_DisplayName}" UseLocationExpression="True" Expression="{Binding ModelItem.DataTable, ConverterParameter=Out, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <Label Content="{x:Static activity:Resources.CheckPoint_Exception_DisplayName}" Grid.Row="2"
+                   ToolTip="{x:Static activity:Resources.CheckPoint_Exception_Description}"/>
+            <sapv:ExpressionTextBox Grid.Row="3" ExpressionType="{Binding ModelItem.Properties[Exception].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.CheckPoint_Exception_Description}" UseLocationExpression="False">
+                <sapv:ExpressionTextBox.Expression>
+                    <Binding Path="ModelItem.Exception" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
+                </sapv:ExpressionTextBox.Expression>
+            </sapv:ExpressionTextBox>
         </Grid>
     </uip:ActivityDecoratorControl>
 </sap:ActivityDesigner>

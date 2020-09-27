@@ -1,12 +1,12 @@
+using Autossential.Activities.Properties;
 using System;
 using System.Activities;
+using System.Collections.Generic;
+using System.Data;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Data;
-using Autossential.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
-using System.Collections.Generic;
 
 namespace Autossential.Activities
 {
@@ -39,8 +39,7 @@ namespace Autossential.Activities
         [LocalizedCategory(nameof(Resources.Options_Category))]
         public bool AutoRename { get; set; }
 
-        #endregion
-
+        #endregion Properties
 
         #region Constructors
 
@@ -48,8 +47,7 @@ namespace Autossential.Activities
         {
         }
 
-        #endregion
-
+        #endregion Constructors
 
         #region Protected Methods
 
@@ -104,7 +102,6 @@ namespace Autossential.Activities
             return (ctx) => OutputDataTable.Set(ctx, outputDT);
         }
 
-        #endregion
+        #endregion Protected Methods
     }
 }
-

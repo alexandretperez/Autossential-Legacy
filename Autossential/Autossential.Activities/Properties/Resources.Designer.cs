@@ -178,6 +178,60 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Checks if a given expression is true, if not, thrown the specified exception..
+        /// </summary>
+        public static string CheckPoint_Description {
+            get {
+                return ResourceManager.GetString("CheckPoint_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Point.
+        /// </summary>
+        public static string CheckPoint_DisplayName {
+            get {
+                return ResourceManager.GetString("CheckPoint_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The exception that will be thrown if the expression is not true..
+        /// </summary>
+        public static string CheckPoint_Exception_Description {
+            get {
+                return ResourceManager.GetString("CheckPoint_Exception_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception.
+        /// </summary>
+        public static string CheckPoint_Exception_DisplayName {
+            get {
+                return ResourceManager.GetString("CheckPoint_Exception_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The expression to be evaluated..
+        /// </summary>
+        public static string CheckPoint_Expression_Description {
+            get {
+                return ResourceManager.GetString("CheckPoint_Expression_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expression.
+        /// </summary>
+        public static string CheckPoint_Expression_DisplayName {
+            get {
+                return ResourceManager.GetString("CheckPoint_Expression_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Common.
         /// </summary>
         public static string Common_Category {
@@ -444,6 +498,105 @@ namespace Autossential.Activities.Properties {
         public static string Do {
             get {
                 return ResourceManager.GetString("Do", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Returns an enumerable collection of file names that match the provided search patterns and directories. Optionally also searches into subdirectories..
+        /// </summary>
+        public static string EnumerateFiles_Description {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enumerate Files.
+        /// </summary>
+        public static string EnumerateFiles_DisplayName {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The relative or absolute path (or collection of paths) to the directory (or directories) to search..
+        /// </summary>
+        public static string EnumerateFiles_Path_Description {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_Path_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string EnumerateFiles_Path_DisplayName {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_Path_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An enumerable collection of the full names (including paths) for the files in the directory specified by path and that match the specified search pattern and option..
+        /// </summary>
+        public static string EnumerateFiles_Result_Description {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_Result_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Result.
+        /// </summary>
+        public static string EnumerateFiles_Result_DisplayName {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_Result_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One of the enumeration values that specifies whether the search operation should include only the current directory or should include all subdirectories..
+        /// </summary>
+        public static string EnumerateFiles_SearchOption_Description {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_SearchOption_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SearchOption.
+        /// </summary>
+        public static string EnumerateFiles_SearchOption_DisplayName {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_SearchOption_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The search string to match against the names of files in path. This parameter  can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn&apos;t support regular expressions..
+        /// </summary>
+        public static string EnumerateFiles_SearchPattern_Description {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_SearchPattern_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SearchPattern.
+        /// </summary>
+        public static string EnumerateFiles_SearchPattern_DisplayName {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_SearchPattern_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Optional) Default is *.*.
+        /// </summary>
+        public static string EnumerateFiles_SearchPattern_HintText {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_SearchPattern_HintText", resourceCulture);
             }
         }
         
@@ -745,6 +898,96 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Decompress files from a zip archive..
+        /// </summary>
+        public static string Unzip_Description {
+            get {
+                return ResourceManager.GetString("Unzip_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zip entry name ends in directory separator character but contains data.
+        /// </summary>
+        public static string Unzip_DirectoryNameWithData_Error {
+            get {
+                return ResourceManager.GetString("Unzip_DirectoryNameWithData_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unzip.
+        /// </summary>
+        public static string Unzip_DisplayName {
+            get {
+                return ResourceManager.GetString("Unzip_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extracting Zip entry would have resulted in a file outside the specified destination directory..
+        /// </summary>
+        public static string Unzip_ExtractingResultsInOutside_Error {
+            get {
+                return ResourceManager.GetString("Unzip_ExtractingResultsInOutside_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path to the folder where files will be extracted..
+        /// </summary>
+        public static string Unzip_ExtractTo_Description {
+            get {
+                return ResourceManager.GetString("Unzip_ExtractTo_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ExtractTo.
+        /// </summary>
+        public static string Unzip_ExtractTo_DisplayName {
+            get {
+                return ResourceManager.GetString("Unzip_ExtractTo_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When true, overwrites an existing file that has the same name as the destination file..
+        /// </summary>
+        public static string Unzip_Overwrite_Description {
+            get {
+                return ResourceManager.GetString("Unzip_Overwrite_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overwrite.
+        /// </summary>
+        public static string Unzip_Overwrite_DisplayName {
+            get {
+                return ResourceManager.GetString("Unzip_Overwrite_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The compressed file..
+        /// </summary>
+        public static string Unzip_ZipFilePath_Description {
+            get {
+                return ResourceManager.GetString("Unzip_ZipFilePath_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ZipFilePath.
+        /// </summary>
+        public static string Unzip_ZipFilePath_DisplayName {
+            get {
+                return ResourceManager.GetString("Unzip_ZipFilePath_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please provide a value either for {0} or {1}, but not both..
         /// </summary>
         public static string ValidationExclusiveProperties_Error {
@@ -772,11 +1015,20 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please provide a value of type {0}..
+        ///   Looks up a localized string similar to Please provide a value of type {0} for {1}..
         /// </summary>
         public static string ValidationType_Error {
             get {
                 return ResourceManager.GetString("ValidationType_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} must be a string or a collection of strings.
+        /// </summary>
+        public static string ValidationType_StringOrStrings_Error {
+            get {
+                return ResourceManager.GetString("ValidationType_StringOrStrings_Error", resourceCulture);
             }
         }
         
@@ -921,6 +1173,78 @@ namespace Autossential.Activities.Properties {
         public static string WaitFile_WaitForExist_DisplayName {
             get {
                 return ResourceManager.GetString("WaitFile_WaitForExist_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Compress files into a zip archive..
+        /// </summary>
+        public static string Zip_Description {
+            get {
+                return ResourceManager.GetString("Zip_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zip.
+        /// </summary>
+        public static string Zip_DisplayName {
+            get {
+                return ResourceManager.GetString("Zip_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Returns the amount of files added to zip archive..
+        /// </summary>
+        public static string Zip_FilesCount_Description {
+            get {
+                return ResourceManager.GetString("Zip_FilesCount_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FilesCount.
+        /// </summary>
+        public static string Zip_FilesCount_DisplayName {
+            get {
+                return ResourceManager.GetString("Zip_FilesCount_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path of the file(s) or folder(s) that will be compressed. Can be a string or a collection of strings..
+        /// </summary>
+        public static string Zip_ToCompress_Description {
+            get {
+                return ResourceManager.GetString("Zip_ToCompress_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ToCompress.
+        /// </summary>
+        public static string Zip_ToCompress_DisplayName {
+            get {
+                return ResourceManager.GetString("Zip_ToCompress_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path of the zip archive..
+        /// </summary>
+        public static string Zip_ZipFilePath_Description {
+            get {
+                return ResourceManager.GetString("Zip_ZipFilePath_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ZipFilePath.
+        /// </summary>
+        public static string Zip_ZipFilePath_DisplayName {
+            get {
+                return ResourceManager.GetString("Zip_ZipFilePath_DisplayName", resourceCulture);
             }
         }
     }

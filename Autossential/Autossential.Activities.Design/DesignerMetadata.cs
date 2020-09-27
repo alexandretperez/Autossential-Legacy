@@ -16,6 +16,7 @@ namespace Autossential.Activities.Design
             var main = Resources.Category;
             var dataTableCategory = new CategoryAttribute($"{main}.DataTable");
             var fileCategory = new CategoryAttribute($"{main}.File");
+            var fileCompressionCategory = new CategoryAttribute($"{main}.File.Compression");
             var programmingCategory = new CategoryAttribute($"{main}.Programming");
             var workflowCategory = new CategoryAttribute($"{main}.Workflow");
 
@@ -62,6 +63,22 @@ namespace Autossential.Activities.Design
             builder.AddCustomAttributes(typeof(PromoteHeaders), dataTableCategory);
             builder.AddCustomAttributes(typeof(PromoteHeaders), new DesignerAttribute(typeof(PromoteHeadersDesigner)));
             builder.AddCustomAttributes(typeof(PromoteHeaders), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(EnumerateFiles), fileCategory);
+            builder.AddCustomAttributes(typeof(EnumerateFiles), new DesignerAttribute(typeof(EnumerateFilesDesigner)));
+            builder.AddCustomAttributes(typeof(EnumerateFiles), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(Zip), fileCompressionCategory);
+            builder.AddCustomAttributes(typeof(Zip), new DesignerAttribute(typeof(ZipDesigner)));
+            builder.AddCustomAttributes(typeof(Zip), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(Unzip), fileCompressionCategory);
+            builder.AddCustomAttributes(typeof(Unzip), new DesignerAttribute(typeof(UnzipDesigner)));
+            builder.AddCustomAttributes(typeof(Unzip), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(CheckPoint), workflowCategory);
+            builder.AddCustomAttributes(typeof(CheckPoint), new DesignerAttribute(typeof(CheckPointDesigner)));
+            builder.AddCustomAttributes(typeof(CheckPoint), new HelpKeywordAttribute(""));
 
 
             MetadataStore.AddAttributeTable(builder.CreateTable());

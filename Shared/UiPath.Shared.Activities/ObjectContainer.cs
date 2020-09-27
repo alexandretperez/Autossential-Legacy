@@ -45,7 +45,7 @@ namespace UiPath.Shared.Activities
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="filter"></param>
         /// <returns></returns>

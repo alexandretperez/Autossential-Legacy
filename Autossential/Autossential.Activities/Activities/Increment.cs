@@ -1,9 +1,8 @@
+using Autossential.Activities.Properties;
 using System;
 using System.Activities;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows;
-using Autossential.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
 
@@ -33,8 +32,7 @@ namespace Autossential.Activities
         [LocalizedCategory(nameof(Resources.Options_Category))]
         public int Value { get; set; } = 1;
 
-        #endregion
-
+        #endregion Properties
 
         #region Constructors
 
@@ -42,8 +40,7 @@ namespace Autossential.Activities
         {
         }
 
-        #endregion
-
+        #endregion Constructors
 
         #region Protected Methods
 
@@ -63,7 +60,6 @@ namespace Autossential.Activities
             return (ctx) => Variable.Set(ctx, variable + Value);
         }
 
-        #endregion
+        #endregion Protected Methods
     }
 }
-

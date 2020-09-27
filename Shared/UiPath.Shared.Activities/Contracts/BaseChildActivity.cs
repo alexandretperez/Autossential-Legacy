@@ -3,7 +3,7 @@
 namespace UiPath.Shared.Activities.Contracts
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public interface IBaseChildActivity
     {
@@ -12,12 +12,12 @@ namespace UiPath.Shared.Activities.Contracts
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="propertyName"></param>
-        /// 
+        ///
         /// <returns></returns>
         T GetFromContext<T>(ActivityContext context, string propertyName) where T : class;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="context"></param>
@@ -25,7 +25,7 @@ namespace UiPath.Shared.Activities.Contracts
         T GetFromUserState<T>(AsyncCodeActivityContext context) where T : class;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="context"></param>
@@ -37,7 +37,7 @@ namespace UiPath.Shared.Activities.Contracts
     public class BaseChildActivity : IBaseChildActivity
     {
         /// <summary>
-        /// Get object from context.UserState object. 
+        /// Get object from context.UserState object.
         /// According to documentation, this is the place to store object for multithreaded access
         /// </summary>
         public U GetFromUserState<U>(AsyncCodeActivityContext context) where U : class

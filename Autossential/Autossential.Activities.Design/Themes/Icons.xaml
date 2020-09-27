@@ -143,29 +143,81 @@
 
     <!--TimeoutScope Icon-->
     <DrawingGroup x:Key="progressclock23fbbfff68a047e294689ec66f39a3f3_0">
-      <DrawingGroup.ClipGeometry>
-        <RectangleGeometry Rect="0,0,24,24" />
-      </DrawingGroup.ClipGeometry>
-      <GeometryDrawing Brush="#FF000000">
-        <GeometryDrawing.Geometry>
-          <PathGeometry FillRule="Nonzero" Figures="M13,2.03L13,2.05 13,4.05C17.39,4.59 20.5,8.58 19.96,12.97 19.5,16.61 16.64,19.5 13,19.93L13,21.93C18.5,21.38 22.5,16.5 21.95,11 21.5,6.25 17.73,2.5 13,2.03 M11,2.06C9.05,2.25,7.19,3,5.67,4.26L7.1,5.74C8.22,4.84,9.57,4.26,11,4.06L11,2.06 M4.26,5.67C3,7.19,2.25,9.04,2.05,11L4.05,11C4.24,9.58,4.8,8.23,5.69,7.1L4.26,5.67 M2.06,13C2.26,14.96,3.03,16.81,4.27,18.33L5.69,16.9C4.81,15.77,4.24,14.42,4.06,13L2.06,13 M7.1,18.37L5.67,19.74C7.18,21,9.04,21.79,11,22L11,20C9.58,19.82,8.23,19.25,7.1,18.37 M12.5,7L12.5,12.25 17,14.92 16.25,16.15 11,13 11,7 12.5,7z" />
-        </GeometryDrawing.Geometry>
-      </GeometryDrawing>
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0,0,24,24" />
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#FF000000">
+            <GeometryDrawing.Geometry>
+                <PathGeometry FillRule="Nonzero" Figures="M13,2.03L13,2.05 13,4.05C17.39,4.59 20.5,8.58 19.96,12.97 19.5,16.61 16.64,19.5 13,19.93L13,21.93C18.5,21.38 22.5,16.5 21.95,11 21.5,6.25 17.73,2.5 13,2.03 M11,2.06C9.05,2.25,7.19,3,5.67,4.26L7.1,5.74C8.22,4.84,9.57,4.26,11,4.06L11,2.06 M4.26,5.67C3,7.19,2.25,9.04,2.05,11L4.05,11C4.24,9.58,4.8,8.23,5.69,7.1L4.26,5.67 M2.06,13C2.26,14.96,3.03,16.81,4.27,18.33L5.69,16.9C4.81,15.77,4.24,14.42,4.06,13L2.06,13 M7.1,18.37L5.67,19.74C7.18,21,9.04,21.79,11,22L11,20C9.58,19.82,8.23,19.25,7.1,18.37 M12.5,7L12.5,12.25 17,14.92 16.25,16.15 11,13 11,7 12.5,7z" />
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
     </DrawingGroup>
     <DrawingBrush x:Key="TimeoutScopeIcon" Drawing="{StaticResource progressclock23fbbfff68a047e294689ec66f39a3f3_0}" />
 
     <!--PromoteHeaders Icon-->
     <DrawingGroup x:Key="tablerowheight5956cb7b25cc415386661e27747ee01b_0">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0,0,24,24" />
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#FF00C373">
+            <GeometryDrawing.Geometry>
+                <PathGeometry FillRule="Nonzero" Figures="M3,5L15,5A2,2,0,0,1,17,7L17,17A2,2,0,0,1,15,19L3,19A2,2,0,0,1,1,17L1,7A2,2,0,0,1,3,5 M3,9L3,12 8,12 8,9 3,9 M10,9L10,12 15,12 15,9 10,9 M3,14L3,17 8,17 8,14 3,14 M10,14L10,17 15,17 15,14 10,14 M23,14L23,7 19,7 19,9 21,9 21,12 19,12 19,14 23,14z" />
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingBrush x:Key="PromoteHeadersIcon" Drawing="{StaticResource tablerowheight5956cb7b25cc415386661e27747ee01b_0}" />
+
+    <!--EnumerateFiles Icon-->
+    <DrawingGroup x:Key="filesearcha224589f2b23407caabd68a5e694a4f9_0">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0,0,24,24" />
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#FFFF6161">
+            <GeometryDrawing.Geometry>
+                <PathGeometry FillRule="Nonzero" Figures="M14,2L6,2A2,2,0,0,0,4,4L4,20A2,2,0,0,0,6,22L13,22C12.59,21.75 12.2,21.44 11.86,21.1 9.22,18.67 9.05,14.56 11.5,11.92 13.69,9.5 17.33,9.13 20,11L20,8 14,2 M13,9L13,3.5 18.5,9 13,9 M20.31,18.9C21.64,16.79 21,14 18.91,12.68 16.8,11.35 14,12 12.69,14.08 11.35,16.19 12,18.97 14.09,20.3 15.55,21.23 17.41,21.23 18.88,20.32L22,23.39 23.39,22 20.31,18.9 M16.5,19A2.5,2.5,0,0,1,14,16.5A2.5,2.5,0,0,1,16.5,14A2.5,2.5,0,0,1,19,16.5A2.5,2.5,0,0,1,16.5,19z" />
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingBrush x:Key="EnumerateFilesIcon" Drawing="{StaticResource filesearcha224589f2b23407caabd68a5e694a4f9_0}" />
+
+    <!--Zip Icon-->
+    <DrawingGroup x:Key="packagevariantclosed774eaf689e754ed29e99cfffbc383751_0">
       <DrawingGroup.ClipGeometry>
         <RectangleGeometry Rect="0,0,24,24" />
       </DrawingGroup.ClipGeometry>
-      <GeometryDrawing Brush="#FF00C373">
+        <GeometryDrawing Brush="#FFFF6161">
         <GeometryDrawing.Geometry>
-          <PathGeometry FillRule="Nonzero" Figures="M3,5L15,5A2,2,0,0,1,17,7L17,17A2,2,0,0,1,15,19L3,19A2,2,0,0,1,1,17L1,7A2,2,0,0,1,3,5 M3,9L3,12 8,12 8,9 3,9 M10,9L10,12 15,12 15,9 10,9 M3,14L3,17 8,17 8,14 3,14 M10,14L10,17 15,17 15,14 10,14 M23,14L23,7 19,7 19,9 21,9 21,12 19,12 19,14 23,14z" />
+          <PathGeometry FillRule="Nonzero" Figures="M21,16.5C21,16.88,20.79,17.21,20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22 11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21,3,16.88,3,16.5L3,7.5C3,7.12,3.21,6.79,3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2 12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79,21,7.12,21,7.5L21,16.5 M12,4.15L10.11,5.22 16,8.61 17.96,7.5 12,4.15 M6.04,7.5L12,10.85 13.96,9.75 8.08,6.35 6.04,7.5 M5,15.91L11,19.29 11,12.58 5,9.21 5,15.91 M19,15.91L19,9.21 13,12.58 13,19.29 19,15.91z" />
         </GeometryDrawing.Geometry>
       </GeometryDrawing>
     </DrawingGroup>
-    <DrawingBrush x:Key="PromoteHeadersIcon" Drawing="{StaticResource tablerowheight5956cb7b25cc415386661e27747ee01b_0}" />
+    <DrawingBrush x:Key="ZipIcon" Drawing="{StaticResource packagevariantclosed774eaf689e754ed29e99cfffbc383751_0}" />
+
+    <!--Unzip Icon-->
+    <DrawingGroup x:Key="packagevariant1e5d9a8b717649b1af13e3ab3bc84f85_0">
+      <DrawingGroup.ClipGeometry>
+        <RectangleGeometry Rect="0,0,24,24" />
+      </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#FFFF6161">
+        <GeometryDrawing.Geometry>
+          <PathGeometry FillRule="Nonzero" Figures="M2,10.96C1.5,10.68,1.35,10.07,1.63,9.59L3.13,7C3.24,6.8,3.41,6.66,3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2 12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72,20.82,6.88,20.91,7.08L22.36,9.6C22.64,10.08,22.47,10.69,22,10.96L21,11.54 21,16.5C21,16.88,20.79,17.21,20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22 11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21,3,16.88,3,16.5L3,10.96C2.7,11.13,2.32,11.14,2,10.96 M12,4.15L12,4.15 12,10.85 12,10.85 17.96,7.5 12,4.15 M5,15.91L11,19.29 11,12.58 5,9.21 5,15.91 M19,15.91L19,12.69 14,15.59C13.67,15.77,13.3,15.76,13,15.6L13,19.29 19,15.91 M13.85,13.36L20.13,9.73 19.55,8.72 13.27,12.35 13.85,13.36z" />
+        </GeometryDrawing.Geometry>
+      </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingBrush x:Key="UnzipIcon" Drawing="{StaticResource packagevariant1e5d9a8b717649b1af13e3ab3bc84f85_0}" />
+
+    <!--CheckPoint Icon-->
+    <DrawingGroup x:Key="flagcheckereda1b5ac8a7e5b401fa1389566532fc609_0">
+      <DrawingGroup.ClipGeometry>
+        <RectangleGeometry Rect="0,0,24,24" />
+      </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#FF7769FF">
+        <GeometryDrawing.Geometry>
+          <PathGeometry FillRule="Nonzero" Figures="M14.4,6L20,6 20,16 13,16 12.6,14 7,14 7,21 5,21 5,4 14,4 14.4,6 M14,14L16,14 16,12 18,12 18,10 16,10 16,8 14,8 14,10 13,8 13,6 11,6 11,8 9,8 9,6 7,6 7,8 9,8 9,10 7,10 7,12 9,12 9,10 11,10 11,12 13,12 13,10 14,12 14,14 M11,10L11,8 13,8 13,10 11,10 M14,10L16,10 16,12 14,12 14,10z" />
+        </GeometryDrawing.Geometry>
+      </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingBrush x:Key="CheckPointIcon" Drawing="{StaticResource flagcheckereda1b5ac8a7e5b401fa1389566532fc609_0}" />
 
 
 </ResourceDictionary>

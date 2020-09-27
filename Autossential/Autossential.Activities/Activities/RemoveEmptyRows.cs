@@ -5,7 +5,6 @@ using System.Activities;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Management.Instrumentation;
 using System.Threading;
 using System.Threading.Tasks;
 using UiPath.Shared.Activities;
@@ -67,7 +66,7 @@ namespace Autossential.Activities
         {
             // The logic here is inverted from workflow design.
             // In design time, we are asking for the rows to be removed.
-            // Here the logic is to keep the rows in data table. 
+            // Here the logic is to keep the rows in data table.
             // All becomes Any and Any becomes All.
 
             // Inputs
