@@ -669,4 +669,12 @@
     <value>Encoding</value>
     <comment>property name</comment>
   </data>
+  <data name="EnumerateFiles_Exclusions_Description" xml:space="preserve">
+    <value>Excludes from the enumeration the files with any of the specified attributes.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EnumerateFiles_Exclusions_DisplayName" xml:space="preserve">
+    <value>Exclusions</value>
+    <comment>property name</comment>
+  </data>
 </root>

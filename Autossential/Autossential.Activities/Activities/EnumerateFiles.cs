@@ -40,6 +40,15 @@ namespace Autossential.Activities
         [LocalizedCategory(nameof(Resources.Options_Category))]
         public SearchOption SearchOption { get; set; }
 
+        [LocalizedDisplayName(nameof(Resources.EnumerateFiles_Exclusions_DisplayName))]
+        [LocalizedDescription(nameof(Resources.EnumerateFiles_Exclusions_Description))]
+        [LocalizedCategory(nameof(Resources.Options_Category))]
+        public FileAttributes Exclusions { get; set; } = FileAttributes.Hidden
+                                                        | FileAttributes.System
+                                                        | FileAttributes.Temporary
+                                                        | FileAttributes.Device
+                                                        | FileAttributes.Offline;
+
         [LocalizedDisplayName(nameof(Resources.EnumerateFiles_Result_DisplayName))]
         [LocalizedDescription(nameof(Resources.EnumerateFiles_Result_Description))]
         [LocalizedCategory(nameof(Resources.Output_Category))]
@@ -109,9 +118,12 @@ namespace Autossential.Activities
             {
                 foreach (var pattern in patterns)
                 {
-                    result = result.Concat(Directory.EnumerateFiles(directory, pattern, SearchOption));
+                    result = result.Union(Directory.EnumerateFiles(directory, pattern, SearchOption));
                 }
             }
+
+            if (Exclusions > 0)
+                result = result.Where(filePath => (new FileInfo(filePath).Attributes & Exclusions) == 0);
 
             // Outputs
             return (ctx) => Result.Set(ctx, result);

@@ -520,6 +520,24 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Excludes from the enumeration the files with any of the specified attributes..
+        /// </summary>
+        public static string EnumerateFiles_Exclusions_Description {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_Exclusions_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exclusions.
+        /// </summary>
+        public static string EnumerateFiles_Exclusions_DisplayName {
+            get {
+                return ResourceManager.GetString("EnumerateFiles_Exclusions_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The relative or absolute path (or collection of paths) to the directory (or directories) to search..
         /// </summary>
         public static string EnumerateFiles_Path_Description {
