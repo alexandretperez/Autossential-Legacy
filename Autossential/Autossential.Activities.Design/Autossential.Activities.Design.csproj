@@ -4,12 +4,13 @@
 		<RootNamespace>Autossential.Activities.Design</RootNamespace>
 		<AssemblyName>Autossential.Activities.Design</AssemblyName>
     <PackageId>Autossential.Activities</PackageId>
+    <UseWpf>True</UseWpf>
   </PropertyGroup>
   <!-- Package Metadata -->
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression></PackageLicenseExpression>
-    <Description>A set of custom activities.</Description>
+    <Description>A set of custom activities designed to work with RPA tools based on Windows Workflow Foundation, e.g: UiPath.</Description>
     <Authors>Alexandre Toledo Perez</Authors>
     <Company>Alexandre Toledo Perez</Company>
     <Copyright>© 2020 Alexandre Toledo Perez</Copyright>
@@ -27,9 +28,11 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>1.0.0-alpha4</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Controls\FilePickerControl.xaml" />
+    <None Remove="Controls\FolderPickerControl.xaml" />
     <None Remove="Designers\AggregateDesigner.xaml" />
     <None Remove="Designers\CheckPointDesigner.xaml" />
     <None Remove="Designers\ContainerDesigner.xaml" />
@@ -106,6 +109,12 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
+    <Page Include="Controls\FilePickerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FolderPickerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Designers\AggregateDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
@@ -177,9 +186,6 @@
     <EmbeddedResource Update="Properties\Resources.*.resx">
       <DependentUpon>Resources.resx</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="..\..\Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems" Label="Shared" />
 </Project>

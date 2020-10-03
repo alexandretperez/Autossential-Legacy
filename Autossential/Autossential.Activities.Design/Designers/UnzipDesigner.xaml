@@ -1,4 +1,4 @@
-<sap:ActivityDesigner x:Class="Autossential.Activities.Design.Designers.UnzipDesigner"
+<sap:ActivityDesigner
                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:activity="clr-namespace:Autossential.Activities.Properties;assembly=Autossential.Activities"
@@ -6,7 +6,8 @@
                       xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
                       xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
                       xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
-                      xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls">
+                      xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls" xmlns:Controls="clr-namespace:Autossential.Activities.Design.Controls" x:Class="Autossential.Activities.Design.Designers.UnzipDesigner"
+                      >
 
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>
@@ -19,7 +20,7 @@
     </sap:ActivityDesigner.Resources>
 
     <sap:ActivityDesigner.Icon>
-        <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/Autossential.Activities.Design;component/themes/icons.xaml}" />
+        <DrawingBrush Stretch="Uniform" Drawing="{Binding ModelItem, ConverterParameter=pack://application:\,\,\,/Autossential.Activities.Design;component/themes/icons.xaml, Converter={StaticResource ActivityIconConverter}}" />
     </sap:ActivityDesigner.Icon>
 
     <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
@@ -39,29 +40,19 @@
                                  VerticalAlignment="Top" Width="300"
                                  ModelItem="{Binding ModelItem}"
                                  PropertyName="ZipFilePath"
-                                 Expression="{Binding Path=ModelItem.ZipFilePath, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}"
+                                 Expression="{Binding ModelItem.ZipFilePath, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay}"
                                  Filter="Zip Files (*.zip)|*.zip"
                                  HintText="{x:Static activity:Resources.Unzip_ZipFilePath_Description}" />
 
             <Label Content="{x:Static activity:Resources.Unzip_ExtractTo_DisplayName}" Grid.Row="2"
                    ToolTip="{x:Static activity:Resources.Unzip_ExtractTo_Description}" />
-            <sapv:ExpressionTextBox Grid.Row="3" ExpressionType="{Binding ModelItem.Properties[ExtractTo].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.Unzip_ExtractTo_Description}" UseLocationExpression="False"
-                                    Margin="0,0,23,0">
-                <sapv:ExpressionTextBox.Expression>
-                    <Binding Path="ModelItem.ExtractTo" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
-                </sapv:ExpressionTextBox.Expression>
-            </sapv:ExpressionTextBox>
-            <Button x:Name="LoadButton" Click="LoadButton_Click" Grid.Row="3" HorizontalAlignment="Right">
-                <Button.Style>
-                    <Style BasedOn="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" TargetType="{x:Type Button}">
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="BorderBrush" Value="#D0D7E2" />
-                        <Setter Property="Width" Value="23" />
-                        <Setter Property="Height" Value="23" />
-                        <Setter Property="Content" Value="..." />
-                    </Style>
-                </Button.Style>
-            </Button>
+            
+            <sapv:ExpressionTextBox Grid.Row="3" ExpressionType="{Binding ModelItem.Properties[ExtractTo].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding ModelItem}" HintText="{x:Static activity:Resources.Unzip_ExtractTo_Description}" UseLocationExpression="False"
+                                    Margin="0,0,23,0" Expression="{Binding ModelItem.ExtractTo, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            
+            <Controls:FolderPickerControl Grid.Row="3" HorizontalAlignment="Right"
+                                          PropertyName="ExtractTo"
+                                          ModelItem="{Binding ModelItem}"/>
         </Grid>
     </uip:ActivityDecoratorControl>
 </sap:ActivityDesigner>

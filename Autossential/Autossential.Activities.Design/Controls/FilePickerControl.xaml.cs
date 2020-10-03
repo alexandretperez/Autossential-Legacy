@@ -1,0 +1,92 @@
+﻿using Autossential.Activities.Design.Utils;
+using Microsoft.VisualBasic.Activities;
+using Microsoft.Win32;
+using System;
+using System.Activities;
+using System.Activities.Presentation.Model;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace Autossential.Activities.Design.Controls
+{
+    /// <summary>
+    /// Interaction logic for FilePickerControl.xaml
+    /// </summary>
+    public partial class FilePickerControl : UserControl
+    {
+        public FilePickerControl()
+        {
+            InitializeComponent();
+        }
+
+
+        public static readonly DependencyProperty ModelItemProperty = DependencyProperty.Register("ModelItem", typeof(ModelItem), typeof(FilePickerControl));
+
+        public ModelItem ModelItem
+        {
+            get { return GetValue(ModelItemProperty) as ModelItem; }
+            set { SetValue(ModelItemProperty, value); }
+        }
+
+        public static readonly DependencyProperty PropertyNameProperty = DependencyProperty.Register("PropertyName", typeof(string), typeof(FilePickerControl));
+
+        public string PropertyName
+        {
+            get { return GetValue(PropertyNameProperty) as string; }
+            set { SetValue(PropertyNameProperty, value); }
+        }
+
+        public string Filter { get; set; }
+        public string Title { get; set; }
+        public bool Multiselect { get; set; }
+
+
+        private void LoadButton_Click(object sender, RoutedEventArgs e)
+        {
+            var ofd = new OpenFileDialog
+            {
+                Multiselect = Multiselect
+            };
+
+            if (string.IsNullOrEmpty(ofd.Filter))
+                ofd.Filter = "All files (*.*)|*.*";
+           
+            if (string.IsNullOrWhiteSpace(Title))
+                Title = "Select file(s)";
+
+            ofd.Title = Title;
+            ofd.InitialDirectory = Directory.GetCurrentDirectory();
+
+            if (ofd.ShowDialog() == true)
+            {
+                var baseUri = new Uri(ofd.InitialDirectory);
+
+                var files = ofd.FileNames;
+                if (files.Length == 1)
+                {
+                    ModelItem.Properties[PropertyName].SetValue(InArgument<string>.FromValue(IOUtils.GetRelativePath(ofd.InitialDirectory, files[0])));
+                    return;
+                }
+
+                var paths = files.Select(path => $"\"{IOUtils.GetRelativePath(ofd.InitialDirectory, path)}\"");
+
+                ModelItem.Properties[PropertyName].SetValue(new InArgument<IEnumerable<string>>(new VisualBasicValue<IEnumerable<string>>
+                {
+                    ExpressionText = $"{{{string.Join(", ", paths)}}}"
+                }));
+            }
+        }
+    }
+}
