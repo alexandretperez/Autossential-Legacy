@@ -22,10 +22,12 @@
         <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/Autossential.Activities.Design;component/themes/icons.xaml}" />
     </sap:ActivityDesigner.Icon>
 
-    <Border Padding="6,0">
+    <Border Padding="4,0" MinWidth="240">
         <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
             <sap:WorkflowItemPresenter x:Uid="sad:WorkflowItemPresenter_1"
                                        AutomationProperties.AutomationId="Activity"
+                                       MinWidth="200"
+                                       Margin="0"
                                        Item="{Binding Path=ModelItem.Body.Handler, Mode=TwoWay}"
                                        AllowedItemType="{x:Type sa:Activity}"
                                        HintText="{x:Static p:Resources.DropActivityHere}" />
