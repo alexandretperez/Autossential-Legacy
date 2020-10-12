@@ -241,7 +241,7 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Like a Sequence Activity, it executes a set of child activities sequentially, however, it can be combined with Exit Activity which interrupts the children execution flow exiting from the Container beforehand..
+        ///   Looks up a localized string similar to Its a wrapper that when combined with Exit Activity, interrupts the children execution flow exiting the Container beforehand..
         /// </summary>
         public static string Container_Description {
             get {

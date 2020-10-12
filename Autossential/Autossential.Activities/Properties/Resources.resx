@@ -302,7 +302,7 @@
     <comment>activity name</comment>
   </data>
   <data name="Container_Description" xml:space="preserve">
-    <value>Like a Sequence Activity, it executes a set of child activities sequentially, however, it can be combined with Exit Activity which interrupts the children execution flow exiting from the Container beforehand.</value>
+    <value>Its a wrapper that when combined with Exit Activity, interrupts the children execution flow exiting the Container beforehand.</value>
     <comment>activity description</comment>
   </data>
   <data name="Exit_DisplayName" xml:space="preserve">
