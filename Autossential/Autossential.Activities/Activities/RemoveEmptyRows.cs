@@ -85,7 +85,8 @@ namespace Autossential.Activities
                 handler = GetCustomModeHandler(context, dt, predicate);
             }
 
-            var dtResult = dt.AsEnumerable().Where(handler).CopyToDataTable();
+            var rows = dt.AsEnumerable().Where(handler);
+            var dtResult = rows.Any() ? rows.CopyToDataTable() : dt.Clone();
 
             // Outputs
             return (ctx) => OutputDataTable.Set(ctx, dtResult);
