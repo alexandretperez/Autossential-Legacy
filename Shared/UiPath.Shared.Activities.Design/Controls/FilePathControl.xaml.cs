@@ -37,45 +37,58 @@ namespace UiPath.Shared.Activities.Design.Controls
         }
 
         public static readonly DependencyProperty HintTextProperty = DependencyProperty.Register("HintText", typeof(string), typeof(FilePathControl), new PropertyMetadata("Text must be quoted"));
+
         public string HintText
         {
             get { return GetValue(HintTextProperty) as string; }
             set { SetValue(HintTextProperty, value); }
         }
+
         public static readonly DependencyProperty FileNameProperty = DependencyProperty.Register("FileName", typeof(string), typeof(FilePathControl));
+
         public string FileName
         {
             get { return GetValue(FileNameProperty) as string; }
             set { SetValue(FileNameProperty, value); }
         }
+
         public static readonly DependencyProperty FilterProperty = DependencyProperty.Register("Filter", typeof(string), typeof(FilePathControl));
+
         public string Filter
         {
             get { return GetValue(FilterProperty) as string; }
             set { SetValue(FilterProperty, value); }
         }
+
         public static readonly DependencyProperty TitleProperty = DependencyProperty.Register("Title", typeof(string), typeof(FilePathControl));
+
         public string Title
         {
             get { return GetValue(TitleProperty) as string; }
             set { SetValue(TitleProperty, value); }
         }
+
         public static readonly RoutedEvent OpenEvent = EventManager.RegisterRoutedEvent("Open", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(FilePathControl));
+
         public event RoutedEventHandler Open
         {
             add { AddHandler(OpenEvent, value); }
             remove { RemoveHandler(OpenEvent, value); }
         }
+
         public static readonly RoutedEvent FileSelectedEvent = EventManager.RegisterRoutedEvent("FileSelected", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(FilePathControl));
+
         public event RoutedEventHandler FileSelected
         {
             add { AddHandler(FileSelectedEvent, value); }
             remove { RemoveHandler(FileSelectedEvent, value); }
         }
+
         public bool IsSaveDialog { get; set; }
         public bool? ValidateNames { get; set; }
         public bool? CheckFileExists { get; set; }
         public bool? CheckPathExists { get; set; }
+
         public FilePathControl()
         {
             Title = "Select File";
@@ -85,6 +98,7 @@ namespace UiPath.Shared.Activities.Design.Controls
             };
             InitializeComponent();
         }
+
         private void LoadButton_Click(object sender, RoutedEventArgs e)
         {
             RoutedEventArgs args = new RoutedEventArgs(OpenEvent);

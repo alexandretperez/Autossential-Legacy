@@ -1,5 +1,6 @@
 using Autossential.Activities.Properties;
 using Autossential.Enums;
+using Autossential.Helpers;
 using System;
 using System.Activities;
 using System.Collections.Generic;
@@ -66,38 +67,13 @@ namespace Autossential.Activities
 
             if (source.Rows.Count > 0)
             {
-                var columnIndexes = IdentifyColumnIndexes(source, ColumnIndexes?.Get(context), ColumnNames?.Get(context));
+                var columnIndexes = DataTableHelper.IdentifyColumnIndexes(source, ColumnIndexes?.Get(context), ColumnNames?.Get(context));
                 var convertibleValues = IdentifyConvertibleValues(source, columnIndexes);
                 Compute(source.AsEnumerable(), result, convertibleValues);
             }
 
             // Outputs
             return (ctx) => DataRow.Set(ctx, result);
-        }
-
-        private HashSet<int> IdentifyColumnIndexes(DataTable source, int[] indexes, string[] names)
-        {
-            var result = new HashSet<int>();
-
-            if (names != null)
-            {
-                foreach (var name in names)
-                    result.Add(source.Columns.IndexOf(name));
-            }
-
-            if (indexes != null)
-            {
-                foreach (var index in indexes)
-                    result.Add(index);
-            }
-
-            if (result.Count == 0)
-            {
-                for (int i = 0; i < source.Columns.Count; i++)
-                    result.Add(i);
-            }
-
-            return result;
         }
 
         private void Compute(IEnumerable<DataRow> source, DataRow dr, Dictionary<int, AggregationFunction[]> convertibleValues)

@@ -6,8 +6,7 @@
                       xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
                       xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
                       xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
-                      xmlns:ac="clr-namespace:Autossential.Activities.Design.Converters"
-                      xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls">
+                      xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls" Collapsible="False">
 
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>
@@ -18,7 +17,6 @@
             <sapc:ModelToObjectValueConverter x:Key="ModelToObjectConverter" />
             <converters:ActivityIconConverter x:Key="ActivityIconConverter" />
             <converters:StringArgumentToComboboxConverter x:Key="StringArgumentToComboboxConverter" />
-            <ac:EnumToStringConverter x:Key="EnumToStringConverter" />
         </ResourceDictionary>
     </sap:ActivityDesigner.Resources>
 
@@ -45,9 +43,7 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Label Content="{x:Static activity:Resources.Aggregate_Function_DisplayName}" Grid.Row="0" Grid.Column="0" />
-                <ComboBox Grid.Row="1" Grid.Column="0"
-                    ItemsSource="{Binding AggregateFunctions}"
-                    SelectedValue="{Binding Path=ModelItem.Function, Mode=TwoWay, Converter={StaticResource EnumToStringConverter}}" />
+                <ComboBox Grid.Row="1" Grid.Column="0" Name="cbFunctions" SelectedValue="{Binding Path=ModelItem.Function, Mode=TwoWay}" />
                 <Label Content="{x:Static activity:Resources.Aggregate_DataRow_DisplayName}" ContentStringFormat="{}{0} (Output)" Grid.Row="0" Grid.Column="2" />
                 <sapv:ExpressionTextBox Grid.Row="1" Grid.Column="2"
                   ExpressionType="{Binding ModelItem.Properties[DataRow].PropertyType.GenericTypeArguments[0]}"

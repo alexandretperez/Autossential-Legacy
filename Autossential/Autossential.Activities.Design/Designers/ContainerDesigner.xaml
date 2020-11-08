@@ -31,7 +31,6 @@
                                        Item="{Binding Path=ModelItem.Body.Handler, Mode=TwoWay}"
                                        AllowedItemType="{x:Type sa:Activity}"
                                        HintText="{x:Static p:Resources.DropActivityHere}" />
-
         </uip:ActivityDecoratorControl>
     </Border>
 </sap:ActivityDesigner>

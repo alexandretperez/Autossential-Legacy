@@ -4,7 +4,7 @@ namespace UiPath.Shared.Activities.Design.Editors
 {
     public partial class EditorTemplates
     {
-        static ResourceDictionary resources;
+        private static ResourceDictionary resources;
 
         internal static ResourceDictionary ResourceDictionary
         {

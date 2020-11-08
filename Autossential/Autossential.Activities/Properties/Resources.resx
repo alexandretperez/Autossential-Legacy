@@ -677,4 +677,308 @@
     <value>Exclusions</value>
     <comment>property name</comment>
   </data>
+  <data name="EncryptText_DisplayName" xml:space="preserve">
+    <value>Encrypt Text</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="EncryptText_Description" xml:space="preserve">
+    <value>Encrypts a text using the specified algorithm and key.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="EncryptText_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptText_Text_Description" xml:space="preserve">
+    <value>The text to be encrypted.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptText_Key_DisplayName" xml:space="preserve">
+    <value>Key</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptText_Key_Description" xml:space="preserve">
+    <value>The key used to encrypt the text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptText_Encoding_DisplayName" xml:space="preserve">
+    <value>Encoding</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptText_Encoding_Description" xml:space="preserve">
+    <value>The encoding used to interpret the text and key.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptText_Algorithm_DisplayName" xml:space="preserve">
+    <value>Algorithm</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptText_Algorithm_Description" xml:space="preserve">
+    <value>The encrypt algorithm to be used by this activity.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptText_Result_DisplayName" xml:space="preserve">
+    <value>Result</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptText_Result_Description" xml:space="preserve">
+    <value>The base64 string representation of the encrypted text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptText_Iterations_Description" xml:space="preserve">
+    <value>The number of iterations to be used in operation. The default and minimum recommended is 1000.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptText_Iterations_DisplayName" xml:space="preserve">
+    <value>Iterations</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptText_DisplayName" xml:space="preserve">
+    <value>Decrypt Text</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DecryptText_Description" xml:space="preserve">
+    <value>Decrypts the text using the specified algorithm and key.</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DecryptText_Text_DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptText_Text_Description" xml:space="preserve">
+    <value>The text to be decrypted.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptText_Algorithm_DisplayName" xml:space="preserve">
+    <value>Algorithm</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptText_Algorithm_Description" xml:space="preserve">
+    <value>The alg</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptText_Iterations_DisplayName" xml:space="preserve">
+    <value>Iterations</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptText_Iterations_Description" xml:space="preserve">
+    <value>The number of iterations to be used in operation. The default and minimum recommended is 1000.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptText_Result_DisplayName" xml:space="preserve">
+    <value>Result</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptText_Result_Description" xml:space="preserve">
+    <value>The decrypted text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptText_Encoding_DisplayName" xml:space="preserve">
+    <value>Encoding</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptText_Encoding_Description" xml:space="preserve">
+    <value>The encoding used to interpret the text and key.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptText_Key_Description" xml:space="preserve">
+    <value>The key used to decrypt the text.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptText_Key_DisplayName" xml:space="preserve">
+    <value>Key</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptDataTable_DisplayName" xml:space="preserve">
+    <value>Encrypt DataTable</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="EncryptDataTable_Description" xml:space="preserve">
+    <value>Encrypts the data of a DataTable</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="EncryptDataTable_Algorithm_DisplayName" xml:space="preserve">
+    <value>Algorithm</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptDataTable_Algorithm_Description" xml:space="preserve">
+    <value>The encrypt algorithm to be used by this activity.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptDataTable_DataTable_DisplayName" xml:space="preserve">
+    <value>DataTable</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptDataTable_DataTable_Description" xml:space="preserve">
+    <value>The DataTable to be encrypted.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptDataTable_ColumnIndexes_DisplayName" xml:space="preserve">
+    <value>ColumnIndexes</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptDataTable_ColumnIndexes_Description" xml:space="preserve">
+    <value>The column indexes to be encrypted.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptDataTable_ColumnNames_DisplayName" xml:space="preserve">
+    <value>ColumnNames</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptDataTable_ColumnNames_Description" xml:space="preserve">
+    <value>The column names to be encrypted.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptDataTable_Key_DisplayName" xml:space="preserve">
+    <value>Key</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptDataTable_Key_Description" xml:space="preserve">
+    <value>The key used to encrypt the data.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptDataTable_Encoding_DisplayName" xml:space="preserve">
+    <value>Encoding</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptDataTable_Encoding_Description" xml:space="preserve">
+    <value>The encoding used to interpret the data and key.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptDataTable_Result_DisplayName" xml:space="preserve">
+    <value>DataTable</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptDataTable_Result_Description" xml:space="preserve">
+    <value>The encrypted DataTable.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptDataTable_Iterations_DisplayName" xml:space="preserve">
+    <value>Iterations</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptDataTable_Iterations_Description" xml:space="preserve">
+    <value>The number of iterations to be used in operation. The default and minimum recommended is 1000.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptDataTable_DisplayName" xml:space="preserve">
+    <value>Decrypt DataTable</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DecryptDataTable_Description" xml:space="preserve">
+    <value>Decrypts the data of a DataTable</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DecryptDataTable_Algorithm_DisplayName" xml:space="preserve">
+    <value>Algorithm</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptDataTable_Algorithm_Description" xml:space="preserve">
+    <value>The encrypt algorithm to be used by this activity.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptDataTable_Iterations_DisplayName" xml:space="preserve">
+    <value>Iterations</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptDataTable_Iterations_Description" xml:space="preserve">
+    <value>The number of iterations to be used in operation. The default and minimum recommended is 1000.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptDataTable_DataTable_DisplayName" xml:space="preserve">
+    <value>DataTable</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptDataTable_DataTable_Description" xml:space="preserve">
+    <value>The DataTable to be decrypted.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptDataTable_Key_DisplayName" xml:space="preserve">
+    <value>Key</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptDataTable_Key_Description" xml:space="preserve">
+    <value>The key used to decrypt the data.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptDataTable_Encoding_DisplayName" xml:space="preserve">
+    <value>Encoding</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptDataTable_Encoding_Description" xml:space="preserve">
+    <value>The encoding used to interpret the data and key.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptDataTable_ColumnIndexes_DisplayName" xml:space="preserve">
+    <value>ColumnIndexes</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptDataTable_ColumnIndexes_Description" xml:space="preserve">
+    <value>The column indexes to be decrypted.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptDataTable_ColumnNames_DisplayName" xml:space="preserve">
+    <value>ColumnNames</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptDataTable_ColumnNames_Description" xml:space="preserve">
+    <value>The column names to be decrypted.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptDataTable_Result_DisplayName" xml:space="preserve">
+    <value>DataTable</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptDataTable_Result_Description" xml:space="preserve">
+    <value>The decrypted DataTable.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Stopwatch_DisplayName" xml:space="preserve">
+    <value>Stopwatch</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="Stopwatch_Description" xml:space="preserve">
+    <value>Initializes e pá</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="Stopwatch_StopwatchObj_DisplayName" xml:space="preserve">
+    <value>Stopwatch</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Stopwatch_StopwatchObj_Description" xml:space="preserve">
+    <value>The stopwatch</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Stopwatch_Method_DisplayName" xml:space="preserve">
+    <value>Method</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Stopwatch_Method_Description" xml:space="preserve">
+    <value>The method</value>
+    <comment>property description</comment>
+  </data>
+  <data name="Stopwatch_LogMessage_DisplayName" xml:space="preserve">
+    <value>LogMessage</value>
+    <comment>property name</comment>
+  </data>
+  <data name="Stopwatch_LogMessage_Description" xml:space="preserve">
+    <value>The message. Use the placeholder {0} to get the elapsed time value.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptDataTable_ParallelProcessing_Description" xml:space="preserve">
+    <value>Uses parallel processing to scan through the DataTable and encrypt the data. Although this can drastically increase the processing speed, the rows in the resulting DataTable may have its order changed.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptDataTable_ParallelProcessing_DisplayName" xml:space="preserve">
+    <value>ParallelProcessing</value>
+    <comment>property name</comment>
+  </data>
+  <data name="DecryptDataTable_ParallelProcessing_Description" xml:space="preserve">
+    <value>Uses parallel processing to scan through the DataTable and decrypt the data. Although this can drastically increase the processing speed, the rows in the resulting DataTable may have its order changed.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptDataTable_ParallelProcessing_DisplayName" xml:space="preserve">
+    <value>ParallelProcessing</value>
+    <comment>property name</comment>
+  </data>
 </root>

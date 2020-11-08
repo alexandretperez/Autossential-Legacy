@@ -16,7 +16,7 @@ namespace UiPath.Shared.Activities.Design.Converters
 
         public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
         {
-            //  Can't convert back, don't try. 
+            //  Can't convert back, don't try.
             throw new NotImplementedException();
         }
 

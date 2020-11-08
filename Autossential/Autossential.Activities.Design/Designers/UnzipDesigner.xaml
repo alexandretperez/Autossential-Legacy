@@ -6,8 +6,7 @@
                       xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
                       xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
                       xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
-                      xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls" xmlns:Controls="clr-namespace:Autossential.Activities.Design.Controls" x:Class="Autossential.Activities.Design.Designers.UnzipDesigner"
-                      >
+                      xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls" xmlns:Controls="clr-namespace:Autossential.Activities.Design.Controls" x:Class="Autossential.Activities.Design.Designers.UnzipDesigner">
 
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>
@@ -46,13 +45,13 @@
 
             <Label Content="{x:Static activity:Resources.Unzip_ExtractTo_DisplayName}" Grid.Row="2"
                    ToolTip="{x:Static activity:Resources.Unzip_ExtractTo_Description}" />
-            
+
             <sapv:ExpressionTextBox Grid.Row="3" ExpressionType="{Binding ModelItem.Properties[ExtractTo].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding ModelItem}" HintText="{x:Static activity:Resources.Unzip_ExtractTo_Description}" UseLocationExpression="False"
-                                    Margin="0,0,23,0" Expression="{Binding ModelItem.ExtractTo, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-            
+                                    Margin="0,0,23,0" Expression="{Binding ModelItem.ExtractTo, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
             <Controls:FolderPickerControl Grid.Row="3" HorizontalAlignment="Right"
                                           PropertyName="ExtractTo"
-                                          ModelItem="{Binding ModelItem}"/>
+                                          ModelItem="{Binding ModelItem}" />
         </Grid>
     </uip:ActivityDecoratorControl>
 </sap:ActivityDesigner>

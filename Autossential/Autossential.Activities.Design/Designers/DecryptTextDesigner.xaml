@@ -1,0 +1,67 @@
+<sap:ActivityDesigner x:Class="Autossential.Activities.Design.Designers.DecryptTextDesigner"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:activity="clr-namespace:Autossential.Activities.Properties;assembly=Autossential.Activities"
+                      xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+                      xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+                      xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+                      xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
+                      xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls">
+
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Themes\Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <sapc:ArgumentToExpressionConverter x:Key="ArgumentToExpressionConverter" />
+            <converters:ActivityIconConverter x:Key="ActivityIconConverter" />
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/Autossential.Activities.Design;component/themes/icons.xaml}" />
+    </sap:ActivityDesigner.Icon>
+
+    <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
+        <Grid Width="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="{x:Static activity:Resources.DecryptText_Algorithm_DisplayName}" Grid.Row="0" Grid.Column="0" />
+            <ComboBox Grid.Row="1" Grid.Column="0" Name="cbAlgorithms" SelectedValue="{Binding Path=ModelItem.Algorithm, Mode=TwoWay}" />
+
+            <Label Content="{x:Static activity:Resources.DecryptText_Key_DisplayName}" Grid.Row="0" Grid.Column="2"
+                   ToolTip="{x:Static activity:Resources.DecryptText_Key_Description}" />
+            <sapv:ExpressionTextBox Grid.Row="1" Grid.Column="2" ExpressionType="{Binding ModelItem.Properties[Key].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.DecryptText_Key_Description}" UseLocationExpression="False">
+                <sapv:ExpressionTextBox.Expression>
+                    <Binding Path="ModelItem.Key" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
+                </sapv:ExpressionTextBox.Expression>
+            </sapv:ExpressionTextBox>
+
+            <Label Content="{x:Static activity:Resources.DecryptText_Text_DisplayName}" Grid.Row="2" Grid.Column="0"
+                   ToolTip="{x:Static activity:Resources.DecryptText_Text_Description}" />
+            <sapv:ExpressionTextBox  Grid.Row="3" Grid.Column="0" ExpressionType="{Binding ModelItem.Properties[Text].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.DecryptText_Text_Description}" UseLocationExpression="False">
+                <sapv:ExpressionTextBox.Expression>
+                    <Binding Path="ModelItem.Text" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
+                </sapv:ExpressionTextBox.Expression>
+            </sapv:ExpressionTextBox>
+
+            <Label Content="{x:Static activity:Resources.DecryptText_Result_DisplayName}" Grid.Row="2" Grid.Column="2"
+                   ToolTip="{x:Static activity:Resources.DecryptText_Result_Description}" ContentStringFormat="{}{0} (Output)" />
+            <sapv:ExpressionTextBox Grid.Row="3" Grid.Column="2" ExpressionType="{Binding ModelItem.Properties[Result].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.DecryptText_Result_Description}" UseLocationExpression="True">
+                <sapv:ExpressionTextBox.Expression>
+                    <Binding Path="ModelItem.Result" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="Out" UpdateSourceTrigger="PropertyChanged" />
+                </sapv:ExpressionTextBox.Expression>
+            </sapv:ExpressionTextBox>
+        </Grid>
+    </uip:ActivityDecoratorControl>
+</sap:ActivityDesigner>

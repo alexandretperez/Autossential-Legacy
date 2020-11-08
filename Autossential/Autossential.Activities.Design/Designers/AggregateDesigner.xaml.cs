@@ -1,6 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Autossential.Enums;
+using Autossential.Helpers;
 
 namespace Autossential.Activities.Design.Designers
 {
@@ -12,15 +11,10 @@ namespace Autossential.Activities.Design.Designers
         public AggregateDesigner()
         {
             InitializeComponent();
-        }
 
-        public List<string> AggregateFunctions
-        {
-            get
-            {
-                var type = typeof(Aggregate).GetProperty("Function").PropertyType;
-                return Enum.GetNames(type).ToList();
-            }
+            cbFunctions.ItemsSource = EnumHelper.EnumAsDictionary<AggregationFunction>();
+            cbFunctions.DisplayMemberPath = "Key";
+            cbFunctions.SelectedValuePath = "Value";
         }
     }
 }

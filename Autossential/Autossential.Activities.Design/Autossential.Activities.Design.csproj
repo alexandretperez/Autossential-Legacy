@@ -10,7 +10,7 @@
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression></PackageLicenseExpression>
-    <Description>A set of custom activities designed to work with RPA tools based on Windows Workflow Foundation, e.g: UiPath.</Description>
+    <Description>A set of custom activities designed to work with the RPA tool UiPath or any other based on Windows Workflow Foundation.</Description>
     <Authors>Alexandre Toledo Perez</Authors>
     <Company>Alexandre Toledo Perez</Company>
     <Copyright>© 2020 Alexandre Toledo Perez</Copyright>
@@ -39,7 +39,11 @@
     <None Remove="Designers\CultureScopeDesigner.xaml" />
     <None Remove="Designers\DataRowToDictionaryDesigner.xaml" />
     <None Remove="Designers\DecrementDesigner.xaml" />
+    <None Remove="Designers\DecryptDataTableDesigner.xaml" />
+    <None Remove="Designers\DecryptTextDesigner.xaml" />
     <None Remove="Designers\DictionaryToDataTableDesigner.xaml" />
+    <None Remove="Designers\EncryptDataTableDesigner.xaml" />
+    <None Remove="Designers\EncryptTextDesigner.xaml" />
     <None Remove="Designers\EnumerateFilesDesigner.xaml" />
     <None Remove="Designers\ExitDesigner.xaml" />
     <None Remove="Designers\IncrementDesigner.xaml" />
@@ -80,7 +84,7 @@
     <DocumentationFile>bin\$(Configuration)\Autossential.Activities.Design.xml</DocumentationFile>
     <PackageIcon>packageIcon.png</PackageIcon>
     <Product>Autossential.Activities</Product>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <RepositoryUrl>https://github.com/alexandretperez/Autossential</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
@@ -134,7 +138,19 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
+    <Page Include="Designers\DecryptDataTableDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\DecryptTextDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
     <Page Include="Designers\DictionaryToDataTableDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\EncryptDataTableDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\EncryptTextDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\EnumerateFilesDesigner.xaml">
@@ -170,6 +186,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Autossential.Activities\Autossential.Activities.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\Autossential\Autossential.csproj">
+      <Private></Private>
+      <EmbedInteropTypes></EmbedInteropTypes>
+      <PrivateAssets>All</PrivateAssets>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

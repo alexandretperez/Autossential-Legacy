@@ -33,7 +33,7 @@
                     Expression="{Binding ModelItem.CultureName, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     HorizontalAlignment="Right"
                     Width="70" />
-         
+
                 <sap:WorkflowItemPresenter x:Uid="sad:WorkflowItemPresenter_1"
                                        AutomationProperties.AutomationId="Activity"
                                        MinWidth="200"
@@ -41,7 +41,6 @@
                                        Item="{Binding Path=ModelItem.Body.Handler, Mode=TwoWay}"
                                        AllowedItemType="{x:Type sa:Activity}"
                                        HintText="{x:Static p:Resources.DropActivityHere}" />
-           
         </StackPanel>
     </uip:ActivityDecoratorControl>
 </sap:ActivityDesigner>

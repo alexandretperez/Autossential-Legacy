@@ -32,7 +32,7 @@
             </Grid.RowDefinitions>
 
             <Label Content="{x:Static activity:Resources.CheckPoint_Expression_DisplayName}" Grid.Row="0"
-                   ToolTip="{x:Static activity:Resources.CheckPoint_Expression_Description}"/>
+                   ToolTip="{x:Static activity:Resources.CheckPoint_Expression_Description}" />
             <sapv:ExpressionTextBox Grid.Row="1" ExpressionType="{Binding ModelItem.Properties[Expression].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.CheckPoint_Expression_Description}" UseLocationExpression="False">
                 <sapv:ExpressionTextBox.Expression>
                     <Binding Path="ModelItem.Expression" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
@@ -40,7 +40,7 @@
             </sapv:ExpressionTextBox>
 
             <Label Content="{x:Static activity:Resources.CheckPoint_Exception_DisplayName}" Grid.Row="2"
-                   ToolTip="{x:Static activity:Resources.CheckPoint_Exception_Description}"/>
+                   ToolTip="{x:Static activity:Resources.CheckPoint_Exception_Description}" />
             <sapv:ExpressionTextBox Grid.Row="3" ExpressionType="{Binding ModelItem.Properties[Exception].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.CheckPoint_Exception_Description}" UseLocationExpression="False">
                 <sapv:ExpressionTextBox.Expression>
                     <Binding Path="ModelItem.Exception" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />

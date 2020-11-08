@@ -19,6 +19,7 @@ namespace Autossential.Activities.Design
             var fileCompressionCategory = new CategoryAttribute($"{main}.File.Compression");
             var programmingCategory = new CategoryAttribute($"{main}.Programming");
             var workflowCategory = new CategoryAttribute($"{main}.Workflow");
+            var securityCategory = new CategoryAttribute($"{main}.Security");
 
             builder.AddCustomAttributes(typeof(Aggregate), dataTableCategory);
             builder.AddCustomAttributes(typeof(Aggregate), new DesignerAttribute(typeof(AggregateDesigner)));
@@ -80,6 +81,21 @@ namespace Autossential.Activities.Design
             builder.AddCustomAttributes(typeof(CheckPoint), new DesignerAttribute(typeof(CheckPointDesigner)));
             builder.AddCustomAttributes(typeof(CheckPoint), new HelpKeywordAttribute(""));
 
+            builder.AddCustomAttributes(typeof(EncryptText), securityCategory);
+            builder.AddCustomAttributes(typeof(EncryptText), new DesignerAttribute(typeof(EncryptTextDesigner)));
+            builder.AddCustomAttributes(typeof(EncryptText), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(DecryptText), securityCategory);
+            builder.AddCustomAttributes(typeof(DecryptText), new DesignerAttribute(typeof(DecryptTextDesigner)));
+            builder.AddCustomAttributes(typeof(DecryptText), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(EncryptDataTable), securityCategory);
+            builder.AddCustomAttributes(typeof(EncryptDataTable), new DesignerAttribute(typeof(EncryptDataTableDesigner)));
+            builder.AddCustomAttributes(typeof(EncryptDataTable), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(DecryptDataTable), securityCategory);
+            builder.AddCustomAttributes(typeof(DecryptDataTable), new DesignerAttribute(typeof(DecryptDataTableDesigner)));
+            builder.AddCustomAttributes(typeof(DecryptDataTable), new HelpKeywordAttribute(""));
 
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }

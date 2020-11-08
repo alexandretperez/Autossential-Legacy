@@ -38,7 +38,7 @@
             </sapv:ExpressionTextBox>
             <Controls:FolderPickerControl Grid.Row="0" HorizontalAlignment="Right"
                                           ModelItem="{Binding ModelItem}"
-                                          PropertyName="Path"/>            
+                                          PropertyName="Path" />
             <Label Content="{x:Static activity:Resources.EnumerateFiles_SearchPattern_DisplayName}" Grid.Row="1"
                    ToolTip="{x:Static activity:Resources.EnumerateFiles_SearchPattern_Description}" />
             <sapv:ExpressionTextBox Grid.Row="2" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.EnumerateFiles_SearchPattern_HintText}" UseLocationExpression="False">

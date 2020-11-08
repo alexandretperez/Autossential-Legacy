@@ -73,36 +73,35 @@
     </Style>
 
     <Style TargetType="{x:Type ComboBox}" x:Key="NonEditableComboboxStyle" BasedOn="{StaticResource {x:Type ComboBox}}">
-        <Setter Property="HorizontalAlignment" Value="Stretch"/>
-        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
-        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
-        <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
-        <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}"/>
-        <Setter Property="BorderBrush" Value="#D0D7E2"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.CanContentScroll" Value="True" />
+        <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="BorderBrush" Value="#D0D7E2" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="Height" Value="23" />
     </Style>
     <ControlTemplate x:Key="DefaultButtonStyle" TargetType="{x:Type Button}">
         <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True">
-            <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="BorderBrush" TargetName="Bd" Value="#80AAAAAA"/>
-                <Setter Property="Background" TargetName="Bd" Value="#210080FF"/>
+                <Setter Property="BorderBrush" TargetName="Bd" Value="#80AAAAAA" />
+                <Setter Property="Background" TargetName="Bd" Value="#210080FF" />
             </Trigger>
             <Trigger Property="IsKeyboardFocused" Value="True">
-                <Setter Property="BorderBrush" TargetName="Bd" Value="#80AAAAAA"/>
-                <Setter Property="Background" TargetName="Bd" Value="#210080FF"/>
+                <Setter Property="BorderBrush" TargetName="Bd" Value="#80AAAAAA" />
+                <Setter Property="Background" TargetName="Bd" Value="#210080FF" />
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="BorderBrush" TargetName="Bd" Value="#90006CD9"/>
-                <Setter Property="Background" TargetName="Bd" Value="#400080FF"/>
+                <Setter Property="BorderBrush" TargetName="Bd" Value="#90006CD9" />
+                <Setter Property="Background" TargetName="Bd" Value="#400080FF" />
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-
 </ResourceDictionary>

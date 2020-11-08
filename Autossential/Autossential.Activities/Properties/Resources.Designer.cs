@@ -430,6 +430,312 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The encrypt algorithm to be used by this activity..
+        /// </summary>
+        public static string DecryptDataTable_Algorithm_Description {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Algorithm_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Algorithm.
+        /// </summary>
+        public static string DecryptDataTable_Algorithm_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Algorithm_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The column indexes to be decrypted..
+        /// </summary>
+        public static string DecryptDataTable_ColumnIndexes_Description {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_ColumnIndexes_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ColumnIndexes.
+        /// </summary>
+        public static string DecryptDataTable_ColumnIndexes_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_ColumnIndexes_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The column names to be decrypted..
+        /// </summary>
+        public static string DecryptDataTable_ColumnNames_Description {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_ColumnNames_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ColumnNames.
+        /// </summary>
+        public static string DecryptDataTable_ColumnNames_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_ColumnNames_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The DataTable to be decrypted..
+        /// </summary>
+        public static string DecryptDataTable_DataTable_Description {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_DataTable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DataTable.
+        /// </summary>
+        public static string DecryptDataTable_DataTable_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_DataTable_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decrypts the data of a DataTable.
+        /// </summary>
+        public static string DecryptDataTable_Description {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decrypt DataTable.
+        /// </summary>
+        public static string DecryptDataTable_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The encoding used to interpret the data and key..
+        /// </summary>
+        public static string DecryptDataTable_Encoding_Description {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Encoding_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encoding.
+        /// </summary>
+        public static string DecryptDataTable_Encoding_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Encoding_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The number of iterations to be used in operation. The default and minimum recommended is 1000..
+        /// </summary>
+        public static string DecryptDataTable_Iterations_Description {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Iterations_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iterations.
+        /// </summary>
+        public static string DecryptDataTable_Iterations_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Iterations_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The key used to decrypt the data..
+        /// </summary>
+        public static string DecryptDataTable_Key_Description {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Key_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key.
+        /// </summary>
+        public static string DecryptDataTable_Key_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Key_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uses parallel processing to scan through the DataTable and decrypt the data. Although this can drastically increase the processing speed, the rows in the resulting DataTable may have its order changed..
+        /// </summary>
+        public static string DecryptDataTable_ParallelProcessing_Description {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_ParallelProcessing_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ParallelProcessing.
+        /// </summary>
+        public static string DecryptDataTable_ParallelProcessing_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_ParallelProcessing_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The decrypted DataTable..
+        /// </summary>
+        public static string DecryptDataTable_Result_Description {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Result_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DataTable.
+        /// </summary>
+        public static string DecryptDataTable_Result_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Result_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The alg.
+        /// </summary>
+        public static string DecryptText_Algorithm_Description {
+            get {
+                return ResourceManager.GetString("DecryptText_Algorithm_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Algorithm.
+        /// </summary>
+        public static string DecryptText_Algorithm_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptText_Algorithm_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decrypts the text using the specified algorithm and key..
+        /// </summary>
+        public static string DecryptText_Description {
+            get {
+                return ResourceManager.GetString("DecryptText_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decrypt Text.
+        /// </summary>
+        public static string DecryptText_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptText_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The encoding used to interpret the text and key..
+        /// </summary>
+        public static string DecryptText_Encoding_Description {
+            get {
+                return ResourceManager.GetString("DecryptText_Encoding_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encoding.
+        /// </summary>
+        public static string DecryptText_Encoding_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptText_Encoding_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The number of iterations to be used in operation. The default and minimum recommended is 1000..
+        /// </summary>
+        public static string DecryptText_Iterations_Description {
+            get {
+                return ResourceManager.GetString("DecryptText_Iterations_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iterations.
+        /// </summary>
+        public static string DecryptText_Iterations_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptText_Iterations_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The key used to decrypt the text..
+        /// </summary>
+        public static string DecryptText_Key_Description {
+            get {
+                return ResourceManager.GetString("DecryptText_Key_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key.
+        /// </summary>
+        public static string DecryptText_Key_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptText_Key_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The decrypted text..
+        /// </summary>
+        public static string DecryptText_Result_Description {
+            get {
+                return ResourceManager.GetString("DecryptText_Result_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Result.
+        /// </summary>
+        public static string DecryptText_Result_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptText_Result_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The text to be decrypted..
+        /// </summary>
+        public static string DecryptText_Text_Description {
+            get {
+                return ResourceManager.GetString("DecryptText_Text_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string DecryptText_Text_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptText_Text_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The output Data Table.
         /// </summary>
         public static string DictionaryToDataTable_DataTable_Description {
@@ -498,6 +804,312 @@ namespace Autossential.Activities.Properties {
         public static string Do {
             get {
                 return ResourceManager.GetString("Do", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The encrypt algorithm to be used by this activity..
+        /// </summary>
+        public static string EncryptDataTable_Algorithm_Description {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Algorithm_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Algorithm.
+        /// </summary>
+        public static string EncryptDataTable_Algorithm_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Algorithm_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The column indexes to be encrypted..
+        /// </summary>
+        public static string EncryptDataTable_ColumnIndexes_Description {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_ColumnIndexes_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ColumnIndexes.
+        /// </summary>
+        public static string EncryptDataTable_ColumnIndexes_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_ColumnIndexes_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The column names to be encrypted..
+        /// </summary>
+        public static string EncryptDataTable_ColumnNames_Description {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_ColumnNames_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ColumnNames.
+        /// </summary>
+        public static string EncryptDataTable_ColumnNames_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_ColumnNames_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The DataTable to be encrypted..
+        /// </summary>
+        public static string EncryptDataTable_DataTable_Description {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_DataTable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DataTable.
+        /// </summary>
+        public static string EncryptDataTable_DataTable_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_DataTable_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encrypts the data of a DataTable.
+        /// </summary>
+        public static string EncryptDataTable_Description {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encrypt DataTable.
+        /// </summary>
+        public static string EncryptDataTable_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The encoding used to interpret the data and key..
+        /// </summary>
+        public static string EncryptDataTable_Encoding_Description {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Encoding_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encoding.
+        /// </summary>
+        public static string EncryptDataTable_Encoding_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Encoding_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The number of iterations to be used in operation. The default and minimum recommended is 1000..
+        /// </summary>
+        public static string EncryptDataTable_Iterations_Description {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Iterations_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iterations.
+        /// </summary>
+        public static string EncryptDataTable_Iterations_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Iterations_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The key used to encrypt the data..
+        /// </summary>
+        public static string EncryptDataTable_Key_Description {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Key_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key.
+        /// </summary>
+        public static string EncryptDataTable_Key_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Key_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uses parallel processing to scan through the DataTable and encrypt the data. Although this can drastically increase the processing speed, the rows in the resulting DataTable may have its order changed..
+        /// </summary>
+        public static string EncryptDataTable_ParallelProcessing_Description {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_ParallelProcessing_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ParallelProcessing.
+        /// </summary>
+        public static string EncryptDataTable_ParallelProcessing_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_ParallelProcessing_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The encrypted DataTable..
+        /// </summary>
+        public static string EncryptDataTable_Result_Description {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Result_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DataTable.
+        /// </summary>
+        public static string EncryptDataTable_Result_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Result_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The encrypt algorithm to be used by this activity..
+        /// </summary>
+        public static string EncryptText_Algorithm_Description {
+            get {
+                return ResourceManager.GetString("EncryptText_Algorithm_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Algorithm.
+        /// </summary>
+        public static string EncryptText_Algorithm_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptText_Algorithm_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encrypts a text using the specified algorithm and key..
+        /// </summary>
+        public static string EncryptText_Description {
+            get {
+                return ResourceManager.GetString("EncryptText_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encrypt Text.
+        /// </summary>
+        public static string EncryptText_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptText_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The encoding used to interpret the text and key..
+        /// </summary>
+        public static string EncryptText_Encoding_Description {
+            get {
+                return ResourceManager.GetString("EncryptText_Encoding_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encoding.
+        /// </summary>
+        public static string EncryptText_Encoding_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptText_Encoding_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The number of iterations to be used in operation. The default and minimum recommended is 1000..
+        /// </summary>
+        public static string EncryptText_Iterations_Description {
+            get {
+                return ResourceManager.GetString("EncryptText_Iterations_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iterations.
+        /// </summary>
+        public static string EncryptText_Iterations_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptText_Iterations_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The key used to encrypt the text..
+        /// </summary>
+        public static string EncryptText_Key_Description {
+            get {
+                return ResourceManager.GetString("EncryptText_Key_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key.
+        /// </summary>
+        public static string EncryptText_Key_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptText_Key_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The base64 string representation of the encrypted text..
+        /// </summary>
+        public static string EncryptText_Result_Description {
+            get {
+                return ResourceManager.GetString("EncryptText_Result_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Result.
+        /// </summary>
+        public static string EncryptText_Result_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptText_Result_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The text to be encrypted..
+        /// </summary>
+        public static string EncryptText_Text_Description {
+            get {
+                return ResourceManager.GetString("EncryptText_Text_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string EncryptText_Text_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptText_Text_DisplayName", resourceCulture);
             }
         }
         
@@ -885,6 +1497,78 @@ namespace Autossential.Activities.Properties {
         public static string RemoveEmptyRows_OutputDataTable_DisplayName {
             get {
                 return ResourceManager.GetString("RemoveEmptyRows_OutputDataTable_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Initializes e pá.
+        /// </summary>
+        public static string Stopwatch_Description {
+            get {
+                return ResourceManager.GetString("Stopwatch_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stopwatch.
+        /// </summary>
+        public static string Stopwatch_DisplayName {
+            get {
+                return ResourceManager.GetString("Stopwatch_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The message. Use the placeholder {0} to get the elapsed time value..
+        /// </summary>
+        public static string Stopwatch_LogMessage_Description {
+            get {
+                return ResourceManager.GetString("Stopwatch_LogMessage_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LogMessage.
+        /// </summary>
+        public static string Stopwatch_LogMessage_DisplayName {
+            get {
+                return ResourceManager.GetString("Stopwatch_LogMessage_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The method.
+        /// </summary>
+        public static string Stopwatch_Method_Description {
+            get {
+                return ResourceManager.GetString("Stopwatch_Method_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Method.
+        /// </summary>
+        public static string Stopwatch_Method_DisplayName {
+            get {
+                return ResourceManager.GetString("Stopwatch_Method_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The stopwatch.
+        /// </summary>
+        public static string Stopwatch_StopwatchObj_Description {
+            get {
+                return ResourceManager.GetString("Stopwatch_StopwatchObj_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stopwatch.
+        /// </summary>
+        public static string Stopwatch_StopwatchObj_DisplayName {
+            get {
+                return ResourceManager.GetString("Stopwatch_StopwatchObj_DisplayName", resourceCulture);
             }
         }
         

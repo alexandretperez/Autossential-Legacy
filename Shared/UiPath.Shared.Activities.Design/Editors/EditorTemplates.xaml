@@ -7,7 +7,7 @@
 
     <DataTemplate x:Key="ArgumentDictionaryEditor">
         <DockPanel LastChildFill="True">
-            <TextBlock Text="{x:Static localization:SharedResources.Collection}" TextTrimming="CharacterEllipsis" IsEnabled="False"/>
+            <TextBlock Text="{x:Static localization:SharedResources.Collection}" TextTrimming="CharacterEllipsis" IsEnabled="False" />
             <propertyEditing:EditModeSwitchButton TargetEditMode="Dialog" HorizontalAlignment="Right" DockPanel.Dock="Right" />
         </DockPanel>
     </DataTemplate>
@@ -17,5 +17,4 @@
             <PasswordBox x:Name="EmailPassword" editors:PasswordBoxAssistant.BindPassword="True" editors:PasswordBoxAssistant.BoundPassword="{Binding Path=Value, Mode=TwoWay}" />
         </DockPanel>
     </DataTemplate>
-
 </ResourceDictionary>
