@@ -143,7 +143,7 @@ namespace Autossential.Activities
             foreach (var colIndex in columnIndexes)
             {
                 var value = values[colIndex];
-                if (value == null || value == DBNull.Value)
+                if (value == null || value == DBNull.Value || Equals(value, ""))
                     continue;
 
                 values[colIndex] = crypto.Encrypt(value.ToString(), key);
