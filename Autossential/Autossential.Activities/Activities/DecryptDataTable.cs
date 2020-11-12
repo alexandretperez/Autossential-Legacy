@@ -110,8 +110,9 @@ namespace Autossential.Activities
             var columnIndexes = DataTableHelper.IdentifyColumnIndexes(inDt, ColumnIndexes?.Get(context), ColumnNames?.Get(context));
 
             // Configs output datatable
-            var outDt = inDt.Clone();
-            DataTableHelper.ChangeColumnTypes(outDt, columnIndexes, typeof(object));
+            var outDt = new DataTable();
+            foreach (DataColumn col in inDt.Columns)
+                outDt.Columns.Add(col.ColumnName, typeof(object));
 
             using (var crypto = new Crypto(Algorithm, encoding, iterations))
             {

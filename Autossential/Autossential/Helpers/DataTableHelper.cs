@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 
 namespace Autossential.Helpers
@@ -29,12 +28,6 @@ namespace Autossential.Helpers
             }
 
             return result;
-        }
-
-        public static void ChangeColumnTypes(DataTable dataTable, IEnumerable<int> columnIndexes, Type dataType)
-        {
-            foreach (var colIndex in columnIndexes)
-                dataTable.Columns[colIndex].DataType = dataType;
         }
     }
 }
