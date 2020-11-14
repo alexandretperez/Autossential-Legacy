@@ -19,7 +19,8 @@
                 </Style>
             </Button.Style>
         </Button>
-        <sapv:ExpressionTextBox DockPanel.Dock="Left" MaxLines="1" Name="FileNameTextBox" OwnerActivity="{Binding ModelItem}"
+        <sapv:ExpressionTextBox DockPanel.Dock="Left" MaxLines="1" Name="FileNameTextBox" OwnerActivity="{Binding ModelItem}" 
                                 ExpressionType="s:String" HintText="{Binding HintText, ElementName=FilePath}" Expression="{Binding Expression, ElementName=FilePath}" />
     </DockPanel>
+    
 </UserControl>

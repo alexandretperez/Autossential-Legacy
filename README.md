@@ -1,3 +1,3 @@
 # Autossential.Activities
 
-A set of custom activities designed to work with RPA tools based on Windows Workflow Foundation, e.g: UiPath.
+A set of custom activities designed to work with the RPA tool UiPath or any other based on Windows Workflow Foundation.

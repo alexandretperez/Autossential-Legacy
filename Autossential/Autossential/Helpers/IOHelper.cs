@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 
-namespace Autossential.Activities.Design.Utils
+namespace Autossential.Helpers
 {
-    public static class IOUtils
+    public static class IOHelper
     {
         public static string GetRelativePath(string basePath, string path)
         {

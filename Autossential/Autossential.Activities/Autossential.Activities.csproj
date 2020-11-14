@@ -8,14 +8,14 @@
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\Autossential.Activities.xml</DocumentationFile>
-    <Version>1.0.4</Version>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+  </ItemGroup>
 	<ItemGroup>
 		<Reference Include="System" />
 		
 		<Reference Include="System.Core" />
-		
-		<Reference Include="System.IO.Compression" />
 		<Reference Include="System.Xml.Linq" />
 		<Reference Include="System.Data.DataSetExtensions" />
 		

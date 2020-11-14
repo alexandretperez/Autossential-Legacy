@@ -46,7 +46,7 @@ namespace UiPath.Shared.Activities.Design.Converters
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            // Convert combo box value to InArgument<string>
+            // Convert combo box value to InArgument<string>  
             string itemContent = "\"" + (string)value + "\"";
             VisualBasicValue<string> vbArgument = new VisualBasicValue<string>(itemContent);
             InArgument<string> inArgument = new InArgument<string>(vbArgument);

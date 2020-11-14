@@ -2,7 +2,7 @@
 
 namespace UiPath.Shared.Activities.Utilities
 {
-    internal static class ActivityExtensions
+    static class ActivityExtensions
     {
         public static T GetValueOrDefault<T>(this AsyncCodeActivityContext context, InArgument<T> arg, T defaultValue = default(T))
         {

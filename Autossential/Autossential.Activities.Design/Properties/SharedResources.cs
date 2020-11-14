@@ -1,6 +1,7 @@
-﻿namespace UiPath.Shared.Localization
+﻿
+namespace UiPath.Shared.Localization
 {
-    internal class SharedResources : Autossential.Activities.Design.Properties.Resources
+    class SharedResources : Autossential.Activities.Design.Properties.Resources
     {
     }
 }

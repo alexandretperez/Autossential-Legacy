@@ -4,7 +4,6 @@
 		<RootNamespace>Autossential.Activities.Design</RootNamespace>
 		<AssemblyName>Autossential.Activities.Design</AssemblyName>
     <PackageId>Autossential.Activities</PackageId>
-    <UseWpf>True</UseWpf>
   </PropertyGroup>
   <!-- Package Metadata -->
   <PropertyGroup>
@@ -14,7 +13,7 @@
     <Authors>Alexandre Toledo Perez</Authors>
     <Company>Alexandre Toledo Perez</Company>
     <Copyright>© 2020 Alexandre Toledo Perez</Copyright>
-    <PackageTags>UiPath Activit𝗒 .NET Workflow</PackageTags>
+    <PackageTags>UiPath Activity .NET Workflow</PackageTags>
     <PackageProjectUrl>https://github.com/alexandretperez/Autossential</PackageProjectUrl>
     <PackageIconUrl></PackageIconUrl>
     <!--<PackageIcon>packageIcon.png</PackageIcon>--> <!--PackageIcon not yet supported in UiPath Studio-->
@@ -28,30 +27,12 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>1.0.4</PackageVersion>
+    <PackageVersion>0.1.0</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Controls\FilePickerControl.xaml" />
     <None Remove="Controls\FolderPickerControl.xaml" />
     <None Remove="Designers\AggregateDesigner.xaml" />
-    <None Remove="Designers\CheckPointDesigner.xaml" />
-    <None Remove="Designers\ContainerDesigner.xaml" />
-    <None Remove="Designers\CultureScopeDesigner.xaml" />
-    <None Remove="Designers\DataRowToDictionaryDesigner.xaml" />
-    <None Remove="Designers\DecrementDesigner.xaml" />
-    <None Remove="Designers\DecryptDataTableDesigner.xaml" />
-    <None Remove="Designers\DecryptTextDesigner.xaml" />
-    <None Remove="Designers\DictionaryToDataTableDesigner.xaml" />
-    <None Remove="Designers\EncryptDataTableDesigner.xaml" />
-    <None Remove="Designers\EncryptTextDesigner.xaml" />
-    <None Remove="Designers\EnumerateFilesDesigner.xaml" />
-    <None Remove="Designers\ExitDesigner.xaml" />
-    <None Remove="Designers\IncrementDesigner.xaml" />
-    <None Remove="Designers\PromoteHeadersDesigner.xaml" />
-    <None Remove="Designers\RemoveEmptyRowsDesigner.xaml" />
-    <None Remove="Designers\UnzipDesigner.xaml" />
-    <None Remove="Designers\WaitFileDesigner.xaml" />
-    <None Remove="Designers\ZipDesigner.xaml" />
     <None Include="LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -82,11 +63,10 @@
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\Autossential.Activities.Design.xml</DocumentationFile>
-    <PackageIcon>packageIcon.png</PackageIcon>
-    <Product>Autossential.Activities</Product>
-    <Version>1.0.4</Version>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Version>1.0.5</Version>
     <RepositoryUrl>https://github.com/alexandretperez/Autossential</RepositoryUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageIcon>packageIcon.png</PackageIcon>
     <RepositoryType>GIT</RepositoryType>
   </PropertyGroup>
 	<ItemGroup>
@@ -114,10 +94,10 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Controls\FilePickerControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Controls\FolderPickerControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\AggregateDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -136,7 +116,7 @@
     </Page>
     <Page Include="Designers\DecrementDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToOutputDirectory></CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\DecryptDataTableDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -161,7 +141,7 @@
     </Page>
     <Page Include="Designers\IncrementDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToOutputDirectory></CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\PromoteHeadersDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -187,8 +167,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Autossential.Activities\Autossential.Activities.csproj" PrivateAssets="All" />
     <ProjectReference Include="..\Autossential\Autossential.csproj">
-      <Private></Private>
-      <EmbedInteropTypes></EmbedInteropTypes>
       <PrivateAssets>All</PrivateAssets>
     </ProjectReference>
   </ItemGroup>

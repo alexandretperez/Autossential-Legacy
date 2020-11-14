@@ -41,7 +41,6 @@ namespace UiPath.Shared.Activities.Design.Editors
                 }
             }
         }
-
         public static void ShowDialog(string propertyName, ModelItem ownerActivity)
         {
             DynamicArgumentDesignerOptions options = new DynamicArgumentDesignerOptions()

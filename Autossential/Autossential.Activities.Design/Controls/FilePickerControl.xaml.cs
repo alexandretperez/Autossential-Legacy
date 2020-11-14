@@ -1,4 +1,4 @@
-﻿using Autossential.Activities.Design.Utils;
+﻿using Autossential.Helpers;
 using Microsoft.VisualBasic.Activities;
 using Microsoft.Win32;
 using System;
@@ -65,11 +65,11 @@ namespace Autossential.Activities.Design.Controls
                 var files = ofd.FileNames;
                 if (files.Length == 1)
                 {
-                    ModelItem.Properties[PropertyName].SetValue(InArgument<string>.FromValue(IOUtils.GetRelativePath(ofd.InitialDirectory, files[0])));
+                    ModelItem.Properties[PropertyName].SetValue(InArgument<string>.FromValue(IOHelper.GetRelativePath(ofd.InitialDirectory, files[0])));
                     return;
                 }
 
-                var paths = files.Select(path => $"\"{IOUtils.GetRelativePath(ofd.InitialDirectory, path)}\"");
+                var paths = files.Select(path => $"\"{IOHelper.GetRelativePath(ofd.InitialDirectory, path)}\"");
 
                 ModelItem.Properties[PropertyName].SetValue(new InArgument<IEnumerable<string>>(new VisualBasicValue<IEnumerable<string>>
                 {

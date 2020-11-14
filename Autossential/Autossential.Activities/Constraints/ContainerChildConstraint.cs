@@ -2,14 +2,13 @@
 using System.Activities;
 using System.Activities.Validation;
 using System.Collections.Generic;
-using System.ComponentModel;
 
 namespace Autossential.Activities.Contraints
 {
     internal class ContainerChildConstraint : NativeActivity<bool>
     {
         [RequiredArgument]
-        [DefaultValue(null)]
+        [System.ComponentModel.DefaultValue(null)]
         public InArgument<IEnumerable<Activity>> ParentChain
         {
             get;
