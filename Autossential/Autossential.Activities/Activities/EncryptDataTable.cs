@@ -71,7 +71,7 @@ namespace Autossential.Activities
         [LocalizedDisplayName(nameof(Resources.EncryptDataTable_ParallelProcessing_DisplayName))]
         [LocalizedDescription(nameof(Resources.EncryptDataTable_ParallelProcessing_Description))]
         [LocalizedCategory(nameof(Resources.Options_Category))]
-        public InArgument<bool> ParallelProcessing { get; set; }
+        public bool ParallelProcessing { get; set; }
 
         #endregion Properties
 
@@ -81,7 +81,7 @@ namespace Autossential.Activities
         {
             Encoding = new VisualBasicValue<Encoding>($"{typeof(Encoding).FullName}.{nameof(System.Text.Encoding.UTF8)}");
             Iterations = new VisualBasicValue<int>("1000");
-            ParallelProcessing = new VisualBasicValue<bool>("False");
+            ParallelProcessing = false;
         }
 
         #endregion Constructors
@@ -107,7 +107,7 @@ namespace Autossential.Activities
             var iterations = Iterations.Get(context);
 
             var inDt = DataTable.Get(context);
-            var columnIndexes = DataTableHelper.IdentifyColumnIndexes(inDt, ColumnIndexes?.Get(context), ColumnNames?.Get(context));
+            var dataColumns = DataTableHelper.IdentifyDataColumns(inDt, ColumnIndexes?.Get(context), ColumnNames?.Get(context));
 
             // Configs output datatable
             var outDt = new DataTable();
@@ -117,14 +117,14 @@ namespace Autossential.Activities
             using (var crypto = new Crypto(Algorithm, encoding, iterations))
             {
                 outDt.BeginLoadData();
-                if (ParallelProcessing?.Get(context) == true)
+                if (ParallelProcessing == true)
                 {
-                    Parallel.ForEach(inDt.AsEnumerable(), (DataRow row) => AddToDataTable(key, columnIndexes, outDt, crypto, row));
+                    Parallel.ForEach(inDt.AsEnumerable(), (DataRow row) => AddToDataTable(key, dataColumns, outDt, crypto, row));
                 }
                 else
                 {
                     foreach (DataRow row in inDt.Rows)
-                        AddToDataTable(key, columnIndexes, outDt, crypto, row);
+                        AddToDataTable(key, dataColumns, outDt, crypto, row);
                 }
 
 
@@ -136,18 +136,18 @@ namespace Autossential.Activities
             return (ctx) => Result.Set(ctx, outDt);
         }
 
-        private static void AddToDataTable(string key, HashSet<int> columnIndexes, DataTable outDt, Crypto crypto, DataRow row)
+        private static void AddToDataTable(string key, HashSet<DataColumn> dataColumns, DataTable outDt, Crypto crypto, DataRow row)
         {
             var values = new object[row.ItemArray.Length];
             Array.Copy(row.ItemArray, 0, values, 0, values.Length);
 
-            foreach (var colIndex in columnIndexes)
+            foreach (DataColumn col in dataColumns)
             {
-                var value = values[colIndex];
+                var value = values[col.Ordinal];
                 if (value == null || value == DBNull.Value || Equals(value, ""))
                     continue;
 
-                values[colIndex] = crypto.Encrypt(value.ToString(), key);
+                values[col.Ordinal] = crypto.Encrypt(value.ToString(), key);
             }
 
             outDt.LoadDataRow(values, false);

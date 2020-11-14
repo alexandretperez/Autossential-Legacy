@@ -97,24 +97,6 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The generated DataRow from aggregation.
-        /// </summary>
-        public static string Aggregate_DataRow_Description {
-            get {
-                return ResourceManager.GetString("Aggregate_DataRow_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Data Row.
-        /// </summary>
-        public static string Aggregate_DataRow_DisplayName {
-            get {
-                return ResourceManager.GetString("Aggregate_DataRow_DisplayName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The data table which the aggregate function will be applied.
         /// </summary>
         public static string Aggregate_DataTable_Description {
@@ -165,6 +147,24 @@ namespace Autossential.Activities.Properties {
         public static string Aggregate_Function_DisplayName {
             get {
                 return ResourceManager.GetString("Aggregate_Function_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A dictionary where the key represents the column name and the value is the aggregated result of the operation..
+        /// </summary>
+        public static string Aggregate_Result_Description {
+            get {
+                return ResourceManager.GetString("Aggregate_Result_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Result.
+        /// </summary>
+        public static string Aggregate_Result_DisplayName {
+            get {
+                return ResourceManager.GetString("Aggregate_Result_DisplayName", resourceCulture);
             }
         }
         

@@ -6,8 +6,7 @@
                       xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
                       xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
                       xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
-                      xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls"
-                      xmlns:ds="clr-namespace:Autossential.Activities.Design.Properties">
+                      xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls">
 
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>
@@ -24,21 +23,29 @@
     </sap:ActivityDesigner.Icon>
 
     <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
-        <Grid Width="240">
+        <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="170" />
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="30" />
-                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="60" />
             </Grid.ColumnDefinitions>
 
-            <sapv:ExpressionTextBox Grid.Column="0" ExpressionType="{Binding ModelItem.Properties[Variable].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.Decrement_Variable_Description}" UseLocationExpression="True">
-                <sapv:ExpressionTextBox.Expression>
-                    <Binding Path="ModelItem.Variable" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="InOut" UpdateSourceTrigger="PropertyChanged" />
-                </sapv:ExpressionTextBox.Expression>
-            </sapv:ExpressionTextBox>
+            <sapv:ExpressionTextBox
+                    Grid.Column="0"
+                    ExpressionType="{Binding ModelItem.Properties[Variable].PropertyType.GenericTypeArguments[0]}"
+                    OwnerActivity="{Binding ModelItem}"
+                    UseLocationExpression="True"
+                    HintText="{x:Static activity:Resources.Decrement_Variable_Description}" 
+                    Expression="{Binding ModelItem.Variable, ConverterParameter=InOut, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
             <Label Grid.Column="1" Content="By" HorizontalAlignment="Center" />
-            <Button Content="{Binding Path=ModelItem.Value}" Grid.Column="2" Width="40" x:Name="DecrementButton" Click="DecrementButton_Click" Template="{DynamicResource DefaultButtonStyle}" ToolTip="{x:Static ds:Resources.IncrementOrDecrement}" />
+            <sapv:ExpressionTextBox
+                    Grid.Column="2"
+                    ExpressionType="{Binding ModelItem.Properties[Value].PropertyType.GenericTypeArguments[0]}"
+                    OwnerActivity="{Binding ModelItem}"
+                    UseLocationExpression="False"
+                    HintText="{x:Static activity:Resources.Decrement_Value_Description}" 
+                    Expression="{Binding ModelItem.Value, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         </Grid>
     </uip:ActivityDecoratorControl>
 </sap:ActivityDesigner>

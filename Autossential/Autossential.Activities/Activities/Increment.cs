@@ -1,4 +1,5 @@
 using Autossential.Activities.Properties;
+using Microsoft.VisualBasic.Activities;
 using System;
 using System.Activities;
 using System.Threading;
@@ -30,7 +31,7 @@ namespace Autossential.Activities
         [LocalizedDisplayName(nameof(Resources.Increment_Value_DisplayName))]
         [LocalizedDescription(nameof(Resources.Increment_Value_Description))]
         [LocalizedCategory(nameof(Resources.Options_Category))]
-        public int Value { get; set; } = 1;
+        public InArgument<int> Value { get; set; }
 
         #endregion Properties
 
@@ -38,6 +39,7 @@ namespace Autossential.Activities
 
         public Increment()
         {
+            Value = new VisualBasicValue<int>("1");
         }
 
         #endregion Constructors
@@ -47,7 +49,8 @@ namespace Autossential.Activities
         protected override void CacheMetadata(CodeActivityMetadata metadata)
         {
             if (Variable == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(Variable)));
-            if (Value < 1) metadata.AddValidationError(Resources.Increment_Value_Error);
+            if (Value == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(Value)));
+
             base.CacheMetadata(metadata);
         }
 
@@ -55,9 +58,13 @@ namespace Autossential.Activities
         {
             // Inputs
             var variable = Variable.Get(context);
+            var value = Value.Get(context);
+
+            if (value < 1)
+                throw new InvalidOperationException(Resources.Increment_Value_Error);
 
             // Outputs
-            return (ctx) => Variable.Set(ctx, variable + Value);
+            return (ctx) => Variable.Set(ctx, variable + value);
         }
 
         #endregion Protected Methods

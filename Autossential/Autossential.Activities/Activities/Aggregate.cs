@@ -40,10 +40,10 @@ namespace Autossential.Activities
         [LocalizedCategory(nameof(Resources.Input_Category))]
         public InArgument<DataTable> DataTable { get; set; }
 
-        [LocalizedDisplayName(nameof(Resources.Aggregate_DataRow_DisplayName))]
-        [LocalizedDescription(nameof(Resources.Aggregate_DataRow_Description))]
+        [LocalizedDisplayName(nameof(Resources.Aggregate_Result_DisplayName))]
+        [LocalizedDescription(nameof(Resources.Aggregate_Result_Description))]
         [LocalizedCategory(nameof(Resources.Output_Category))]
-        public OutArgument<DataRow> DataRow { get; set; }
+        public OutArgument<Dictionary<string, object>> Result { get; set; }
 
         [LocalizedDisplayName(nameof(Resources.Aggregate_Function_DisplayName))]
         [LocalizedDescription(nameof(Resources.Aggregate_Function_Description))]
@@ -63,20 +63,20 @@ namespace Autossential.Activities
         protected override async Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken)
         {
             var source = DataTable.Get(context);
-            var result = source.NewRow();
+            var result = new Dictionary<string, object>();
 
             if (source.Rows.Count > 0)
             {
-                var columnIndexes = DataTableHelper.IdentifyColumnIndexes(source, ColumnIndexes?.Get(context), ColumnNames?.Get(context));
-                var convertibleValues = IdentifyConvertibleValues(source, columnIndexes);
+                var dataColumns = DataTableHelper.IdentifyDataColumns(source, ColumnIndexes?.Get(context), ColumnNames?.Get(context));
+                var convertibleValues = IdentifyConvertibleValues(source, dataColumns);
                 Compute(source.AsEnumerable(), result, convertibleValues);
             }
 
             // Outputs
-            return (ctx) => DataRow.Set(ctx, result);
+            return (ctx) => Result.Set(ctx, result);
         }
 
-        private void Compute(IEnumerable<DataRow> source, DataRow dr, Dictionary<int, AggregationFunction[]> convertibleValues)
+        private void Compute(IEnumerable<DataRow> source, Dictionary<string, object> dr, Dictionary<string, AggregationFunction[]> convertibleValues)
         {
             foreach (var match in convertibleValues)
             {
@@ -122,21 +122,21 @@ namespace Autossential.Activities
             }
         }
 
-        private Dictionary<int, AggregationFunction[]> IdentifyConvertibleValues(DataTable source, HashSet<int> columnIndexes)
+        private Dictionary<string, AggregationFunction[]> IdentifyConvertibleValues(DataTable source, HashSet<DataColumn> dataColumns)
         {
-            var available = new Dictionary<int, AggregationFunction[]>();
+            var available = new Dictionary<string, AggregationFunction[]>();
             var rowIndex = 0;
             DataRow dr = source.Rows[rowIndex];
-            foreach (var colIndex in columnIndexes)
+            foreach (DataColumn col in dataColumns)
             {
-                switch (dr[colIndex])
+                switch (dr[col.Ordinal])
                 {
                     case int _:
                     case double _:
                     case byte _:
                     case float _:
                     case decimal _:
-                        available.Add(colIndex, new[] {
+                        available.Add(col.ColumnName, new[] {
                                 AggregationFunction.Sum,
                                 AggregationFunction.Average,
                                 AggregationFunction.Min,
@@ -147,7 +147,7 @@ namespace Autossential.Activities
                         break;
 
                     case DateTime _:
-                        available.Add(colIndex, new[]
+                        available.Add(col.ColumnName, new[]
                         {
                                 AggregationFunction.Min,
                                 AggregationFunction.Max,
@@ -156,7 +156,7 @@ namespace Autossential.Activities
                         break;
 
                     default:
-                        available.Add(colIndex, new[] { AggregationFunction.DistinctCount });
+                        available.Add(col.ColumnName, new[] { AggregationFunction.DistinctCount });
                         break;
                 }
             }

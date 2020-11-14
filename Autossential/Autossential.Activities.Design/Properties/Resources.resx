@@ -141,8 +141,4 @@
     <value>Editing</value>
     <comment>label</comment>
   </data>
-  <data name="IncrementOrDecrement" xml:space="preserve">
-    <value>Click to +1. Press Control/Ctrl than click to -1.</value>
-    <comment>hint</comment>
-  </data>
 </root>

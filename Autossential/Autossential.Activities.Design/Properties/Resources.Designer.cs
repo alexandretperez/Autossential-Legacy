@@ -113,14 +113,5 @@ namespace Autossential.Activities.Design.Properties {
                 return ResourceManager.GetString("Editing", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Click to +1. Press Control/Ctrl than click to -1..
-        /// </summary>
-        public static string IncrementOrDecrement {
-            get {
-                return ResourceManager.GetString("IncrementOrDecrement", resourceCulture);
-            }
-        }
     }
 }

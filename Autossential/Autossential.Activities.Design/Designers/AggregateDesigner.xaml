@@ -34,9 +34,9 @@
             Expression="{Binding ModelItem.DataTable, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="115" />
+                    <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="10" />
-                    <ColumnDefinition Width="115" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -44,12 +44,12 @@
                 </Grid.RowDefinitions>
                 <Label Content="{x:Static activity:Resources.Aggregate_Function_DisplayName}" Grid.Row="0" Grid.Column="0" />
                 <ComboBox Grid.Row="1" Grid.Column="0" Name="cbFunctions" SelectedValue="{Binding Path=ModelItem.Function, Mode=TwoWay}" />
-                <Label Content="{x:Static activity:Resources.Aggregate_DataRow_DisplayName}" ContentStringFormat="{}{0} (Output)" Grid.Row="0" Grid.Column="2" />
+                <Label Content="{x:Static activity:Resources.Aggregate_Result_DisplayName}" ContentStringFormat="{}{0} (Output)" Grid.Row="0" Grid.Column="2" />
                 <sapv:ExpressionTextBox Grid.Row="1" Grid.Column="2"
-                  ExpressionType="{Binding ModelItem.Properties[DataRow].PropertyType.GenericTypeArguments[0]}"
+                  ExpressionType="{Binding ModelItem.Properties[Result].PropertyType.GenericTypeArguments[0]}"
                   OwnerActivity="{Binding ModelItem}"
                   UseLocationExpression="True"
-                  Expression="{Binding ModelItem.DataRow, ConverterParameter=Out, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                  Expression="{Binding ModelItem.ItemArray, ConverterParameter=Out, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </Grid>
         </StackPanel>
     </uip:ActivityDecoratorControl>

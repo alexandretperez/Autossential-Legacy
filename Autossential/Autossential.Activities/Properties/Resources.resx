@@ -225,12 +225,12 @@
     <value>Column Names</value>
     <comment>property name</comment>
   </data>
-  <data name="Aggregate_DataRow_Description" xml:space="preserve">
-    <value>The generated DataRow from aggregation</value>
+  <data name="Aggregate_Result_Description" xml:space="preserve">
+    <value>A dictionary where the key represents the column name and the value is the aggregated result of the operation.</value>
     <comment>property description</comment>
   </data>
-  <data name="Aggregate_DataRow_DisplayName" xml:space="preserve">
-    <value>Data Row</value>
+  <data name="Aggregate_Result_DisplayName" xml:space="preserve">
+    <value>Result</value>
     <comment>property name</comment>
   </data>
   <data name="Aggregate_DataTable_Description" xml:space="preserve">

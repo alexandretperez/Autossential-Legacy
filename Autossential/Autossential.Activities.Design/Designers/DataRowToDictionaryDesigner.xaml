@@ -18,10 +18,6 @@
         </ResourceDictionary>
     </sap:ActivityDesigner.Resources>
 
-    <!--<Style TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
-        <Setter Property="FontSize" Value="25" />
-    </Style>-->
-
     <sap:ActivityDesigner.Icon>
         <DrawingBrush Stretch="Uniform" Drawing="{Binding ModelItem, ConverterParameter=pack://application:\,\,\,/Autossential.Activities.Design;component/themes/icons.xaml, Converter={StaticResource ActivityIconConverter}}" />
     </sap:ActivityDesigner.Icon>
@@ -33,9 +29,9 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="115" />
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="10" />
-                <ColumnDefinition Width="115" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
             <Label Content="{x:Static activity:Resources.DataRowToDictionary_DataRow_DisplayName}" Grid.Row="0"
