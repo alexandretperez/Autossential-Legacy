@@ -4,6 +4,7 @@ using Autossential.Security;
 using Microsoft.VisualBasic.Activities;
 using System;
 using System.Activities;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
@@ -108,26 +109,14 @@ namespace Autossential.Activities
 
             var inDt = DataTable.Get(context);
             var dataColumns = DataTableHelper.IdentifyDataColumns(inDt, ColumnIndexes?.Get(context), ColumnNames?.Get(context));
-
-            // Configs output datatable
-            var outDt = new DataTable();
-            foreach (DataColumn col in inDt.Columns)
-                outDt.Columns.Add(col.ColumnName, typeof(object));
+            var outDt = DataTableHelper.NewCryptoDataTable(inDt, dataColumns);
             
             using (var crypto = new Crypto(Algorithm, encoding, iterations))
             {
                 outDt.BeginLoadData();
-                if (ParallelProcessing == true)
-                {
-                    Parallel.ForEach(inDt.AsEnumerable(), (DataRow row) => AddToDataTable(key, dataColumns, outDt, crypto, row));
-                }
-                else
-                {
-                    foreach (DataRow row in inDt.Rows)
-                        AddToDataTable(key, dataColumns, outDt, crypto, row);
-                }
 
-
+                AddToDataTable(inDt, outDt, dataColumns, key, crypto);
+                
                 outDt.AcceptChanges();
                 outDt.EndLoadData();
             }
@@ -136,21 +125,45 @@ namespace Autossential.Activities
             return (ctx) => Result.Set(ctx, outDt);
         }
 
-        private static void AddToDataTable(string key, HashSet<DataColumn> dataColumns, DataTable outDt, Crypto crypto, DataRow row)
+        private void AddToDataTable(DataTable inDt, DataTable outDt, HashSet<DataColumn> dataColumns, string key, Crypto crypto)
         {
-            var values = new object[row.ItemArray.Length];
-            Array.Copy(row.ItemArray, 0, values, 0, values.Length);
-
-            foreach (DataColumn col in dataColumns)
+            if (ParallelProcessing)
             {
-                var value = values[col.Ordinal];
-                if (value == null || value == DBNull.Value || Equals(value, ""))
-                    continue;
+                var safeList = new ConcurrentBag<object[]>();
+                Parallel.ForEach(inDt.AsEnumerable(), row =>
+                {
+                    var values = ApplyEncryption(row.ItemArray, dataColumns, crypto, key);
+                    safeList.Add(values);
+                });
 
-                values[col.Ordinal] = crypto.Encrypt(value.ToString(), key);
+                while (!safeList.IsEmpty)
+                {
+                    if (safeList.TryTake(out object[] values))
+                        outDt.LoadDataRow(values, false);
+                }
+
+                return;
             }
 
-            outDt.LoadDataRow(values, false);
+            foreach (DataRow row in inDt.Rows)
+            {
+                var values = ApplyEncryption(row.ItemArray, dataColumns, crypto, key);
+                outDt.LoadDataRow(values, false);
+            }
+        }
+
+        private object[] ApplyEncryption(object[] values, HashSet<DataColumn> dataColumns, Crypto crypto, string key)
+        {
+            foreach (var col in dataColumns)
+            {
+                var content = values[col.Ordinal];
+                if (content == null || content == DBNull.Value || Equals(content, ""))
+                    continue;
+
+                values[col.Ordinal] = crypto.Encrypt(content.ToString(), key);
+            }
+
+            return values;
         }
 
         #endregion Protected Methods

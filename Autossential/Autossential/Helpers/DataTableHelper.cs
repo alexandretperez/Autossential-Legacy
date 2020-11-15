@@ -31,6 +31,19 @@ namespace Autossential.Helpers
         }
 
 
+        public static DataTable NewCryptoDataTable(DataTable sourceDataTable, HashSet<DataColumn> cryptoColumns)
+        {
+            var result = new DataTable();
+            foreach (DataColumn col in sourceDataTable.Columns)
+            {
+                if (cryptoColumns.Contains(col))
+                    result.Columns.Add(col.ColumnName, typeof(string));
+                else
+                    result.Columns.Add(col.ColumnName, col.DataType);
+            }
+            return result;
+        }
+
         public static Dictionary<string, object> ColumnsToDictionary(DataTable dataTable)
         {
             var result = new Dictionary<string, object>();

@@ -63,7 +63,7 @@
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\Autossential.Activities.Design.xml</DocumentationFile>
-    <Version>1.0.5</Version>
+    <Version>1.0.5-alpha</Version>
     <RepositoryUrl>https://github.com/alexandretperez/Autossential</RepositoryUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageIcon>packageIcon.png</PackageIcon>

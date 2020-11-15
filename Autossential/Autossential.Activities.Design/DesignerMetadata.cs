@@ -1,6 +1,5 @@
 using Autossential.Activities.Design.Designers;
 using Autossential.Activities.Design.Properties;
-using Autossential.Activities.Design.PropertyEditors;
 using System.Activities.Presentation.Metadata;
 using System.Activities.Presentation.PropertyEditing;
 using System.ComponentModel;
@@ -94,7 +93,6 @@ namespace Autossential.Activities.Design
             builder.AddCustomAttributes(typeof(EncryptDataTable), securityCategory);
             builder.AddCustomAttributes(typeof(EncryptDataTable), new DesignerAttribute(typeof(EncryptDataTableDesigner)));
             builder.AddCustomAttributes(typeof(EncryptDataTable), new HelpKeywordAttribute(""));
-            builder.AddCustomAttributes(typeof(EncryptDataTable), nameof(EncryptDataTable.ParallelProcessing), new EditorAttribute(typeof(BooleanPropertyEditor), typeof(PropertyValueEditor)));
 
             builder.AddCustomAttributes(typeof(DecryptDataTable), securityCategory);
             builder.AddCustomAttributes(typeof(DecryptDataTable), new DesignerAttribute(typeof(DecryptDataTableDesigner)));
