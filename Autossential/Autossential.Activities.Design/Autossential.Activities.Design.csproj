@@ -27,7 +27,7 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>0.1.0</PackageVersion>
+    <PackageVersion>1.0.5-alpha</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Controls\FilePickerControl.xaml" />
@@ -63,11 +63,11 @@
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\Autossential.Activities.Design.xml</DocumentationFile>
-    <Version>1.0.5-alpha</Version>
     <RepositoryUrl>https://github.com/alexandretperez/Autossential</RepositoryUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageIcon>packageIcon.png</PackageIcon>
     <RepositoryType>GIT</RepositoryType>
+    <Version>1.0.5-alpha</Version>
   </PropertyGroup>
 	<ItemGroup>
 		<Reference Include="System" />
