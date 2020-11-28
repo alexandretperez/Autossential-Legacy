@@ -74,6 +74,11 @@ namespace Autossential.Activities
         [LocalizedCategory(nameof(Resources.Options_Category))]
         public bool ParallelProcessing { get; set; }
 
+        [LocalizedDisplayName(nameof(Resources.DecryptDataTable_Sort_DisplayName))]
+        [LocalizedDescription(nameof(Resources.DecryptDataTable_Sort_Description))]
+        [LocalizedCategory(nameof(Resources.Options_Category))]
+        public InArgument<string> Sort { get; set; }
+
         #endregion Properties
 
         #region Constructors
@@ -119,6 +124,13 @@ namespace Autossential.Activities
 
                 outDt.AcceptChanges();
                 outDt.EndLoadData();
+            }
+
+            var sortBy = Sort.Get(context);
+            if (sortBy != null)
+            {
+                outDt.DefaultView.Sort = sortBy;
+                outDt = outDt.DefaultView.ToTable();
             }
 
             // Outputs

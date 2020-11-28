@@ -981,4 +981,20 @@
     <value>ParallelProcessing</value>
     <comment>property name</comment>
   </data>
+  <data name="DecryptDataTable_Sort_Description" xml:space="preserve">
+    <value>Sets the sort column or columns, and sort order for the resulting DataTable. The value must be a string that contains the column name followed by "ASC" (ascending) or "DESC" (descending). Columns are sorted ascending by default. Multiple columns can be separated by commas.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="DecryptDataTable_Sort_DisplayName" xml:space="preserve">
+    <value>Sort</value>
+    <comment>property name</comment>
+  </data>
+  <data name="EncryptDataTable_Sort_Description" xml:space="preserve">
+    <value>Sets the sort column or columns, and sort order for the resulting DataTable. The value must be a string that contains the column name followed by "ASC" (ascending) or "DESC" (descending). Columns are sorted ascending by default. Multiple columns can be separated by commas.</value>
+    <comment>property description</comment>
+  </data>
+  <data name="EncryptDataTable_Sort_DisplayName" xml:space="preserve">
+    <value>Sort</value>
+    <comment>property name</comment>
+  </data>
 </root>

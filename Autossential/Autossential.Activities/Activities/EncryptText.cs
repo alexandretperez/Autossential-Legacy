@@ -86,10 +86,13 @@ namespace Autossential.Activities
             var encoding = TextEncoding.Get(context);
             var iterations = Iterations.Get(context);
 
-            string result;
-            using (var crypto = new Crypto(Algorithm, encoding, iterations))
-                result = crypto.Encrypt(text, password);
-
+            string result = text;
+            if (!string.IsNullOrEmpty(text))
+            {
+                using (var crypto = new Crypto(Algorithm, encoding, iterations))
+                    result = crypto.Encrypt(text, password);
+            }
+         
             return (ctx) => Result.Set(ctx, result);
         }
 

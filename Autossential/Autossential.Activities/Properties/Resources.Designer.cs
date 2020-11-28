@@ -610,6 +610,24 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sets the sort column or columns, and sort order for the resulting DataTable. The value must be a string that contains the column name followed by &quot;ASC&quot; (ascending) or &quot;DESC&quot; (descending). Columns are sorted ascending by default. Multiple columns can be separated by commas..
+        /// </summary>
+        public static string DecryptDataTable_Sort_Description {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Sort_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sort.
+        /// </summary>
+        public static string DecryptDataTable_Sort_DisplayName {
+            get {
+                return ResourceManager.GetString("DecryptDataTable_Sort_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The alg.
         /// </summary>
         public static string DecryptText_Algorithm_Description {
@@ -984,6 +1002,24 @@ namespace Autossential.Activities.Properties {
         public static string EncryptDataTable_Result_DisplayName {
             get {
                 return ResourceManager.GetString("EncryptDataTable_Result_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sets the sort column or columns, and sort order for the resulting DataTable. The value must be a string that contains the column name followed by &quot;ASC&quot; (ascending) or &quot;DESC&quot; (descending). Columns are sorted ascending by default. Multiple columns can be separated by commas..
+        /// </summary>
+        public static string EncryptDataTable_Sort_Description {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Sort_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sort.
+        /// </summary>
+        public static string EncryptDataTable_Sort_DisplayName {
+            get {
+                return ResourceManager.GetString("EncryptDataTable_Sort_DisplayName", resourceCulture);
             }
         }
         

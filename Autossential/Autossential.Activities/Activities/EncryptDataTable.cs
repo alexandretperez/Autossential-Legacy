@@ -74,6 +74,10 @@ namespace Autossential.Activities
         [LocalizedCategory(nameof(Resources.Options_Category))]
         public bool ParallelProcessing { get; set; }
 
+        [LocalizedDisplayName(nameof(Resources.EncryptDataTable_Sort_DisplayName))]
+        [LocalizedDescription(nameof(Resources.EncryptDataTable_Sort_Description))]
+        [LocalizedCategory(nameof(Resources.Options_Category))]
+        public InArgument<string> Sort { get; set; }
         #endregion Properties
 
         #region Constructors
@@ -96,7 +100,7 @@ namespace Autossential.Activities
             if (Encoding == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(Encoding)));
             if (Iterations == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(Iterations)));
             if (ColumnIndexes != null && ColumnNames != null) metadata.AddValidationError(string.Format(Resources.ValidationExclusiveProperties_Error, nameof(ColumnIndexes), nameof(ColumnNames)));
-
+         
             base.CacheMetadata(metadata);
         }
 
@@ -110,15 +114,22 @@ namespace Autossential.Activities
             var inDt = DataTable.Get(context);
             var dataColumns = DataTableHelper.IdentifyDataColumns(inDt, ColumnIndexes?.Get(context), ColumnNames?.Get(context));
             var outDt = DataTableHelper.NewCryptoDataTable(inDt, dataColumns);
-            
+
             using (var crypto = new Crypto(Algorithm, encoding, iterations))
             {
                 outDt.BeginLoadData();
 
                 AddToDataTable(inDt, outDt, dataColumns, key, crypto);
-                
+
                 outDt.AcceptChanges();
                 outDt.EndLoadData();
+            }
+
+            var sortBy = Sort.Get(context);
+            if (sortBy != null)
+            {
+                outDt.DefaultView.Sort = sortBy;
+                outDt = outDt.DefaultView.ToTable();
             }
 
             // Outputs
