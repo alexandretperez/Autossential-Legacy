@@ -49,7 +49,7 @@
                   ExpressionType="{Binding ModelItem.Properties[Result].PropertyType.GenericTypeArguments[0]}"
                   OwnerActivity="{Binding ModelItem}"
                   UseLocationExpression="True"
-                  Expression="{Binding ModelItem.ItemArray, ConverterParameter=Out, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                  Expression="{Binding ModelItem.Result, ConverterParameter=Out, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </Grid>
         </StackPanel>
     </uip:ActivityDecoratorControl>
