@@ -49,7 +49,7 @@ namespace Autossential.Activities
         protected override void Execute(NativeActivityContext context)
         {
             var exitBookmark = context.CreateBookmark(OnExit, BookmarkOptions.NonBlocking);
-            context.Properties.Add(Exit.ExitBookmark, exitBookmark);
+            context.Properties.Add(Exit.Bookmark, exitBookmark);
 
             context.ScheduleAction<IObjectContainer>(Body, _objectContainer, OnCompleted, OnFaulted);
         }

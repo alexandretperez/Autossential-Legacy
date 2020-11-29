@@ -6,25 +6,25 @@ using UiPath.Shared.Activities.Localization;
 
 namespace Autossential.Activities
 {
-    [LocalizedDisplayName(nameof(Resources.Exit_DisplayName))]
-    [LocalizedDescription(nameof(Resources.Exit_Description))]
-    public class Exit : NativeActivity
+    [LocalizedDisplayName(nameof(Resources.Next_DisplayName))]
+    [LocalizedDescription(nameof(Resources.Next_Description))]
+    public class Next : NativeActivity
     {
-        internal const string Bookmark = "Exit";
+        internal const string Bookmark = "Next";
 
         protected override bool CanInduceIdle => true;
 
-        public Exit()
+        public Next()
         {
-            var arg = new DelegateInArgument<Exit>("constraintArg");
+            var arg = new DelegateInArgument<Next>("constraintArg");
             var ctx = new DelegateInArgument<ValidationContext>("validationContext");
-            Constraints.Add(new Constraint<Exit>
+            Constraints.Add(new Constraint<Next>
             {
-                Body = new ActivityAction<Exit, ValidationContext>
+                Body = new ActivityAction<Next, ValidationContext>
                 {
                     Argument1 = arg,
                     Argument2 = ctx,
-                    Handler = new ExitConstraint
+                    Handler = new NextConstraint
                     {
                         ParentChain = new GetParentChain { ValidationContext = ctx }
                     }

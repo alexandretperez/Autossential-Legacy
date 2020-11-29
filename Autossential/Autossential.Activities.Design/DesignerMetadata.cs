@@ -98,6 +98,15 @@ namespace Autossential.Activities.Design
             builder.AddCustomAttributes(typeof(DecryptDataTable), new DesignerAttribute(typeof(DecryptDataTableDesigner)));
             builder.AddCustomAttributes(typeof(DecryptDataTable), new HelpKeywordAttribute(""));
 
+            builder.AddCustomAttributes(typeof(Iterate), workflowCategory);
+            builder.AddCustomAttributes(typeof(Iterate), new DesignerAttribute(typeof(IterateDesigner)));
+            builder.AddCustomAttributes(typeof(Iterate), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(Next), workflowCategory);
+            builder.AddCustomAttributes(typeof(Next), new DesignerAttribute(typeof(NextDesigner)));
+            builder.AddCustomAttributes(typeof(Next), new HelpKeywordAttribute(""));
+
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

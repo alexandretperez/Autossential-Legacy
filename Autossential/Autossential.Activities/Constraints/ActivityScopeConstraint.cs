@@ -1,11 +1,9 @@
-﻿using Autossential.Activities.Properties;
-using System.Activities;
-using System.Activities.Validation;
+﻿using System.Activities;
 using System.Collections.Generic;
 
 namespace Autossential.Activities.Contraints
 {
-    internal class ContainerChildConstraint : NativeActivity<bool>
+    internal abstract class ActivityScopeConstraint : NativeActivity<bool>
     {
         [RequiredArgument]
         [System.ComponentModel.DefaultValue(null)]
@@ -19,11 +17,11 @@ namespace Autossential.Activities.Contraints
         {
             foreach (var activity in ParentChain.Get(context))
             {
-                if (IsInContainer(activity))
+                if (IsInValidScope(activity))
                     return;
             }
 
-            Constraint.AddValidationError(context, new ValidationError(string.Format(Resources.ValidationScope_Error, nameof(Container))));
+            OnScopeValidationError(context);
         }
 
         protected override void CacheMetadata(NativeActivityMetadata metadata)
@@ -33,10 +31,8 @@ namespace Autossential.Activities.Contraints
             metadata.AddArgument(arg);
         }
 
-        private bool IsInContainer(Activity activity)
-        {
-            if (activity == null) return false;
-            return activity is Container;
-        }
+        protected abstract bool IsInValidScope(Activity activity);
+
+        protected abstract void OnScopeValidationError(NativeActivityContext context);
     }
 }

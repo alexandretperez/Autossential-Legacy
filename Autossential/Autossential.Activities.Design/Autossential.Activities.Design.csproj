@@ -27,12 +27,14 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>1.0.5-alpha</PackageVersion>
+    <PackageVersion>1.0.5-alpha2</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Controls\FilePickerControl.xaml" />
     <None Remove="Controls\FolderPickerControl.xaml" />
     <None Remove="Designers\AggregateDesigner.xaml" />
+    <None Remove="Designers\IterateDesigner.xaml" />
+    <None Remove="Designers\NextDesigner.xaml" />
     <None Include="LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -67,7 +69,7 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageIcon>packageIcon.png</PackageIcon>
     <RepositoryType>GIT</RepositoryType>
-    <Version>1.0.5-alpha</Version>
+    <Version>1.0.5-alpha2</Version>
   </PropertyGroup>
 	<ItemGroup>
 		<Reference Include="System" />
@@ -144,6 +146,12 @@
     <Page Include="Designers\IncrementDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\IterateDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\NextDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\PromoteHeadersDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

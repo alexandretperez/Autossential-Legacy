@@ -610,7 +610,7 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sets the sort column or columns, and sort order for the resulting DataTable. The value must be a string that contains the column name followed by &quot;ASC&quot; (ascending) or &quot;DESC&quot; (descending). Columns are sorted ascending by default. Multiple columns can be separated by commas..
+        ///   Looks up a localized string similar to Sets the sort column or columns, and sort order for the output DataTable. The value must be a string that contains the column name followed by &quot;ASC&quot; (ascending) or &quot;DESC&quot; (descending). Columns are sorted ascending by default. Multiple columns can be separated by commas..
         /// </summary>
         public static string DecryptDataTable_Sort_Description {
             get {
@@ -1006,7 +1006,7 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sets the sort column or columns, and sort order for the resulting DataTable. The value must be a string that contains the column name followed by &quot;ASC&quot; (ascending) or &quot;DESC&quot; (descending). Columns are sorted ascending by default. Multiple columns can be separated by commas..
+        ///   Looks up a localized string similar to Sets the sort column or columns, and sort order for the output DataTable. The value must be a string that contains the column name followed by &quot;ASC&quot; (ascending) or &quot;DESC&quot; (descending). Columns are sorted ascending by default. Multiple columns can be separated by commas..
         /// </summary>
         public static string EncryptDataTable_Sort_Description {
             get {
@@ -1362,6 +1362,78 @@ namespace Autossential.Activities.Properties {
         public static string InputOutput_Category {
             get {
                 return ResourceManager.GetString("InputOutput_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iterates the activity execution for the specified number of times..
+        /// </summary>
+        public static string Iterate_Description {
+            get {
+                return ResourceManager.GetString("Iterate_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iterate.
+        /// </summary>
+        public static string Iterate_DisplayName {
+            get {
+                return ResourceManager.GetString("Iterate_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The zero-based iteration index..
+        /// </summary>
+        public static string Iterate_Index_Description {
+            get {
+                return ResourceManager.GetString("Iterate_Index_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string Iterate_Index_DisplayName {
+            get {
+                return ResourceManager.GetString("Iterate_Index_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The number of iterations that must be run.
+        /// </summary>
+        public static string Iterate_Iterations_Description {
+            get {
+                return ResourceManager.GetString("Iterate_Iterations_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iterations.
+        /// </summary>
+        public static string Iterate_Iterations_DisplayName {
+            get {
+                return ResourceManager.GetString("Iterate_Iterations_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skips the current iteration in an Iterate activity and proceeds the execution with the next iteration..
+        /// </summary>
+        public static string Next_Description {
+            get {
+                return ResourceManager.GetString("Next_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        public static string Next_DisplayName {
+            get {
+                return ResourceManager.GetString("Next_DisplayName", resourceCulture);
             }
         }
         
@@ -1744,7 +1816,7 @@ namespace Autossential.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot be used outside of a {0}..
+        ///   Looks up a localized string similar to Cannot be used outside of a {0} activity..
         /// </summary>
         public static string ValidationScope_Error {
             get {
