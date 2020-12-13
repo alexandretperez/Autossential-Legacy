@@ -27,7 +27,7 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>1.0.5-alpha2</PackageVersion>
+    <PackageVersion>1.0.5-alpha3</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Controls\FilePickerControl.xaml" />
@@ -69,7 +69,7 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageIcon>packageIcon.png</PackageIcon>
     <RepositoryType>GIT</RepositoryType>
-    <Version>1.0.5-alpha2</Version>
+    <Version>1.0.5-alpha3</Version>
   </PropertyGroup>
 	<ItemGroup>
 		<Reference Include="System" />

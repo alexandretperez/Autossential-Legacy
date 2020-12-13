@@ -112,6 +112,9 @@ namespace Autossential.Activities
                 {
                     try
                     {
+                        if (cancellationToken.IsCancellationRequested)
+                            cancellationToken.ThrowIfCancellationRequested();
+
                         if (File.Exists(filePath))
                         {
                             using (var fs = File.Open(filePath, FileMode.Open, FileAccess.Read))
@@ -122,8 +125,11 @@ namespace Autossential.Activities
                     }
                     catch (Exception e)
                     {
+                        done = e is OperationCanceledException || e is ObjectDisposedException;
                         _latestFileException = e;
-                        Thread.Sleep(interval);
+
+                        if (!done)
+                            Thread.Sleep(interval);
                     }
                 } while (!done);
             }, cancellationToken);

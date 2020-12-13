@@ -119,6 +119,10 @@ namespace Autossential.Activities
                             break;
                     }
                 }
+                else
+                {
+                    dr[match.Key] = null;
+                }
             }
         }
 
